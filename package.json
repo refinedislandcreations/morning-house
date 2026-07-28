@@ -1,0 +1,28 @@
+{
+  "name": "morning-house",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:css": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/output.css --watch",
+    "build:css": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/output.css --minify",
+    "dev": "concurrently \"npm run dev:css\" \"bundle exec jekyll serve\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/refinedislandcreations/morning-house.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/refinedislandcreations/morning-house/issues"
+  },
+  "homepage": "https://github.com/refinedislandcreations/morning-house#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "concurrently": "^10.0.4",
+    "tailwindcss": "^4.3.3"
+  }
+}
