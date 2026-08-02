@@ -45,8 +45,16 @@ title: Home
     </main>
 
     <!-- Footer -->
-    <footer class="p-6 md:p-10 xl:p-12 flex justify-end">
-      <a href="{{ '/privacy.html' | relative_url }}" class="text-white/70 hover:text-white font-body text-[11px] md:text-xs transition">Privacy Policy</a>
+    <footer class="px-6 pb-6 md:px-10 xl:px-24 grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+      <div class="flex justify-center md:justify-start order-1 md:order-none">
+        <a href="{{ '/privacy.html' | relative_url }}" class="text-white/70 hover:text-white font-body text-[11px] md:text-xs transition hover:underline underline-offset-2">Privacy Policy</a>
+      </div>
+      <div class="text-center order-2 md:order-none">
+        <p class="text-white/70 font-body text-[11px] md:text-xs">
+          Designed and built by <a href="https://refinedislandcreations.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition hover:underline underline-offset-2">Refined Island Creations</a>.
+        </p>
+      </div>
+      <div class="hidden md:block"></div>
     </footer>
   </div>
 </div>
