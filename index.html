@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Coming Soon
 ---
 <div class="relative min-h-screen bg-cover bg-[80%_center] bg-no-repeat" style="background-image: url('{{ '/assets/images/bg-image.webp' | relative_url }}');">
   <!-- Gradient Overlay for readability on smaller screens and better contrast -->
@@ -25,9 +25,12 @@ title: Home
       </p>
 
       <form class="flex flex-col sm:flex-row gap-4 max-w-xl mb-4">
+        <label for="email" class="sr-only">Email address</label>
         <input 
+          id="email"
           type="email" 
           placeholder="you@example.com" 
+          aria-label="Email address"
           class="flex-grow bg-[#f5f1eb] text-gray-800 placeholder-gray-500 font-body px-6 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-orange text-sm xl:text-base shadow-inner"
           required
         >

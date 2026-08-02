@@ -1,0 +1,58 @@
+# Morning House — Complete Overview
+
+## Company Profile
+
+Morning House is an AI automation studio founded to serve small businesses that lack the resources for enterprise automation but desperately need relief from repetitive administrative work. Based in Bali, Indonesia, the company serves clients worldwide with practical AI tools designed for immediate implementation.
+
+The company name embodies its core promise: business owners hand over tasks at the end of their day, and by the next morning, those tasks are complete — emails sorted, leads acknowledged, reviews managed. Morning House positions itself as the overnight operations team that small businesses cannot afford to hire but desperately need.
+
+## Core Services
+
+### Smart Inbox
+Email overload remains one of the most persistent drains on small business owner productivity. Smart Inbox connects to existing email accounts and uses AI to categorize incoming messages, prioritize those requiring immediate attention, and draft contextually appropriate replies. Business owners review and approve drafts rather than composing from scratch, reducing email processing time from hours to minutes.
+
+The system learns from approval patterns, improving its categorization and drafting accuracy over time. It handles the triage work — identifying which emails are urgent, which are routine, and which are noise — so business owners focus only on decisions that genuinely require their judgment.
+
+### Lead Follow-Up
+Speed of response is the single strongest predictor of lead conversion, yet small business owners often cannot respond within the critical first five minutes. Lead Follow-Up monitors incoming inquiries across channels (contact forms, email, social messages) and sends an immediate, personalized acknowledgment within minutes.
+
+Beyond initial response, the system tracks lead engagement and automatically follows up when prospects go quiet, using contextually appropriate messaging based on the original inquiry and any subsequent interaction. The goal is persistence without being pushy — maintaining presence in a prospect's inbox without requiring the business owner to remember to follow up manually.
+
+### Google Reviews
+Online reputation management creates two time-consuming obligations: asking satisfied customers for reviews and responding to the reviews that appear. Google Reviews automates both. After completed transactions or positive interactions, the system sends personalized review requests to customers, timed for when satisfaction is highest.
+
+When reviews arrive — positive or negative — the system drafts appropriate responses. Positive reviews receive grateful, personalized acknowledgments. Negative reviews receive professional, solution-oriented responses that demonstrate the business's commitment to customer satisfaction. As with all Morning House tools, business owners review and approve before anything is published.
+
+## Development Philosophy
+
+Morning House builds tools through iterative development informed by direct client feedback. Rather than launching a comprehensive platform, the company releases focused tools that solve specific problems well, then expands functionality based on what clients actually need rather than what developers assume they need.
+
+All tools share three design principles:
+1. **Human in the loop**: AI drafts and suggests; humans approve and publish
+2. **Existing workflows**: Tools integrate into current email and communication systems rather than requiring new platforms
+3. **Progressive learning**: Systems improve through use, learning individual business preferences and communication styles
+
+## Target Market
+
+Morning House serves small businesses typically with 1-20 employees — businesses large enough to feel administrative pain but too small to hire dedicated operations staff. Primary verticals include professional services (lawyers, accountants, consultants), home services (contractors, cleaners, landscapers), and health and wellness practitioners.
+
+The common thread across clients is that the business owner remains deeply involved in day-to-day operations and personally handles email, lead management, and customer communication — tasks that scale poorly as the business grows.
+
+## Geographic Scope
+
+While based in Bali, Indonesia, Morning House serves English-speaking small businesses globally. The company operates remotely with clients primarily in North America, Australia, and Southeast Asia. Time zone differences become an advantage: tasks submitted at end-of-day in any time zone are processed during Morning House working hours, making the "done by morning" promise geographically viable.
+
+## Technical Approach
+
+Morning House builds on existing AI infrastructure rather than developing proprietary models. The company's value lies in workflow design, integration engineering, and the practical application of AI capabilities to specific small business problems. This approach allows rapid iteration and keeps the company focused on outcomes rather than research.
+
+## Contact Information
+
+- Website: https://morninghouse.ai
+- Instagram: https://instagram.com/morninghouse.ai
+- Location: Bali, Indonesia
+- Service area: Worldwide (English-speaking markets)
+
+## Current Status (as of site launch)
+
+The morninghouse.ai website is currently a coming soon page collecting email addresses for launch notification. The three core tools are in active development with early clients providing feedback. General availability will be announced to the email list.

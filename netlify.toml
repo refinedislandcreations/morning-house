@@ -1,0 +1,10 @@
+[build]
+  command = "bundle exec jekyll build"
+  publish = "_site"
+  environment = { JEKYLL_ENV = "production" }
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false

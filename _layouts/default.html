@@ -4,10 +4,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    
+    <!-- Open Graph & Twitter Cards -->
+    <meta property="og:title" content="{{ page.title }} - {{ site.title }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ site.url }}/assets/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/output.css' | relative_url }}">
+
+    <!-- GEO: Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Morning House",
+      "url": "https://morninghouse.ai",
+      "description": "Morning House builds AI automations for small businesses. Smart Inbox sorts email and drafts replies for review. Lead Follow-Up acknowledges every new lead within minutes and follows up automatically if they go quiet. Google Reviews requests reviews from happy customers and drafts responses to the ones that come in.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Denpasar",
+        "addressRegion": "Bali",
+        "addressCountry": "ID"
+      },
+      "areaServed": "Worldwide",
+      "sameAs": [
+        "https://instagram.com/morninghouse.ai"
+      ]
+    }
+    </script>
+
+    <!-- GEO: ProfessionalService Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Morning House",
+      "url": "https://morninghouse.ai",
+      "description": "AI automation studio for small businesses. Smart Inbox, Lead Follow-Up, and Google Reviews automation.",
+      "image": "https://morninghouse.ai/assets/images/og-image.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Denpasar",
+        "addressRegion": "Bali",
+        "addressCountry": "ID"
+      },
+      "areaServed": {
+        "@type": "Continent",
+        "name": "Worldwide"
+      },
+      "telephone": "",
+      "email": "",
+      "sameAs": [
+        "https://instagram.com/morninghouse.ai"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI Automation Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Smart Inbox",
+              "description": "AI-powered email sorting and reply drafting for small businesses"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Lead Follow-Up",
+              "description": "Automated lead acknowledgment within minutes and intelligent follow-up sequences"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Google Reviews",
+              "description": "Automated review requests for happy customers and AI-drafted review responses"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    {% if page.url == "/" %}
+    <!-- GEO: Speakable Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".max-w-md"
+        ]
+      },
+      "url": "https://morninghouse.ai/"
+    }
+    </script>
+    {% endif %}
     
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">

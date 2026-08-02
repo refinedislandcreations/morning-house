@@ -1,0 +1,30 @@
+# Morning House
+
+> AI automation studio for small businesses. We build tools that handle the work you dread — inbox management, lead follow-up, and review management — so you can focus on running your business.
+
+## Key Pages
+
+- [Home](https://morninghouse.ai/) — Coming soon page with email signup for launch notifications
+- [Privacy Policy](https://morninghouse.ai/privacy) — Data handling and privacy information
+
+## Services
+
+Morning House currently builds three AI automation tools:
+
+- **Smart Inbox**: Sorts your email and drafts replies for you to review, turning hours of inbox management into minutes of quick approvals
+- **Lead Follow-Up**: Acknowledges every new lead within minutes and follows up automatically if they go quiet, ensuring no opportunity slips through
+- **Google Reviews**: Requests reviews from happy customers and drafts responses to the ones that come in, maintaining your online reputation while you sleep
+
+Services are continuously expanded based on client feedback.
+
+## About
+
+Morning House is an AI automation studio based in Bali, Indonesia, working with small business clients worldwide. Founded to eliminate the repetitive administrative work that pulls business owners away from what matters, we build practical AI tools that integrate into existing workflows rather than requiring new systems to learn.
+
+The name reflects our promise: give us the work you dread, and it'll be done by morning. Our approach prioritizes human review and approval — AI drafts and suggests, but business owners always maintain final control.
+
+## Contact
+
+- Website: https://morninghouse.ai
+- Instagram: https://instagram.com/morninghouse.ai
+- Location: Bali, Indonesia (serving clients worldwide)

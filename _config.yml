@@ -1,3 +1,4 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://morninghouse.ai" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "" # the name of your site, e.g. ACME Corp.
+title: "Morning House | AI Automation for Small Businesses" # the name of your site, e.g. ACME Corp.
+description: "Morning House builds AI automations for small businesses. Smart Inbox sorts email, Lead Follow-Up acknowledges new leads within minutes, Google Reviews requests and responds to reviews automatically."
