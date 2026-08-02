@@ -293,8 +293,14 @@
   .bg-cover {
     background-size: cover;
   }
+  .bg-\[80\%_center\] {
+    background-position: 80% center;
+  }
   .bg-center {
     background-position: center;
+  }
+  .bg-right {
+    background-position: right;
   }
   .bg-no-repeat {
     background-repeat: no-repeat;
