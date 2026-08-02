@@ -14,6 +14,7 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-md: 28rem;
+    --container-lg: 32rem;
     --container-xl: 36rem;
     --container-2xl: 42rem;
     --container-4xl: 56rem;
@@ -427,6 +428,9 @@
     .md\:h-12 {
       height: calc(var(--spacing) * 12);
     }
+    .md\:max-w-lg {
+      max-width: var(--container-lg);
+    }
     .md\:max-w-xl {
       max-width: var(--container-xl);
     }
@@ -471,6 +475,12 @@
     }
     .xl\:max-w-2xl {
       max-width: var(--container-2xl);
+    }
+    .xl\:max-w-lg {
+      max-width: var(--container-lg);
+    }
+    .xl\:max-w-xl {
+      max-width: var(--container-xl);
     }
     .xl\:bg-transparent {
       background-color: transparent;
