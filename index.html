@@ -24,10 +24,12 @@ title: Coming Soon
         We're building AI automations for small businesses: inboxes sorted, leads followed up within minutes, reviews requested and answered while you sleep. We're putting the finishing touches on it now.
       </p>
 
-      <form class="flex flex-col sm:flex-row gap-4 max-w-xl mb-4">
+      <form name="notify-me" method="POST" data-netlify="true" class="flex flex-col sm:flex-row gap-4 max-w-xl mb-4">
+        <input type="hidden" name="form-name" value="notify-me" />
         <label for="email" class="sr-only">Email address</label>
         <input 
           id="email"
+          name="email"
           type="email" 
           placeholder="you@example.com" 
           aria-label="Email address"
