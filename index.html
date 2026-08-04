@@ -23,31 +23,23 @@ title: Coming Soon
       <p class="text-white/90 font-body text-xs md:text-sm xl:text-base max-w-md md:max-w-lg mb-10 leading-relaxed font-light">
         We're building AI automations for small businesses: inboxes sorted, leads followed up within minutes, reviews requested and answered while you sleep. We're putting the finishing touches on it now.
       </p>
-
-      <form id="notify-form" name="notify-me" method="POST" data-netlify="true" class="flex flex-col sm:flex-row gap-4 max-w-xl mb-4">
-        <input type="hidden" name="form-name" value="notify-me" />
-        <label for="email" class="sr-only">Email address</label>
-        <input 
-          id="email"
-          name="email"
-          type="email" 
-          placeholder="you@example.com" 
-          aria-label="Email address"
-          class="flex-grow bg-[#f5f1eb] text-gray-800 placeholder-gray-500 font-body px-6 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-orange text-sm xl:text-base shadow-inner"
-          required
+      <div class="flex sm:flex-row gap-4 max-w-xl mb-4">
+        <a 
+          href="https://www.instagram.com/morninghouse.ai"
+          target="_blank" 
+          class="relative inline-flex items-center justify-center rounded-xl px-10 py-4 font-body font-semibold text-white bg-brand-orange shadow-lg shadow-brand-orange/20 overflow-hidden group hover:shadow-brand-orange/40 hover:-translate-y-0.5 transition-all text-sm tracking-widest uppercase whitespace-nowrap"
         >
-        <button 
-          type="submit" 
-          class="bg-brand-orange text-white font-body font-semibold px-8 py-4 rounded-xl shadow hover:bg-[#8f4222] transition tracking-wide text-sm whitespace-nowrap"
-        >
-          NOTIFY ME
-        </button>
-      </form>
-      
-      <p class="text-white/80 font-body text-[11px] md:text-xs">
-        No spam. Just one email, when we're ready.
-      </p>
+          <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></span>
+          <span class="relative">FOLLOW OUR PROGRESS</span>
+        </a>
+      </div>
     </main>
+
+    <style>
+      @keyframes shimmer {
+        100% { transform: translateX(100%); }
+      }
+    </style>
 
     <!-- Footer -->
     <footer class="px-6 pb-6 md:px-10 xl:px-24 grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
@@ -63,85 +55,5 @@ title: Coming Soon
     </footer>
   </div>
 
-  <!-- Toast Notification -->
-  <div id="toast" class="fixed bottom-4 right-4 max-w-sm w-full bg-white rounded-xl shadow-lg border border-gray-200 p-4 transform translate-y-full opacity-0 transition-all duration-300 z-50 pointer-events-none">
-    <div class="flex items-start">
-      <div class="flex-shrink-0" id="toast-icon">
-        <!-- Icon injected by JS -->
-      </div>
-      <div class="ml-3 w-0 flex-1 pt-0.5">
-        <p class="text-sm font-medium text-gray-900 font-body" id="toast-title"></p>
-        <p class="mt-1 text-sm text-gray-500 font-body font-light" id="toast-message"></p>
-      </div>
-      <div class="ml-4 flex-shrink-0 flex">
-        <button class="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-orange" onclick="hideToast()">
-          <span class="sr-only">Close</span>
-          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
 
-  <script>
-    const form = document.getElementById('notify-form');
-    const toast = document.getElementById('toast');
-    const toastIcon = document.getElementById('toast-icon');
-    const toastTitle = document.getElementById('toast-title');
-    const toastMessage = document.getElementById('toast-message');
-
-    const successIcon = '<svg class="h-6 w-6 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>';
-    const errorIcon = '<svg class="h-6 w-6 text-red-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>';
-
-    function showToast(type, title, message) {
-      toastIcon.innerHTML = type === 'success' ? successIcon : errorIcon;
-      toastTitle.textContent = title;
-      toastMessage.textContent = message;
-      
-      toast.classList.remove('translate-y-full', 'opacity-0', 'pointer-events-none');
-      toast.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
-
-      setTimeout(() => {
-        hideToast();
-      }, 5000);
-    }
-
-    function hideToast() {
-      toast.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
-      toast.classList.add('translate-y-full', 'opacity-0', 'pointer-events-none');
-    }
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const formData = new FormData(form);
-      const submitButton = form.querySelector('button[type="submit"]');
-      const originalText = submitButton.textContent;
-      
-      submitButton.textContent = 'SENDING...';
-      submitButton.disabled = true;
-
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
-      })
-      .then((res) => {
-        if (res.ok) {
-          showToast('success', 'Success!', "We'll let you know when we launch.");
-          form.reset();
-        } else {
-          throw new Error('Network response was not ok.');
-        }
-      })
-      .catch((error) => {
-        showToast('error', 'Error', 'Something went wrong. Please try again.');
-      })
-      .finally(() => {
-        submitButton.textContent = originalText;
-        submitButton.disabled = false;
-      });
-    });
-  </script>
 </div>
