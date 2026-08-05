@@ -655,6 +655,9 @@
   .bg-cover {
     background-size: cover;
   }
+  .bg-fixed {
+    background-attachment: fixed;
+  }
   .bg-\[70\%_center\] {
     background-position: 70% center;
   }
@@ -666,6 +669,9 @@
   }
   .bg-center {
     background-position: center;
+  }
+  .bg-top {
+    background-position: top;
   }
   .bg-no-repeat {
     background-repeat: no-repeat;
