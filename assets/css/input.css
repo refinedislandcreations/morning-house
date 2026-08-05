@@ -1,7 +1,39 @@
 @import "tailwindcss";
 
 @theme {
+  /* Fonts */
   --font-title: "DM Serif Display", serif;
   --font-body: "Raleway", sans-serif;
+
+  /* Colors */
   --color-brand-orange: #a8502b;
+
+  /* Section Spacing */
+  --spacing-section-desktop: 80px;
+  --spacing-section-tablet: 64px;
+  --spacing-section-mobile: 48px;
+  --spacing-section-small: 32px;
+}
+
+/* Section */
+.section {
+  padding-block: var(--spacing-section-desktop);
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding-block: var(--spacing-section-tablet);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-block: var(--spacing-section-mobile);
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding-block: var(--spacing-section-small);
+  }
 }
