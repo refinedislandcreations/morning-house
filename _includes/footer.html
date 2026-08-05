@@ -1,96 +1,30 @@
 <!-- Footer -->
-<footer class="w-full relative bg-[#7B6558] pt-20 pb-10 border-t border-white/5 overflow-hidden">
-  <!-- Subtle top glow effect -->
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-brand-orange/30 to-transparent"></div>
-  <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-1/2 h-40 bg-brand-orange/5 blur-[120px] rounded-full pointer-events-none"></div>
+<footer class="w-full bg-[#7B6558] py-10 md:py-12 border-t border-white/5">
+  <div class="max-w-9xl mx-auto px-6 md:px-10 xl:px-24 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-6 text-center md:text-left">
+    
+    <!-- Left: Logo & Wordmark -->
+    <a href="/" class="flex items-center gap-3 group">
+      <!-- Logo Mark (Minimalist outline) -->
+      <svg class="w-6 h-6 text-brand-orange transition-transform group-hover:scale-105" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 22V12h6v10" />
+      </svg>
+      <span class="text-white font-title text-lg md:text-xl tracking-[0.15em] uppercase font-bold mt-0.5">
+        MORNING HOUSE
+      </span>
+    </a>
 
-  <div class="w-full px-6 md:px-10 xl:px-24 mx-auto relative z-10">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-16">
-      
-      <!-- Brand Section -->
-      <div class="md:col-span-6 lg:col-span-4 space-y-6">
-        <a href="/" class="text-white font-title text-2xl tracking-[0.15em] uppercase font-bold inline-block">
-          MORNING HOUSE
-        </a>
-        <p class="text-white/80 font-body text-sm leading-relaxed max-w-sm">
-          Transforming spaces into digital realities. We provide premium solutions tailored to elevate your business presence.
-        </p>
-      </div>
+    <!-- Middle: Copyright -->
+    <p class="text-white/60 font-body text-[11px] md:text-xs font-light">
+      &copy; 2026 Morning House
+    </p>
 
-      <!-- Spacer for large screens -->
-      <div class="hidden lg:block lg:col-span-4"></div>
-
-      <!-- Navigation Links -->
-      <div class="md:col-span-3 lg:col-span-2 space-y-6">
-        <h4 class="text-white font-body font-semibold uppercase tracking-widest text-xs opacity-90">Navigation</h4>
-        <ul class="space-y-4">
-          <li><a href="#solutions" class="group relative inline-block pb-0.5 text-white/80 hover:text-white transition-colors font-body text-sm">
-            Solutions
-            <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
-          </a></li>
-          <li><a href="#pricing" class="group relative inline-block pb-0.5 text-white/80 hover:text-white transition-colors font-body text-sm">
-            Pricing
-            <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
-          </a></li>
-          <li><a href="#about" class="group relative inline-block pb-0.5 text-white/80 hover:text-white transition-colors font-body text-sm">
-            About
-            <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
-          </a></li>
-          <li><a href="#faq" class="group relative inline-block pb-0.5 text-white/80 hover:text-white transition-colors font-body text-sm">
-            FAQ
-            <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
-          </a></li>
-        </ul>
-      </div>
-
-      <!-- Contact / Connect -->
-      <div class="md:col-span-3 lg:col-span-2 space-y-6">
-        <h4 class="text-white font-body font-semibold uppercase tracking-widest text-xs opacity-90">Connect</h4>
-        <ul class="space-y-4">
-          <li><a href="mailto:hello@morninghouse.com" class="group relative inline-block pb-0.5 text-white/80 hover:text-white transition-colors font-body text-sm">
-            Contact Us
-            <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
-          </a></li>
-          <li><a href="#" class="group relative inline-block pb-0.5 text-white/80 hover:text-white transition-colors font-body text-sm">
-            Twitter
-            <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
-          </a></li>
-          <li><a href="#" class="group relative inline-block pb-0.5 text-white/80 hover:text-white transition-colors font-body text-sm">
-            Instagram
-            <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
-          </a></li>
-          <li><a href="#" class="group relative inline-block pb-0.5 text-white/80 hover:text-white transition-colors font-body text-sm">
-            LinkedIn
-            <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
-          </a></li>
-        </ul>
-      </div>
-
+    <!-- Right: Links -->
+    <div class="flex items-center justify-center gap-3 sm:gap-4 text-white/80 font-body text-xs">
+      <a href="mailto:hello@morninghouse.ai" class="hover:text-white transition-colors">hello@morninghouse.ai</a>
+      <span class="w-1 h-1 rounded-full bg-white/30"></span>
+      <a href="#" class="hover:text-white transition-colors">Instagram</a>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-      
-      <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-white/60 font-body text-xs">
-        <span>&copy; <span id="current-year"></span> Morning House. All rights reserved.</span>
-        <span class="hidden sm:inline-block w-1 h-1 rounded-full bg-white/30"></span>
-        <a href="{{ '/privacy.html' | relative_url }}" class="hover:text-white transition-colors">Privacy Policy</a>
-      </div>
-      
-      <p class="text-white/60 font-body text-[11px] md:text-xs text-center md:text-right">
-        Designed & built by
-        <a
-          href="https://refinedislandcreations.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-white/80 hover:text-white transition-colors font-medium hover:underline underline-offset-4"
-        >Refined Island Creations</a>
-      </p>
-
-    </div>
   </div>
-  
-  <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-  </script>
 </footer>

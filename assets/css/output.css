@@ -273,6 +273,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .mt-0\.5 {
+    margin-top: calc(var(--spacing) * 0.5);
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -469,6 +472,9 @@
   }
   .justify-end {
     justify-content: flex-end;
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
@@ -736,6 +742,9 @@
   }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
   }
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
@@ -1066,6 +1075,12 @@
       --tw-translate-y: calc(var(--spacing) * -2);
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
+    .group-hover\:scale-105:is(:where(.group):hover *) {
+      --tw-scale-x: 105%;
+      --tw-scale-y: 105%;
+      --tw-scale-z: 105%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
     .group-hover\:animate-\[shimmer_1\.5s_infinite\]:is(:where(.group):hover *) {
       animation: shimmer 1.5s infinite;
     }
@@ -1161,6 +1176,9 @@
     .sm\:flex-row {
       flex-direction: row;
     }
+    .sm\:gap-4 {
+      gap: calc(var(--spacing) * 4);
+    }
     .sm\:gap-6 {
       gap: calc(var(--spacing) * 6);
     }
@@ -1246,6 +1264,9 @@
     .md\:justify-start {
       justify-content: flex-start;
     }
+    .md\:gap-6 {
+      gap: calc(var(--spacing) * 6);
+    }
     .md\:gap-8 {
       gap: calc(var(--spacing) * 8);
     }
@@ -1292,6 +1313,9 @@
     .md\:py-8 {
       padding-block: calc(var(--spacing) * 8);
     }
+    .md\:py-12 {
+      padding-block: calc(var(--spacing) * 12);
+    }
     .md\:py-24 {
       padding-block: calc(var(--spacing) * 24);
     }
@@ -1309,6 +1333,9 @@
     }
     .md\:pb-24 {
       padding-bottom: calc(var(--spacing) * 24);
+    }
+    .md\:text-left {
+      text-align: left;
     }
     .md\:text-right {
       text-align: right;
