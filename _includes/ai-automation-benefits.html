@@ -4,15 +4,15 @@
     <!-- Header Area -->
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12 md:mb-16">
       <div class="max-w-2xl">
-        <p class="font-body text-[#5a4a42] text-xs sm:text-sm md:text-base mb-4 tracking-wide font-light">
+        <p class="font-body text-[#5a4a42] text-[11px] sm:text-xs md:text-sm mb-4 tracking-wide font-light">
           {{ page.ai_automation_benefits.kicker }}
         </p>
-        <h2 class="font-title text-[#4a3628] text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-bold">
+        <h2 class="font-title text-[#4a3628] text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight font-bold">
           {{ page.ai_automation_benefits.headline }}
         </h2>
       </div>
       <div class="flex-shrink-0 mb-2">
-        <a href="{{ page.ai_automation_benefits.button_link }}" class="relative inline-flex items-center justify-center bg-brand-orange text-white font-body font-bold px-8 py-4 md:px-10 md:py-5 rounded-xl shadow-xl shadow-brand-orange/20 overflow-hidden group hover:shadow-brand-orange/40 transition-all transform hover:-translate-y-1 tracking-widest text-[11px] sm:text-xs uppercase w-full md:w-auto text-center">
+        <a href="{{ page.ai_automation_benefits.button_link }}" class="relative inline-flex items-center justify-center bg-brand-orange text-white font-body font-bold px-8 py-4 md:px-10 md:py-5 rounded-xl shadow-xl shadow-brand-orange/20 overflow-hidden group hover:shadow-brand-orange/40 transition-all transform hover:-translate-y-1 tracking-widest text-[10px] sm:text-[11px] uppercase w-full md:w-auto text-center">
           <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></span>
           <span class="relative">{{ page.ai_automation_benefits.button_text }}</span>
         </a>
@@ -27,8 +27,8 @@
       <a href="{{ card.link }}" class="group relative w-full min-h-[380px] sm:min-h-[420px] lg:min-h-[480px] h-full overflow-hidden rounded-sm bg-cover bg-[center] flex flex-col justify-end p-6 md:p-8" style="background-image: url('{{ card.image | relative_url }}');">
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity group-hover:opacity-90"></div>
         <div class="relative z-10 text-white transform transition-transform duration-500 group-hover:-translate-y-2">
-          <h3 class="font-title text-lg sm:text-xl md:text-2xl font-bold mb-3 md:mb-4 leading-tight">{{ card.title }}</h3>
-          <p class="font-body text-xs sm:text-sm md:text-base text-white/90 font-light leading-relaxed">
+          <h3 class="font-title text-base sm:text-lg md:text-xl font-bold mb-3 md:mb-4 leading-tight">{{ card.title }}</h3>
+          <p class="font-body text-[11px] sm:text-xs md:text-sm text-white/90 font-light leading-relaxed">
             {{ card.body }}
           </p>
         </div>
@@ -39,10 +39,10 @@
 
     <!-- Bottom CTA -->
     <div class="mt-16 md:mt-24 text-center">
-      <h2 class="font-title text-[#4a3628] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+      <h2 class="font-title text-[#4a3628] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
         {{ page.ai_automation_benefits.bottom_cta_headline }}
       </h2>
-      <a href="{{ page.ai_automation_benefits.bottom_cta_link }}" class="inline-block font-title text-brand-orange hover:text-[#8f4222] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold transition-colors group">
+      <a href="{{ page.ai_automation_benefits.bottom_cta_link }}" class="inline-block font-title text-brand-orange hover:text-[#8f4222] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold transition-colors group">
         {{ page.ai_automation_benefits.bottom_cta_link_text }} <span class="inline-block transition-transform group-hover:translate-x-2">&rarr;</span>
       </a>
     </div>
