@@ -1384,6 +1384,9 @@
     .lg\:w-auto {
       width: auto;
     }
+    .lg\:max-w-none {
+      max-width: none;
+    }
     .lg\:max-w-xl {
       max-width: var(--container-xl);
     }
