@@ -1307,6 +1307,9 @@
     .md\:pb-16 {
       padding-bottom: calc(var(--spacing) * 16);
     }
+    .md\:pb-24 {
+      padding-bottom: calc(var(--spacing) * 24);
+    }
     .md\:text-right {
       text-align: right;
     }

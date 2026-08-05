@@ -1,6 +1,6 @@
 <section
   class="relative w-full min-h-[100dvh] flex flex-col bg-gray-900 bg-cover bg-[70%_center] md:bg-[80%_center] bg-no-repeat"
-  style="background-image: url('{{ '/assets/images/morning-house-ai-automation-small-business.webp' | relative_url }}');"
+  style="background-image: url('{{ page.hero.background_image | relative_url }}');"
 >
   <!-- Gradient Overlay for readability on smaller screens and better contrast -->
   <div
@@ -13,29 +13,27 @@
     <h1
       class="text-white font-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.1] mb-6 md:mb-8 max-w-sm md:max-w-lg lg:max-w-xl"
     >
-      Stop drowning in emails, follow-ups, and admin.
+      {{ page.hero.headline }}
     </h1>
 
     <p
       class="text-white/90 font-body text-xs sm:text-sm md:text-base max-w-sm sm:max-w-md md:max-w-xl mb-10 md:mb-12 leading-relaxed font-light"
     >
-      Morning House builds AI automations and AI agents for small businesses. We
-      take the repetitive work off your plate: emails sorted and answered, leads
-      followed up within minutes, reports waiting in your inbox every morning.
+      {{ page.hero.body }}
     </p>
 
     <div class="mb-4 mt-2">
       <a
-        href="#contact"
+        href="{{ page.hero.button_link }}"
         class="relative inline-flex items-center justify-center bg-brand-orange text-white font-body font-bold px-8 md:px-10 py-4 md:py-5 rounded-xl shadow-xl shadow-brand-orange/20 overflow-hidden group hover:shadow-brand-orange/40 transition-all transform hover:-translate-y-1 tracking-widest text-xs md:text-sm w-full sm:w-fit"
       >
         <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></span>
-        <span class="relative">BOOK A FREE 20 MINUTE CALL</span>
+        <span class="relative">{{ page.hero.button_text }}</span>
       </a>
     </div>
 
     <p class="text-white/70 font-body text-[11px] md:text-xs max-w-xs sm:max-w-full">
-      No tech knowledge needed. If we can't help, we'll tell you on the call.
+      {{ page.hero.button_subtext }}
     </p>
   </div>
 </section>

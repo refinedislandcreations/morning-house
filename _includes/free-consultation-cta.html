@@ -5,24 +5,24 @@
       <!-- Left Content -->
       <div class="w-full lg:w-3/5 text-center lg:text-left">
         <p class="font-body text-white/80 text-sm md:text-base mb-4 tracking-wide font-light">
-          Not sure where to start?
+          {{ page.free_consultation_cta.kicker }}
         </p>
         <h2 class="font-title text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-          Let's figure it out together
+          {{ page.free_consultation_cta.headline }}
         </h2>
         <p class="font-body text-white/90 text-sm md:text-base leading-relaxed font-light max-w-2xl mx-auto lg:mx-0">
-          Not sure which product is right for you, or whether any of them fit? Book a free 20-minute call. Tell us where your day gets heavy, and we'll tell you honestly how we can help. No jargon, no pitch deck, no obligation.
+          {{ page.free_consultation_cta.body }}
         </p>
       </div>
 
       <!-- Right Content -->
       <div class="w-full lg:w-auto flex flex-col items-center flex-shrink-0">
-        <a href="#contact" class="relative inline-flex items-center justify-center bg-brand-orange text-white font-body font-bold px-8 py-4 md:px-10 md:py-5 rounded-xl shadow-xl shadow-brand-orange/20 overflow-hidden group hover:shadow-brand-orange/40 transition-all transform hover:-translate-y-1 tracking-widest text-[11px] sm:text-xs uppercase w-full md:w-auto text-center mb-4">
+        <a href="{{ page.free_consultation_cta.button_link }}" class="relative inline-flex items-center justify-center bg-brand-orange text-white font-body font-bold px-8 py-4 md:px-10 md:py-5 rounded-xl shadow-xl shadow-brand-orange/20 overflow-hidden group hover:shadow-brand-orange/40 transition-all transform hover:-translate-y-1 tracking-widest text-[11px] sm:text-xs uppercase w-full md:w-auto text-center mb-4">
           <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></span>
-          <span class="relative">BOOK A FREE 20 MINUTE CALL</span>
+          <span class="relative">{{ page.free_consultation_cta.button_text }}</span>
         </a>
         <p class="font-body text-white/70 text-xs md:text-sm font-light">
-          Free &middot; 20 minutes &middot; no obligation
+          {{ page.free_consultation_cta.button_subtext }}
         </p>
       </div>
 

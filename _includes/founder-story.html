@@ -4,25 +4,25 @@
       
       <!-- Left Image -->
       <img 
-        src="{{ "/assets/images/morning-house-ai-automation-small-business.webp" | relative_url }}" 
-        alt="Julia Rees - Founder of Morning House"
+        src="{{ page.founder_story.image | relative_url }}" 
+        alt="{{ page.founder_story.alt_text }}"
         class="w-full aspect-square lg:aspect-[4/5] object-cover rounded-sm shadow-2xl" 
       />
 
       <!-- Right Content -->
       <div class="flex flex-col justify-center max-w-2xl mx-auto lg:mx-0">
         <p class="font-body text-[#5a4a42] text-xs sm:text-sm md:text-base mb-6 tracking-wide font-light">
-          Why I started Morning House
+          {{ page.founder_story.kicker }}
         </p>
         <h2 class="font-title text-[#4a3628] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-[1.2]">
-          "The goal isn't to make your business AI-powered. It's to make it more human, by giving you your time back for the work and people that actually need you."
+          {{ page.founder_story.quote }}
         </h2>
         <p class="font-body text-[#5a4a42] text-xs sm:text-sm md:text-base leading-relaxed mb-10 font-light">
-          I spent years watching small businesses lose hours and customers to work a system could do quietly overnight. Morning House exists so you stop paying that price.
+          {{ page.founder_story.body }}
         </p>
         <div>
           <p class="font-body text-[#4a3628] font-bold text-sm md:text-base">
-            Julia Rees <span class="font-light text-[#5a4a42]">&mdash; Founder, Morning House</span>
+            {{ page.founder_story.name }} <span class="font-light text-[#5a4a42]">{{ page.founder_story.title }}</span>
           </p>
         </div>
       </div>
