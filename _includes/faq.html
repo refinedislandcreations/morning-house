@@ -38,10 +38,10 @@
           %}open{%
           endif
           %}
-          class="group bg-white/10 backdrop-blur-xl border border-white/20 text-white shadow-xl hover:bg-white/20 transition-colors duration-300"
+          class="faq-item group bg-white/10 backdrop-blur-xl border border-white/20 text-white shadow-xl hover:bg-white/20 transition-colors duration-300"
         >
           <summary
-            class="flex justify-between items-center cursor-pointer p-6 md:p-10 list-none [&::-webkit-details-marker]:hidden"
+            class="faq-summary flex justify-between items-center cursor-pointer px-6 py-4 md:px-10 md:py-6 list-none [&::-webkit-details-marker]:hidden"
           >
             <h3
               class="font-title text-base sm:text-lg md:text-xl font-bold pr-8"
@@ -49,18 +49,20 @@
               {{ item.question }}
             </h3>
             <svg
-              class="w-4 h-4 fill-current transition-transform duration-300 group-open:-rotate-180 flex-shrink-0"
+              class="faq-icon w-4 h-4 fill-current flex-shrink-0"
               viewBox="0 0 16 16"
             >
               <path d="M14 5L8 12L2 5H14Z" />
             </svg>
           </summary>
-          <div class="px-6 md:px-10 pb-6 md:pb-10 pt-0">
-            <p
-              class="font-body text-xs md:text-sm opacity-90 font-light leading-relaxed"
-            >
-              {{ item.answer }}
-            </p>
+          <div class="faq-content-wrapper overflow-hidden">
+            <div class="px-6 md:px-10 pb-6 md:pb-10 pt-0">
+              <p
+                class="font-body text-xs md:text-sm opacity-90 font-light leading-relaxed"
+              >
+                {{ item.answer }}
+              </p>
+            </div>
           </div>
         </details>
         {% endfor %} {% endif %}
@@ -68,3 +70,66 @@
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (typeof gsap === "undefined") return;
+
+    const faqItems = document.querySelectorAll(".faq-item");
+    
+    faqItems.forEach(item => {
+      const summary = item.querySelector(".faq-summary");
+      const content = item.querySelector(".faq-content-wrapper");
+      const icon = item.querySelector(".faq-icon");
+      
+      gsap.set(content, { overflow: "hidden" });
+
+      if (item.hasAttribute("open")) {
+        gsap.set(icon, { rotation: 180 });
+      } else {
+        gsap.set(content, { height: 0, opacity: 0 });
+        gsap.set(icon, { rotation: 0 });
+      }
+
+      let isAnimating = false;
+
+      summary.addEventListener("click", (e) => {
+        e.preventDefault();
+        
+        if (isAnimating) return;
+        isAnimating = true;
+
+        const isOpen = item.hasAttribute("open");
+
+        if (isOpen) {
+          gsap.to(icon, { rotation: 0, duration: 0.3, ease: "power2.out" });
+          gsap.to(content, {
+            height: 0,
+            opacity: 0,
+            duration: 0.3,
+            ease: "power2.out",
+            onComplete: () => {
+              item.removeAttribute("open");
+              isAnimating = false;
+            }
+          });
+        } else {
+          item.setAttribute("open", "");
+          gsap.to(icon, { rotation: 180, duration: 0.3, ease: "power2.out" });
+          gsap.fromTo(content,
+            { height: 0, opacity: 0 },
+            { 
+              height: "auto", 
+              opacity: 1, 
+              duration: 0.3, 
+              ease: "power2.out",
+              onComplete: () => {
+                isAnimating = false;
+              }
+            }
+          );
+        }
+      });
+    });
+  });
+</script>

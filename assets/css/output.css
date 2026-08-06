@@ -1467,6 +1467,9 @@
     .md\:py-5 {
       padding-block: calc(var(--spacing) * 5);
     }
+    .md\:py-6 {
+      padding-block: calc(var(--spacing) * 6);
+    }
     .md\:py-8 {
       padding-block: calc(var(--spacing) * 8);
     }
