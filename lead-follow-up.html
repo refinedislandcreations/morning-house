@@ -1,18 +1,76 @@
 ---
 layout: product
 title: Lead Follow-Up
+hero:
+  background_image: /assets/images/morning-house-ai-automation-small-business.webp
+  headline: Never lose a lead again
+  body: "Morning House builds a two-part automation that answers every new lead within minutes and checks in again on day 3 if they've gone quiet, so no inquiry is ever lost to a slow reply."
+  button_text: BOOK A FREE 20 MINUTE CALL
+  button_link: "#contact"
+problem:
+  image: /assets/images/morning-house-ai-automation-small-business.webp
+  headline: "The lead you don't reply to fast enough is a lead you lose"
+  body: "Someone emails asking about pricing or availability at 2pm. You're mid-job, or asleep, or just busy. By the time you reply, they've already booked with whoever answered first.<br/><br/>You know you should follow up with leads who go quiet, but by the third day they've slipped off your radar completely, buried under new inquiries and the rest of your inbox.<br/><br/>There's no real system for it, just a mental note that doesn't survive a busy week. Some leads get chased, some don't, and there's no way to tell which is which."
+how_it_works_steps:
+  background_image: /assets/images/morning-house-ai-automation-small-business.webp
+  headline: "How does instant lead follow-up work?"
+  body: "Every new email is read by AI and checked against what counts as a lead for your business. A genuine lead gets a warm, personal-sounding reply within minutes; everything else is left alone."
+  steps:
+    - number: "01"
+      title: "Lead email arrives"
+      body: "Any time, day or night"
+    - number: "02"
+      title: "AI reads & acknowledges"
+      body: "Personalized reply within minutes, in your voice"
+    - number: "03"
+      title: "Logged automatically"
+      body: "Name, email, message, timestamp in a Google Sheet"
+    - number: "04"
+      title: "Day 3 check"
+      body: "Still quiet? A gentle follow-up sends itself, then it's marked done"
+what_changes:
+  headline: "What changes for you"
+  cards:
+    - title: "Never lost to a slow reply"
+      body: "Every lead gets a personal acknowledgment within minutes, even at 2am. The business that replies first usually wins the booking."
+      image: "/assets/images/morning-house-ai-automation-small-business.webp"
+    - title: "Nothing falls through"
+      body: "If a lead goes quiet, day 3 catches it automatically. Every lead is either booked, declined, or followed up, never just forgotten."
+      image: "/assets/images/morning-house-ai-automation-small-business.webp"
+    - title: "One sheet, full visibility"
+      body: "See every lead and its status at a glance. No CRM to learn, no new tool, just a sheet you already know how to read."
+      image: "/assets/images/morning-house-ai-automation-small-business.webp"
+costs:
+  headline: "What it costs"
+  body: "Setup <strong>$800–$1,200</strong> one-time, monthly retainer <strong>$300–$450</strong>. Live in 5 to 7 days. Price depends on lead volume and how the acknowledgment is trained on your tone. Full number before we start, always."
+  button_text: "BOOK A FREE 20-MINUTE CALL"
+  button_link: "#contact"
+  button_subtext: "Free &middot; 20 minutes &middot; no obligation"
+faq:
+  headline: "Questions about Lead Follow-Up"
+  background_image: "/assets/images/morning-house-ai-automation-small-business.webp"
+  items:
+    - question: "Will it reply to everyone who emails me?"
+      answer: "No, only messages that look like a genuine lead: pricing, availability, or booking questions. Spam and newsletters are left alone."
+    - question: "What if the acknowledgment doesn't sound like me?"
+      answer: "We train it on real examples of how you already reply, and you approve the tone before it goes live."
+    - question: "Will the lead know it's automated?"
+      answer: "The acknowledgment includes a short, natural disclosure that it's an automated first response, in line with EU AI Act transparency rules, since it goes out without you reviewing each one first."
+    - question: "Do I need a CRM?"
+      answer: "No. The Google Sheet is the CRM: simple, visible, no learning curve."
+    - question: "What happens after the day 3 follow-up?"
+      answer: "The lead is marked done and won't be chased a third time automatically. Want to reach out personally after that? The full history is right there in the sheet."
+final_services_cta:
+  headline: "Your next lead won't have to wait"
+  subhead: "We'll tell you in 20 minutes whether this fits your business."
+  button_text: "BOOK A FREE 20 MINUTE CALL"
+  button_link: "#contact"
 ---
 
-<section
-  class="pt-32 pb-20 px-6 md:px-10 xl:px-24 flex-grow flex items-center justify-center"
->
-  <div class="max-w-4xl mx-auto text-center">
-    <h1 class="font-title text-4xl md:text-6xl text-white mb-6">
-      Lead Follow-Up
-    </h1>
-    <p class="text-xl text-white/80 font-light">
-      Automated lead acknowledgment within minutes and intelligent follow-up
-      sequences.
-    </p>
-  </div>
-</section>
+{% include hero-section.html %}
+{% include cross_referral.html data=page.problem %}
+{% include how-it-works-steps.html %}
+{% include ai-automation-benefits.html data=page.what_changes %}
+{% include free-consultation-cta.html data=page.costs %}
+{% include faq.html data=page.faq %}
+{% include final-services-cta.html data=page.final_services_cta %}

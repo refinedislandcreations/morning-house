@@ -1,18 +1,76 @@
 ---
 layout: product
 title: Google Reviews
+hero:
+  background_image: /assets/images/morning-house-ai-automation-small-business.webp
+  headline: Your happy customers are leaving without leaving a review
+  body: "Morning House builds a two-part automation that asks every customer for a review the moment a job is done, and handles every review that comes in, so your Google rating reflects the work you actually do."
+  button_text: BOOK A FREE 20 MINUTE CALL
+  button_link: "#contact"
+problem:
+  image: /assets/images/morning-house-ai-automation-small-business.webp
+  headline: "You did the work. The review just never happened"
+  body: "You did the work, they were happy, they just forgot to review. The competitor who followed up got the star instead.<br/><br/>A bad review came in on a Friday. You saw it Monday. It sat there all weekend with no reply, which looks worse than the review itself.<br/><br/>You rely on Google for new customers, but you're too busy doing the work to manage your own rating."
+how_it_works_steps:
+  background_image: /assets/images/morning-house-ai-automation-small-business.webp
+  headline: "How does automatic review collection work?"
+  body: "A completed job triggers a request while the experience is still fresh, and every review that comes back gets read and answered automatically, never left ignored."
+  steps:
+    - number: "01"
+      title: "Job marked complete"
+      body: "A row added to a simple Google Sheet"
+    - number: "02"
+      title: "Review request sent"
+      body: "Personalized email within 60 seconds, direct review link included"
+    - number: "03"
+      title: "New review comes in"
+      body: "AI reads it automatically"
+    - number: "04"
+      title: "Response drafted"
+      body: "Thank-you or calm reply waiting in Gmail for your approval"
+what_changes:
+  headline: "What changes for you"
+  cards:
+    - title: "Every job asks for itself"
+      body: "A completed job automatically triggers a review request while the experience is still fresh. No one has to remember."
+      image: "/assets/images/morning-house-ai-automation-small-business.webp"
+    - title: "Every review gets answered"
+      body: "Positive reviews get a same-day thank-you. Negative ones get a calm, professional draft waiting for your approval before anything goes public."
+      image: "/assets/images/morning-house-ai-automation-small-business.webp"
+    - title: "Your rating reflects reality"
+      body: "Reviews build up consistently instead of sporadically, and new customers find the business you actually run."
+      image: "/assets/images/morning-house-ai-automation-small-business.webp"
+costs:
+  headline: "What it costs"
+  body: "Setup <strong>$600–$900</strong> one-time, monthly retainer <strong>$150–$250</strong>. Live in 5 to 7 days (Part 2 depends on your review monitoring setup). Full number before we start, always."
+  button_text: "BOOK A FREE 20-MINUTE CALL"
+  button_link: "#contact"
+  button_subtext: "Free &middot; 20 minutes &middot; no obligation"
+faq:
+  headline: "Questions about Google Reviews"
+  background_image: "/assets/images/morning-house-ai-automation-small-business.webp"
+  items:
+    - question: "What if a customer already left a review, do they get asked again?"
+      answer: "No, the workflow checks first."
+    - question: "Can I approve the response before it sends?"
+      answer: "Yes, negative reviews always come to you for approval first. Positive thank-yous can go out automatically or wait for your review, your choice."
+    - question: "Does this work for my industry?"
+      answer: "Any business where reputation matters: hotels, trades, clinics, cafés, tour operators, cleaning, fitness, and more."
+    - question: "What review platforms does this work for?"
+      answer: "Google is the primary platform; TripAdvisor and Trustpilot are possible with additional setup."
+    - question: "Is this GDPR-compliant?"
+      answer: "Yes, you're emailing your own customers, who you already have a relationship with, and we document exactly what data flows where. Review request emails include a short automated-message disclosure, in line with EU AI Act transparency rules."
+final_services_cta:
+  headline: "Your reputation, taken care of"
+  subhead: "We'll tell you in 20 minutes whether this fits your business."
+  button_text: "BOOK A FREE 20 MINUTE CALL"
+  button_link: "#contact"
 ---
 
-<section
-  class="pt-32 pb-20 px-6 md:px-10 xl:px-24 flex-grow flex items-center justify-center"
->
-  <div class="max-w-4xl mx-auto text-center">
-    <h1 class="font-title text-4xl md:text-6xl text-white mb-6">
-      Google Reviews
-    </h1>
-    <p class="text-xl text-white/80 font-light">
-      Automated review requests for happy customers and AI-drafted review
-      responses.
-    </p>
-  </div>
-</section>
+{% include hero-section.html %}
+{% include cross_referral.html data=page.problem %}
+{% include how-it-works-steps.html %}
+{% include ai-automation-benefits.html data=page.what_changes %}
+{% include free-consultation-cta.html data=page.costs %}
+{% include faq.html data=page.faq %}
+{% include final-services-cta.html data=page.final_services_cta %}
