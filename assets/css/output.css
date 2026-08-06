@@ -377,6 +377,9 @@
   .h-screen {
     height: 100vh;
   }
+  .min-h-\[28px\] {
+    min-height: 28px;
+  }
   .min-h-\[48px\] {
     min-height: 48px;
   }
@@ -1371,6 +1374,9 @@
     .md\:mt-auto {
       margin-top: auto;
     }
+    .md\:mb-2 {
+      margin-bottom: calc(var(--spacing) * 2);
+    }
     .md\:mb-3 {
       margin-bottom: calc(var(--spacing) * 3);
     }
@@ -1403,6 +1409,9 @@
     }
     .md\:h-20 {
       height: calc(var(--spacing) * 20);
+    }
+    .md\:min-h-\[32px\] {
+      min-height: 32px;
     }
     .md\:min-h-\[56px\] {
       min-height: 56px;

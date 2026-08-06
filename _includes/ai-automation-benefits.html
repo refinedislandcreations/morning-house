@@ -1,9 +1,9 @@
 {% assign data = include.data | default: page.ai_automation_benefits %}
 {% if page.title == 'Homepage' %}
-  {% assign title_min_h = "min-h-[64px] sm:min-h-[72px] lg:min-h-[80px]" %}
+  {% assign title_min_h = "min-h-[48px] md:min-h-[56px]" %}
   {% assign body_min_h = "min-h-[110px] sm:min-h-[120px] lg:min-h-[140px]" %}
 {% else %}
-  {% assign title_min_h = "min-h-[48px] md:min-h-[64px]" %}
+  {% assign title_min_h = "min-h-[28px] md:min-h-[32px]" %}
   {% assign body_min_h = "min-h-[72px] sm:min-h-[80px] lg:min-h-[96px]" %}
 {% endif %}
 
@@ -59,7 +59,7 @@
         ></div>
         
         <div class="relative z-10 text-white transform transition-transform duration-500 group-hover:-translate-y-2 w-full flex flex-col">
-          <div class="{{ title_min_h }} mb-2 md:mb-3">
+          <div class="{{ title_min_h }} mb-1 md:mb-2">
             <h3
               class="font-title text-base sm:text-lg md:text-xl font-bold leading-tight"
             >
