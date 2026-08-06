@@ -16,10 +16,18 @@
 
     <!-- Desktop Links -->
     <div class="hidden lg:flex items-center gap-8 xl:gap-12 relative z-[60]">
-      <a href="#solutions" class="nav-item group relative text-white/80 hover:text-white font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors py-2">
-        Solutions
-        <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
-      </a>
+      <div class="relative group">
+        <button class="nav-item group relative flex items-center gap-1 text-white/80 hover:text-white font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors py-2 cursor-pointer focus:outline-none">
+          Solutions
+          <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
+        </button>
+        <div class="absolute top-full left-0 mt-2 w-56 bg-[#7B6558]/95 backdrop-blur-xl rounded-xl shadow-xl shadow-black/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 overflow-hidden z-50">
+          <a href="{{ '/smart-inbox.html' | relative_url }}" class="block px-5 py-4 text-white/80 hover:text-white hover:bg-white/10 font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors">Smart Inbox</a>
+          <a href="{{ '/lead-follow-up.html' | relative_url }}" class="block px-5 py-4 text-white/80 hover:text-white hover:bg-white/10 font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors">Lead Follow-up</a>
+          <a href="{{ '/google-reviews.html' | relative_url }}" class="block px-5 py-4 text-white/80 hover:text-white hover:bg-white/10 font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors">Google Reviews</a>
+        </div>
+      </div>
       <a href="#pricing" class="nav-item group relative text-white/80 hover:text-white font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors py-2">
         Pricing
         <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
@@ -42,10 +50,18 @@
 
   <!-- Mobile Links Dropdown -->
   <div id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-screen bg-[#7B6558]/98 backdrop-blur-2xl flex-col items-center justify-center gap-10 hidden z-50">
-    <a href="#solutions" class="mobile-link group relative inline-block pb-1 text-white/90 hover:text-white font-body text-base uppercase tracking-[0.2em] transition-colors">
-      Solutions
-      <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
-    </a>
+    <div class="flex flex-col items-center w-full">
+      <button class="mobile-dropdown-btn mobile-link group relative flex items-center justify-center gap-2 pb-1 text-white/90 hover:text-white font-body text-base uppercase tracking-[0.2em] transition-colors focus:outline-none">
+        Solutions
+        <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
+      </button>
+      <div class="mobile-dropdown-menu hidden flex-col items-center gap-6 mt-6 w-full overflow-hidden">
+        <a href="{{ '/smart-inbox.html' | relative_url }}" class="mobile-sublink text-white/70 hover:text-white font-body text-sm uppercase tracking-[0.15em] transition-colors">Smart Inbox</a>
+        <a href="{{ '/lead-follow-up.html' | relative_url }}" class="mobile-sublink text-white/70 hover:text-white font-body text-sm uppercase tracking-[0.15em] transition-colors">Lead Follow-up</a>
+        <a href="{{ '/google-reviews.html' | relative_url }}" class="mobile-sublink text-white/70 hover:text-white font-body text-sm uppercase tracking-[0.15em] transition-colors">Google Reviews</a>
+      </div>
+    </div>
     <a href="#pricing" class="mobile-link group relative inline-block pb-1 text-white/90 hover:text-white font-body text-base uppercase tracking-[0.2em] transition-colors">
       Pricing
       <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
@@ -84,6 +100,12 @@
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileLinks = document.querySelectorAll('.mobile-link');
     let menuOpen = false;
+
+    // --- Mobile Accordion Variables ---
+    const mobileDropdownBtn = document.querySelector('.mobile-dropdown-btn');
+    const mobileDropdownMenu = document.querySelector('.mobile-dropdown-menu');
+    const mobileDropdownIcon = mobileDropdownBtn ? mobileDropdownBtn.querySelector('svg') : null;
+    let dropdownOpen = false;
 
     // --- Initial Load Animation ---
     gsap.from(".nav-logo, .nav-item, .nav-btn, .nav-btn-mobile", {
@@ -151,8 +173,8 @@
         gsap.to(".menu-icon-line-2", { opacity: 1, duration: 0.3 });
         gsap.to(".menu-icon-line-3", { rotation: 0, y: 0, duration: 0.3, ease: "power2.inOut" });
         
-        // Hide links simultaneously
-        gsap.to(mobileLinks, { 
+        // Hide links and sublinks simultaneously
+        gsap.to([mobileLinks, '.mobile-sublink'], { 
           y: -20, 
           opacity: 0, 
           duration: 0.3, 
@@ -172,13 +194,55 @@
               navbar.classList.add('bg-transparent', 'py-6', 'md:py-8');
               navbar.classList.remove('bg-[#7B6558]/95', 'backdrop-blur-xl', 'py-4', 'md:py-5', 'shadow-2xl', 'shadow-black/50');
             }
+            
+            // Reset dropdown state silently for next open
+            if (dropdownOpen) {
+              dropdownOpen = false;
+              if (mobileDropdownIcon) gsap.set(mobileDropdownIcon, { rotation: 0 });
+              if (mobileDropdownMenu) {
+                mobileDropdownMenu.classList.add('hidden');
+                mobileDropdownMenu.classList.remove('flex');
+                gsap.set(mobileDropdownMenu, { opacity: 0, height: 0 });
+              }
+            }
+            
+            // Reset sublinks position for next open
+            gsap.set('.mobile-sublink', { y: 0, opacity: 1 });
           }
         });
       }
     });
     
+    // --- Mobile Accordion ---
+    if (mobileDropdownBtn && mobileDropdownMenu) {
+      mobileDropdownBtn.addEventListener('click', () => {
+        dropdownOpen = !dropdownOpen;
+        if (dropdownOpen) {
+          gsap.to(mobileDropdownIcon, { rotation: 180, duration: 0.3 });
+          mobileDropdownMenu.classList.remove('hidden');
+          mobileDropdownMenu.classList.add('flex');
+          gsap.fromTo(mobileDropdownMenu, { opacity: 0, height: 0 }, { opacity: 1, height: 'auto', duration: 0.3 });
+        } else {
+          gsap.to(mobileDropdownIcon, { rotation: 0, duration: 0.3 });
+          gsap.to(mobileDropdownMenu, { opacity: 0, height: 0, duration: 0.3, onComplete: () => {
+            mobileDropdownMenu.classList.add('hidden');
+            mobileDropdownMenu.classList.remove('flex');
+          }});
+        }
+      });
+    }
+    
     // Auto-close mobile menu when a link is clicked
     mobileLinks.forEach(link => {
+      if (!link.classList.contains('mobile-dropdown-btn')) {
+        link.addEventListener('click', () => {
+          if(menuOpen) mobileMenuBtn.click();
+        });
+      }
+    });
+
+    const mobileSublinks = document.querySelectorAll('.mobile-sublink');
+    mobileSublinks.forEach(link => {
       link.addEventListener('click', () => {
         if(menuOpen) mobileMenuBtn.click();
       });
