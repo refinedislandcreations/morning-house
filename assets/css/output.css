@@ -49,6 +49,7 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --tracking-tight: -0.025em;
     --tracking-wide: 0.025em;
     --tracking-widest: 0.1em;
     --leading-tight: 1.25;
@@ -602,6 +603,9 @@
   .bg-\[\#f6f4f0\] {
     background-color: #f6f4f0;
   }
+  .bg-\[\#f6f4f0\]\/90 {
+    background-color: color-mix(in oklab, #f6f4f0 90%, transparent);
+  }
   .bg-black\/20 {
     background-color: color-mix(in srgb, #000 20%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -779,6 +783,9 @@
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
+  .py-12 {
+    padding-block: calc(var(--spacing) * 12);
+  }
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
   }
@@ -914,6 +921,10 @@
   .tracking-\[0\.15em\] {
     --tw-tracking: 0.15em;
     letter-spacing: 0.15em;
+  }
+  .tracking-tight {
+    --tw-tracking: var(--tracking-tight);
+    letter-spacing: var(--tracking-tight);
   }
   .tracking-wide {
     --tw-tracking: var(--tracking-wide);
@@ -1400,6 +1411,9 @@
     .md\:py-12 {
       padding-block: calc(var(--spacing) * 12);
     }
+    .md\:py-20 {
+      padding-block: calc(var(--spacing) * 20);
+    }
     .md\:py-24 {
       padding-block: calc(var(--spacing) * 24);
     }
@@ -1548,6 +1562,10 @@
     .lg\:text-5xl {
       font-size: var(--text-5xl);
       line-height: var(--tw-leading, var(--text-5xl--line-height));
+    }
+    .lg\:text-6xl {
+      font-size: var(--text-6xl);
+      line-height: var(--tw-leading, var(--text-6xl--line-height));
     }
     .lg\:text-lg {
       font-size: var(--text-lg);
