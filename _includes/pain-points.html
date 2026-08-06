@@ -29,19 +29,21 @@
         {% if data.cards %} {% for card in data.cards %}
         <!-- Card -->
         <div
-          class="bg-white/10 backdrop-blur-xl border border-white/20 p-8 md:p-10 text-white shadow-2xl transition-transform hover:-translate-y-1"
+          class="bg-white/10 backdrop-blur-xl border border-white/20 p-8 md:p-10 text-white shadow-2xl transition-transform hover:-translate-y-1 h-full flex flex-col"
         >
           <svg
-            class="w-6 h-6 mb-6 opacity-90"
+            class="w-6 h-6 mb-6 opacity-90 flex-shrink-0"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
             {{ card.icon }}
           </svg>
-          <h3 class="font-title text-base sm:text-lg md:text-xl mb-4 font-bold">
-            {{ card.title }}
-          </h3>
+          <div class="min-h-[48px] md:min-h-[64px] mb-4">
+            <h3 class="font-title text-base sm:text-lg md:text-xl font-bold">
+              {{ card.title }}
+            </h3>
+          </div>
           <p
             class="font-body text-[11px] sm:text-xs md:text-sm leading-relaxed opacity-90 font-light"
           >
