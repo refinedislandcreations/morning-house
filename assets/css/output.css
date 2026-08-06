@@ -1404,6 +1404,9 @@
     .md\:h-20 {
       height: calc(var(--spacing) * 20);
     }
+    .md\:min-h-\[56px\] {
+      min-height: 56px;
+    }
     .md\:min-h-\[64px\] {
       min-height: 64px;
     }
