@@ -1,6 +1,7 @@
+{% assign data = include.data | default: page.hero %}
 <section
   class="relative w-full min-h-[100dvh] flex flex-col bg-gray-900 bg-cover bg-[70%_center] md:bg-[80%_center] bg-no-repeat"
-  style="background-image: url('{{ page.hero.background_image | relative_url }}');"
+  style="background-image: url('{{ data.background_image | relative_url }}');"
 >
   <!-- Gradient Overlay for readability on smaller screens and better contrast -->
   <div
@@ -10,30 +11,36 @@
   <div
     class="relative z-10 flex-grow flex flex-col justify-center content-wrapper pb-16 pt-28 md:pt-32"
   >
+    {% if data.headline %}
     <h1
       class="text-white font-title text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[1.1] mb-6 md:mb-8 max-w-sm md:max-w-lg lg:max-w-xl"
     >
-      {{ page.hero.headline }}
+      {{ data.headline }}
     </h1>
-
+    {% endif %} {% if data.body %}
     <p
       class="text-white/90 font-body text-[11px] sm:text-xs md:text-sm max-w-sm sm:max-w-md md:max-w-xl mb-10 md:mb-12 leading-relaxed font-light"
     >
-      {{ page.hero.body }}
+      {{ data.body }}
     </p>
-
+    {% endif %} {% if data.button_text %}
     <div class="mb-4 mt-2">
       <a
-        href="{{ page.hero.button_link }}"
+        href="{{ data.button_link }}"
         class="relative inline-flex items-center justify-center bg-brand-orange text-white font-body font-bold px-8 md:px-10 py-4 md:py-5 rounded-xl shadow-xl shadow-brand-orange/20 overflow-hidden group hover:shadow-brand-orange/40 transition-all transform hover:-translate-y-1 tracking-widest text-[11px] md:text-xs w-full sm:w-fit"
       >
-        <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></span>
-        <span class="relative">{{ page.hero.button_text }}</span>
+        <span
+          class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"
+        ></span>
+        <span class="relative">{{ data.button_text }}</span>
       </a>
     </div>
-
-    <p class="text-white/70 font-body text-[10px] md:text-[11px] max-w-xs sm:max-w-full">
-      {{ page.hero.button_subtext }}
+    {% endif %} {% if data.button_subtext %}
+    <p
+      class="text-white/70 font-body text-[10px] md:text-[11px] max-w-xs sm:max-w-full"
+    >
+      {{ data.button_subtext }}
     </p>
+    {% endif %}
   </div>
 </section>

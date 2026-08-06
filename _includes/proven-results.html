@@ -1,44 +1,69 @@
+{% assign data = include.data | default: page.proven_results %}
 <section class="section w-full bg-[#f6f4f0]" id="measured">
   <!-- Top Text Area -->
   <div class="mb-6 md:mb-10 content-wrapper text-center">
-    <p class="font-body text-[#5a4a42] text-[11px] sm:text-xs md:text-sm mb-4 tracking-wide font-light">
-      {{ page.proven_results.kicker }}
+    {% if data.kicker %}
+    <p
+      class="font-body text-[#5a4a42] text-[11px] sm:text-xs md:text-sm mb-4 tracking-wide font-light"
+    >
+      {{ data.kicker }}
     </p>
-    <h2 class="font-title text-[#4a3628] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
-      {{ page.proven_results.headline }}
+    {% endif %} {% if data.headline %}
+    <h2
+      class="font-title text-[#4a3628] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight"
+    >
+      {{ data.headline }}
     </h2>
+    {% endif %}
   </div>
 
   <!-- Background Image Area -->
-  <div class="section relative w-full min-h-[500px] flex items-center justify-center bg-cover bg-center" style="background-image: url('{{ page.proven_results.background_image | relative_url }}');">
+  <div
+    class="section relative w-full min-h-[500px] flex items-center justify-center bg-cover bg-center"
+    style="background-image: url('{{ data.background_image | relative_url }}');"
+  >
     <!-- Subtle overlay for text readability -->
     <div class="absolute inset-0 bg-black/30"></div>
 
     <div class="relative z-10 content-wrapper">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+      >
         <!-- Left Column: Quote -->
         <div class="w-full">
-          <h3 class="font-title text-white text-xl sm:text-2xl md:text-3xl font-bold leading-[1.3] mb-6">
-            {{ page.proven_results.quote }}
+          {% if data.quote %}
+          <h3
+            class="font-title text-white text-xl sm:text-2xl md:text-3xl font-bold leading-[1.3] mb-6"
+          >
+            {{ data.quote }}
           </h3>
-          <p class="font-body text-white/90 text-xs md:text-sm leading-relaxed font-light max-w-md">
-            {{ page.proven_results.body }}
+          {% endif %} {% if data.body %}
+          <p
+            class="font-body text-white/90 text-xs md:text-sm leading-relaxed font-light max-w-md"
+          >
+            {{ data.body }}
           </p>
+          {% endif %}
         </div>
 
         <!-- Right Column: Stats (Single Box) -->
         <div class="w-full flex justify-center lg:justify-end">
-          <div class="w-full max-w-lg bg-white/10 backdrop-blur-xl border border-white/20 p-10 md:p-14 text-center text-white shadow-2xl">
-            <p class="font-title text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-              {{ page.proven_results.stat_number }}
+          <div
+            class="w-full max-w-lg bg-white/10 backdrop-blur-xl border border-white/20 p-10 md:p-14 text-center text-white shadow-2xl"
+          >
+            {% if data.stat_number %}
+            <p
+              class="font-title text-3xl sm:text-4xl lg:text-5xl font-bold mb-4"
+            >
+              {{ data.stat_number }}
             </p>
+            {% endif %} {% if data.stat_label %}
             <p class="font-body text-xs md:text-sm font-light opacity-90">
-              {{ page.proven_results.stat_label }}
+              {{ data.stat_label }}
             </p>
+            {% endif %}
           </div>
         </div>
-
       </div>
     </div>
   </div>

@@ -1,34 +1,49 @@
-<section class="section relative w-full bg-cover bg-center" style="background-image: url('{{ page.our_automation_process.background_image | relative_url }}');">
+{% assign data = include.data | default: page.our_automation_process %}
+<section
+  class="section relative w-full bg-cover bg-center"
+  style="background-image: url('{{ data.background_image | relative_url }}');"
+>
   <!-- Subtle dark overlay to ensure white text readability -->
   <div class="absolute inset-0 bg-black/30"></div>
 
   <div class="relative z-10 content-wrapper">
-    
     <!-- Header -->
     <div class="mb-12 md:mb-16 max-w-3xl">
-      <p class="font-body text-white/90 text-[11px] sm:text-xs md:text-sm mb-4 tracking-wide font-light">
-        {{ page.our_automation_process.kicker }}
+      {% if data.kicker %}
+      <p
+        class="font-body text-white/90 text-[11px] sm:text-xs md:text-sm mb-4 tracking-wide font-light"
+      >
+        {{ data.kicker }}
       </p>
-      <h2 class="font-title text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
-        {{ page.our_automation_process.headline }}
+      {% endif %} {% if data.headline %}
+      <h2
+        class="font-title text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight"
+      >
+        {{ data.headline }}
       </h2>
+      {% endif %}
     </div>
 
     <!-- Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-      
-      {% for step in page.our_automation_process.steps %}
+      {% if data.steps %} {% for step in data.steps %}
       <!-- Card -->
-      <div class="bg-white/10 backdrop-blur-xl border border-white/20 p-8 md:p-10 text-white shadow-2xl transition-transform hover:-translate-y-1 flex flex-col h-full">
-        <span class="font-title text-xl sm:text-2xl md:text-3xl font-bold mb-2">{{ step.number }}</span>
-        <h3 class="font-title text-base sm:text-lg md:text-xl mb-6 font-bold">{{ step.title }}</h3>
-        <p class="font-body text-[11px] sm:text-xs md:text-sm leading-relaxed opacity-90 font-light mt-auto">
+      <div
+        class="bg-white/10 backdrop-blur-xl border border-white/20 p-8 md:p-10 text-white shadow-2xl transition-transform hover:-translate-y-1 flex flex-col h-full"
+      >
+        <span class="font-title text-xl sm:text-2xl md:text-3xl font-bold mb-2"
+          >{{ step.number }}</span
+        >
+        <h3 class="font-title text-base sm:text-lg md:text-xl mb-6 font-bold">
+          {{ step.title }}
+        </h3>
+        <p
+          class="font-body text-[11px] sm:text-xs md:text-sm leading-relaxed opacity-90 font-light mt-auto"
+        >
           {{ step.body }}
         </p>
       </div>
-      {% endfor %}
-
+      {% endfor %} {% endif %}
     </div>
-
   </div>
 </section>

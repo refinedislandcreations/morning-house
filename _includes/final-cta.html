@@ -1,25 +1,42 @@
+{% assign data = include.data | default: page.final_cta %}
 <section class="section w-full bg-[#f6f4f0]" id="final-cta">
   <div class="content-wrapper">
-    <div class="w-full bg-[#4a3628] rounded-3xl p-10 md:p-16 lg:p-20 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
-      
+    <div
+      class="w-full bg-[#4a3628] rounded-3xl p-10 md:p-16 lg:p-20 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16"
+    >
       <!-- Left Content -->
       <div class="w-full lg:w-3/5 text-center lg:text-left">
-        <h2 class="font-title text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
-          {{ page.final_cta.headline }}
+        {% if data.headline %}
+        <h2
+          class="font-title text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 leading-tight"
+        >
+          {{ data.headline }}
         </h2>
-        <p class="font-body text-white/90 text-xs md:text-sm leading-relaxed font-light">
-          {{ page.final_cta.subhead }}
+        {% endif %} {% if data.subhead %}
+        <p
+          class="font-body text-white/90 text-xs md:text-sm leading-relaxed font-light"
+        >
+          {{ data.subhead }}
         </p>
+        {% endif %}
       </div>
 
       <!-- Right Content -->
       <div class="w-full lg:w-auto flex flex-col items-center flex-shrink-0">
-        <a href="{{ page.final_cta.button_link }}" class="relative inline-flex items-center justify-center bg-brand-orange text-white font-body font-bold px-8 py-4 md:px-10 md:py-5 rounded-xl shadow-xl shadow-brand-orange/20 overflow-hidden group hover:shadow-brand-orange/40 transition-all transform hover:-translate-y-1 tracking-widest text-[10px] sm:text-[11px] uppercase w-full md:w-auto text-center">
-          <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></span>
-          <span class="relative">{{ page.final_cta.button_text }}</span>
+        {% if data.button_text %}
+        <a
+          href="{{ data.button_link }}"
+          class="relative inline-flex items-center justify-center bg-brand-orange text-white font-body font-bold px-8 py-4 md:px-10 md:py-5 rounded-xl shadow-xl shadow-brand-orange/20 overflow-hidden group hover:shadow-brand-orange/40 transition-all transform hover:-translate-y-1 tracking-widest text-[10px] sm:text-[11px] uppercase w-full md:w-auto text-center"
+        >
+          <span
+            class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"
+          ></span>
+          {% if data.button_text %}
+          <span class="relative">{{ data.button_text }}</span>
+          {% endif %}
         </a>
+        {% endif %}
       </div>
-
     </div>
   </div>
 </section>

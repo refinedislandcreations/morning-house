@@ -1,81 +1,223 @@
-<nav id="navbar" class="w-full relative transition-all duration-500 bg-transparent py-6 md:py-8">
+<nav
+  id="navbar"
+  class="w-full relative transition-all duration-500 bg-transparent py-6 md:py-8"
+>
   <div class="content-wrapper flex justify-between items-center">
     <!-- Logo -->
     <a href="/" class="nav-logo z-[60] flex items-center">
-      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Morning House" width="877" height="400" class="h-10 md:h-12 lg:h-14 w-auto" />
+      <img
+        src="{{ '/assets/images/logo.svg' | relative_url }}"
+        alt="Morning House"
+        width="877"
+        height="400"
+        class="h-10 md:h-12 lg:h-14 w-auto"
+      />
     </a>
 
     <!-- Mobile Menu Toggle -->
-    <button id="mobile-menu-btn" class="nav-btn-mobile lg:hidden text-white focus:outline-none hover:text-white transition-colors relative z-[60] cursor-pointer" aria-label="Toggle menu">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path class="menu-icon-line-1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16"></path>
-        <path class="menu-icon-line-2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 12h16"></path>
-        <path class="menu-icon-line-3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 17h16"></path>
+    <button
+      id="mobile-menu-btn"
+      class="nav-btn-mobile lg:hidden text-white focus:outline-none hover:text-white transition-colors relative z-[60] cursor-pointer"
+      aria-label="Toggle menu"
+    >
+      <svg
+        class="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          class="menu-icon-line-1"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="M4 7h16"
+        ></path>
+        <path
+          class="menu-icon-line-2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="M4 12h16"
+        ></path>
+        <path
+          class="menu-icon-line-3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="M4 17h16"
+        ></path>
       </svg>
     </button>
 
     <!-- Desktop Links -->
     <div class="hidden lg:flex items-center gap-8 xl:gap-12 relative z-[60]">
       <div class="relative group">
-        <button class="nav-item group relative flex items-center gap-1 text-white/80 hover:text-white font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors py-2 cursor-pointer focus:outline-none">
+        <button
+          class="nav-item group relative flex items-center gap-1 text-white/80 hover:text-white font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors py-2 cursor-pointer focus:outline-none"
+        >
           Solutions
-          <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
+          <svg
+            class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+          <span
+            class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"
+          ></span>
         </button>
-        <div class="absolute top-full left-0 mt-2 w-56 bg-[#7B6558]/95 backdrop-blur-xl rounded-xl shadow-xl shadow-black/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 overflow-hidden z-50">
-          <a href="{{ '/smart-inbox.html' | relative_url }}" class="block px-5 py-4 text-white/80 hover:text-white hover:bg-white/10 font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors">Smart Inbox</a>
-          <a href="{{ '/lead-follow-up.html' | relative_url }}" class="block px-5 py-4 text-white/80 hover:text-white hover:bg-white/10 font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors">Lead Follow-up</a>
-          <a href="{{ '/google-reviews.html' | relative_url }}" class="block px-5 py-4 text-white/80 hover:text-white hover:bg-white/10 font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors">Google Reviews</a>
+        <div
+          class="absolute top-full left-0 mt-2 w-56 bg-[#7B6558]/95 backdrop-blur-xl rounded-xl shadow-xl shadow-black/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 overflow-hidden z-50"
+        >
+          <a
+            href="{{ '/smart-inbox.html' | relative_url }}"
+            class="block px-5 py-4 text-white/80 hover:text-white hover:bg-white/10 font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors"
+            >Smart Inbox</a
+          >
+          <a
+            href="{{ '/lead-follow-up.html' | relative_url }}"
+            class="block px-5 py-4 text-white/80 hover:text-white hover:bg-white/10 font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors"
+            >Lead Follow-up</a
+          >
+          <a
+            href="{{ '/google-reviews.html' | relative_url }}"
+            class="block px-5 py-4 text-white/80 hover:text-white hover:bg-white/10 font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors"
+            >Google Reviews</a
+          >
         </div>
       </div>
-      <a href="#pricing" class="nav-item group relative text-white/80 hover:text-white font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors py-2">
+      <a
+        href="#pricing"
+        class="nav-item group relative text-white/80 hover:text-white font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors py-2"
+      >
         Pricing
-        <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
+        <span
+          class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"
+        ></span>
       </a>
-      <a href="#about" class="nav-item group relative text-white/80 hover:text-white font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors py-2">
+      <a
+        href="#about"
+        class="nav-item group relative text-white/80 hover:text-white font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors py-2"
+      >
         About
-        <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
+        <span
+          class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"
+        ></span>
       </a>
-      <a href="#faq" class="nav-item group relative text-white/80 hover:text-white font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors py-2">
+      <a
+        href="#faq"
+        class="nav-item group relative text-white/80 hover:text-white font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors py-2"
+      >
         FAQ
-        <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
+        <span
+          class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"
+        ></span>
       </a>
-      
-      <a href="#contact" class="nav-btn relative inline-flex items-center justify-center rounded-xl px-8 py-3.5 font-body font-semibold text-white bg-brand-orange shadow-lg shadow-brand-orange/20 overflow-hidden group ml-2 hover:shadow-brand-orange/40 hover:-translate-y-0.5">
-        <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></span>
-        <span class="relative text-[10px] lg:text-[12px] tracking-widest uppercase">Book a free call</span>
+
+      <a
+        href="#contact"
+        class="nav-btn relative inline-flex items-center justify-center rounded-xl px-8 py-3.5 font-body font-semibold text-white bg-brand-orange shadow-lg shadow-brand-orange/20 overflow-hidden group ml-2 hover:shadow-brand-orange/40 hover:-translate-y-0.5"
+      >
+        <span
+          class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"
+        ></span>
+        <span
+          class="relative text-[10px] lg:text-[12px] tracking-widest uppercase"
+          >Book a free call</span
+        >
       </a>
     </div>
   </div>
 
   <!-- Mobile Links Dropdown -->
-  <div id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-screen bg-[#7B6558]/98 backdrop-blur-2xl flex-col items-center justify-center gap-10 hidden z-50">
+  <div
+    id="mobile-menu"
+    class="lg:hidden fixed top-0 left-0 w-full h-screen bg-[#7B6558]/98 backdrop-blur-2xl flex-col items-center justify-center gap-10 hidden z-50"
+  >
     <div class="flex flex-col items-center w-full">
-      <button class="mobile-dropdown-btn mobile-link group relative flex items-center justify-center gap-2 pb-1 text-white/90 hover:text-white font-body text-base uppercase tracking-[0.2em] transition-colors focus:outline-none">
+      <button
+        class="mobile-dropdown-btn mobile-link group relative flex items-center justify-center gap-2 pb-1 text-white/90 hover:text-white font-body text-base uppercase tracking-[0.2em] transition-colors focus:outline-none"
+      >
         Solutions
-        <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-        <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
+        <svg
+          class="w-4 h-4 transition-transform duration-300"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"
+          ></path>
+        </svg>
+        <span
+          class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"
+        ></span>
       </button>
-      <div class="mobile-dropdown-menu hidden flex-col items-center gap-6 mt-6 w-full overflow-hidden">
-        <a href="{{ '/smart-inbox.html' | relative_url }}" class="mobile-sublink text-white/70 hover:text-white font-body text-sm uppercase tracking-[0.15em] transition-colors">Smart Inbox</a>
-        <a href="{{ '/lead-follow-up.html' | relative_url }}" class="mobile-sublink text-white/70 hover:text-white font-body text-sm uppercase tracking-[0.15em] transition-colors">Lead Follow-up</a>
-        <a href="{{ '/google-reviews.html' | relative_url }}" class="mobile-sublink text-white/70 hover:text-white font-body text-sm uppercase tracking-[0.15em] transition-colors">Google Reviews</a>
+      <div
+        class="mobile-dropdown-menu hidden flex-col items-center gap-6 mt-6 w-full overflow-hidden"
+      >
+        <a
+          href="{{ '/smart-inbox.html' | relative_url }}"
+          class="mobile-sublink text-white/70 hover:text-white font-body text-sm uppercase tracking-[0.15em] transition-colors"
+          >Smart Inbox</a
+        >
+        <a
+          href="{{ '/lead-follow-up.html' | relative_url }}"
+          class="mobile-sublink text-white/70 hover:text-white font-body text-sm uppercase tracking-[0.15em] transition-colors"
+          >Lead Follow-up</a
+        >
+        <a
+          href="{{ '/google-reviews.html' | relative_url }}"
+          class="mobile-sublink text-white/70 hover:text-white font-body text-sm uppercase tracking-[0.15em] transition-colors"
+          >Google Reviews</a
+        >
       </div>
     </div>
-    <a href="#pricing" class="mobile-link group relative inline-block pb-1 text-white/90 hover:text-white font-body text-base uppercase tracking-[0.2em] transition-colors">
+    <a
+      href="#pricing"
+      class="mobile-link group relative inline-block pb-1 text-white/90 hover:text-white font-body text-base uppercase tracking-[0.2em] transition-colors"
+    >
       Pricing
-      <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
+      <span
+        class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"
+      ></span>
     </a>
-    <a href="#about" class="mobile-link group relative inline-block pb-1 text-white/90 hover:text-white font-body text-base uppercase tracking-[0.2em] transition-colors">
+    <a
+      href="#about"
+      class="mobile-link group relative inline-block pb-1 text-white/90 hover:text-white font-body text-base uppercase tracking-[0.2em] transition-colors"
+    >
       About
-      <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
+      <span
+        class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"
+      ></span>
     </a>
-    <a href="#faq" class="mobile-link group relative inline-block pb-1 text-white/90 hover:text-white font-body text-base uppercase tracking-[0.2em] transition-colors">
+    <a
+      href="#faq"
+      class="mobile-link group relative inline-block pb-1 text-white/90 hover:text-white font-body text-base uppercase tracking-[0.2em] transition-colors"
+    >
       FAQ
-      <span class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
+      <span
+        class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"
+      ></span>
     </a>
-    <a href="#contact" class="mobile-link relative overflow-hidden group bg-brand-orange text-white font-body font-bold px-10 py-5 rounded-xl shadow-xl shadow-brand-orange/20 mt-6 active:scale-95 text-[11px] uppercase tracking-[0.2em] w-4/5 text-center">
-      <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></span>
+    <a
+      href="#contact"
+      class="mobile-link relative overflow-hidden group bg-brand-orange text-white font-body font-bold px-10 py-5 rounded-xl shadow-xl shadow-brand-orange/20 mt-6 active:scale-95 text-[11px] uppercase tracking-[0.2em] w-4/5 text-center"
+    >
+      <span
+        class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"
+      ></span>
       <span class="relative">Book a free call</span>
     </a>
   </div>
@@ -83,28 +225,32 @@
 
 <style>
   @keyframes shimmer {
-    100% { transform: translateX(100%); }
+    100% {
+      transform: translateX(100%);
+    }
   }
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     // Check if GSAP is loaded
-    if (typeof gsap === 'undefined') {
-      console.warn('GSAP is not loaded. Animations will be disabled.');
+    if (typeof gsap === "undefined") {
+      console.warn("GSAP is not loaded. Animations will be disabled.");
       return;
     }
 
-    const navbar = document.getElementById('navbar');
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
+    const navbar = document.getElementById("navbar");
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
     let menuOpen = false;
 
     // --- Mobile Accordion Variables ---
-    const mobileDropdownBtn = document.querySelector('.mobile-dropdown-btn');
-    const mobileDropdownMenu = document.querySelector('.mobile-dropdown-menu');
-    const mobileDropdownIcon = mobileDropdownBtn ? mobileDropdownBtn.querySelector('svg') : null;
+    const mobileDropdownBtn = document.querySelector(".mobile-dropdown-btn");
+    const mobileDropdownMenu = document.querySelector(".mobile-dropdown-menu");
+    const mobileDropdownIcon = mobileDropdownBtn
+      ? mobileDropdownBtn.querySelector("svg")
+      : null;
     let dropdownOpen = false;
 
     // --- Initial Load Animation ---
@@ -116,135 +262,192 @@
       delay: 0.2,
       clearProps: "all",
       onComplete: () => {
-        document.querySelector('.nav-btn').classList.add('transition-all');
-      }
+        document.querySelector(".nav-btn").classList.add("transition-all");
+      },
     });
 
     // --- Scroll Effect ---
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       if (window.scrollY > 30) {
-        navbar.classList.remove('bg-transparent', 'py-6', 'md:py-8');
-        navbar.classList.add('bg-[#7B6558]/95', 'backdrop-blur-xl', 'py-4', 'md:py-5', 'shadow-2xl', 'shadow-black/50');
+        navbar.classList.remove("bg-transparent", "py-6", "md:py-8");
+        navbar.classList.add(
+          "bg-[#7B6558]/95",
+          "backdrop-blur-xl",
+          "py-4",
+          "md:py-5",
+          "shadow-2xl",
+          "shadow-black/50",
+        );
       } else {
-        if (!menuOpen) { // Keep the state if menu is open
-          navbar.classList.add('bg-transparent', 'py-6', 'md:py-8');
-          navbar.classList.remove('bg-[#7B6558]/95', 'backdrop-blur-xl', 'py-4', 'md:py-5', 'shadow-2xl', 'shadow-black/50');
+        if (!menuOpen) {
+          // Keep the state if menu is open
+          navbar.classList.add("bg-transparent", "py-6", "md:py-8");
+          navbar.classList.remove(
+            "bg-[#7B6558]/95",
+            "backdrop-blur-xl",
+            "py-4",
+            "md:py-5",
+            "shadow-2xl",
+            "shadow-black/50",
+          );
         }
       }
     });
 
     // --- Mobile Menu Toggle Animation ---
     // Prepare mobile menu state
-    gsap.set(mobileMenu, { display: "none", opacity: 0, clipPath: "circle(0% at 100% 0%)" });
+    gsap.set(mobileMenu, {
+      display: "none",
+      opacity: 0,
+      clipPath: "circle(0% at 100% 0%)",
+    });
     gsap.set(mobileLinks, { y: 30, opacity: 0 });
 
-    mobileMenuBtn.addEventListener('click', () => {
+    mobileMenuBtn.addEventListener("click", () => {
       if (!menuOpen) {
         // Open Mobile Menu
         menuOpen = true;
         // Transform hamburger to X morphing
-        gsap.to(".menu-icon-line-1", { rotation: 45, y: 5, transformOrigin: "50% 50%", duration: 0.3, ease: "power2.inOut" });
+        gsap.to(".menu-icon-line-1", {
+          rotation: 45,
+          y: 5,
+          transformOrigin: "50% 50%",
+          duration: 0.3,
+          ease: "power2.inOut",
+        });
         gsap.to(".menu-icon-line-2", { opacity: 0, duration: 0.3 });
-        gsap.to(".menu-icon-line-3", { rotation: -45, y: -5, transformOrigin: "50% 50%", duration: 0.3, ease: "power2.inOut" });
-        
+        gsap.to(".menu-icon-line-3", {
+          rotation: -45,
+          y: -5,
+          transformOrigin: "50% 50%",
+          duration: 0.3,
+          ease: "power2.inOut",
+        });
+
         // Show menu via circular clip-path reveal
-        gsap.to(mobileMenu, { 
-          display: "flex", 
-          opacity: 1, 
-          clipPath: "circle(150% at 100% 0%)", 
-          duration: 0.6, 
-          ease: "power3.inOut" 
+        gsap.to(mobileMenu, {
+          display: "flex",
+          opacity: 1,
+          clipPath: "circle(150% at 100% 0%)",
+          duration: 0.6,
+          ease: "power3.inOut",
         });
-        
+
         // Show links simultaneously
-        gsap.to(mobileLinks, { 
-          y: 0, 
-          opacity: 1, 
-          duration: 0.5, 
-          ease: "back.out(1.2)", 
-          delay: 0.3 
+        gsap.to(mobileLinks, {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: "back.out(1.2)",
+          delay: 0.3,
         });
-        
       } else {
         // Close Mobile Menu
         menuOpen = false;
         // Transform X back to hamburger
-        gsap.to(".menu-icon-line-1", { rotation: 0, y: 0, duration: 0.3, ease: "power2.inOut" });
-        gsap.to(".menu-icon-line-2", { opacity: 1, duration: 0.3 });
-        gsap.to(".menu-icon-line-3", { rotation: 0, y: 0, duration: 0.3, ease: "power2.inOut" });
-        
-        // Hide links and sublinks simultaneously
-        gsap.to([mobileLinks, '.mobile-sublink'], { 
-          y: -20, 
-          opacity: 0, 
-          duration: 0.3, 
-          ease: "power2.in" 
+        gsap.to(".menu-icon-line-1", {
+          rotation: 0,
+          y: 0,
+          duration: 0.3,
+          ease: "power2.inOut",
         });
-        
+        gsap.to(".menu-icon-line-2", { opacity: 1, duration: 0.3 });
+        gsap.to(".menu-icon-line-3", {
+          rotation: 0,
+          y: 0,
+          duration: 0.3,
+          ease: "power2.inOut",
+        });
+
+        // Hide links and sublinks simultaneously
+        gsap.to([mobileLinks, ".mobile-sublink"], {
+          y: -20,
+          opacity: 0,
+          duration: 0.3,
+          ease: "power2.in",
+        });
+
         // Hide menu
-        gsap.to(mobileMenu, { 
-          clipPath: "circle(0% at 100% 0%)", 
-          opacity: 0, 
-          duration: 0.5, 
-          ease: "power3.inOut", 
+        gsap.to(mobileMenu, {
+          clipPath: "circle(0% at 100% 0%)",
+          opacity: 0,
+          duration: 0.5,
+          ease: "power3.inOut",
           delay: 0.2,
           onComplete: () => {
             gsap.set(mobileMenu, { display: "none" });
             if (window.scrollY <= 30) {
-              navbar.classList.add('bg-transparent', 'py-6', 'md:py-8');
-              navbar.classList.remove('bg-[#7B6558]/95', 'backdrop-blur-xl', 'py-4', 'md:py-5', 'shadow-2xl', 'shadow-black/50');
+              navbar.classList.add("bg-transparent", "py-6", "md:py-8");
+              navbar.classList.remove(
+                "bg-[#7B6558]/95",
+                "backdrop-blur-xl",
+                "py-4",
+                "md:py-5",
+                "shadow-2xl",
+                "shadow-black/50",
+              );
             }
-            
+
             // Reset dropdown state silently for next open
             if (dropdownOpen) {
               dropdownOpen = false;
-              if (mobileDropdownIcon) gsap.set(mobileDropdownIcon, { rotation: 0 });
+              if (mobileDropdownIcon)
+                gsap.set(mobileDropdownIcon, { rotation: 0 });
               if (mobileDropdownMenu) {
-                mobileDropdownMenu.classList.add('hidden');
-                mobileDropdownMenu.classList.remove('flex');
+                mobileDropdownMenu.classList.add("hidden");
+                mobileDropdownMenu.classList.remove("flex");
                 gsap.set(mobileDropdownMenu, { opacity: 0, height: 0 });
               }
             }
-            
+
             // Reset sublinks position for next open
-            gsap.set('.mobile-sublink', { y: 0, opacity: 1 });
-          }
-        });
-      }
-    });
-    
-    // --- Mobile Accordion ---
-    if (mobileDropdownBtn && mobileDropdownMenu) {
-      mobileDropdownBtn.addEventListener('click', () => {
-        dropdownOpen = !dropdownOpen;
-        if (dropdownOpen) {
-          gsap.to(mobileDropdownIcon, { rotation: 180, duration: 0.3 });
-          mobileDropdownMenu.classList.remove('hidden');
-          mobileDropdownMenu.classList.add('flex');
-          gsap.fromTo(mobileDropdownMenu, { opacity: 0, height: 0 }, { opacity: 1, height: 'auto', duration: 0.3 });
-        } else {
-          gsap.to(mobileDropdownIcon, { rotation: 0, duration: 0.3 });
-          gsap.to(mobileDropdownMenu, { opacity: 0, height: 0, duration: 0.3, onComplete: () => {
-            mobileDropdownMenu.classList.add('hidden');
-            mobileDropdownMenu.classList.remove('flex');
-          }});
-        }
-      });
-    }
-    
-    // Auto-close mobile menu when a link is clicked
-    mobileLinks.forEach(link => {
-      if (!link.classList.contains('mobile-dropdown-btn')) {
-        link.addEventListener('click', () => {
-          if(menuOpen) mobileMenuBtn.click();
+            gsap.set(".mobile-sublink", { y: 0, opacity: 1 });
+          },
         });
       }
     });
 
-    const mobileSublinks = document.querySelectorAll('.mobile-sublink');
-    mobileSublinks.forEach(link => {
-      link.addEventListener('click', () => {
-        if(menuOpen) mobileMenuBtn.click();
+    // --- Mobile Accordion ---
+    if (mobileDropdownBtn && mobileDropdownMenu) {
+      mobileDropdownBtn.addEventListener("click", () => {
+        dropdownOpen = !dropdownOpen;
+        if (dropdownOpen) {
+          gsap.to(mobileDropdownIcon, { rotation: 180, duration: 0.3 });
+          mobileDropdownMenu.classList.remove("hidden");
+          mobileDropdownMenu.classList.add("flex");
+          gsap.fromTo(
+            mobileDropdownMenu,
+            { opacity: 0, height: 0 },
+            { opacity: 1, height: "auto", duration: 0.3 },
+          );
+        } else {
+          gsap.to(mobileDropdownIcon, { rotation: 0, duration: 0.3 });
+          gsap.to(mobileDropdownMenu, {
+            opacity: 0,
+            height: 0,
+            duration: 0.3,
+            onComplete: () => {
+              mobileDropdownMenu.classList.add("hidden");
+              mobileDropdownMenu.classList.remove("flex");
+            },
+          });
+        }
+      });
+    }
+
+    // Auto-close mobile menu when a link is clicked
+    mobileLinks.forEach((link) => {
+      if (!link.classList.contains("mobile-dropdown-btn")) {
+        link.addEventListener("click", () => {
+          if (menuOpen) mobileMenuBtn.click();
+        });
+      }
+    });
+
+    const mobileSublinks = document.querySelectorAll(".mobile-sublink");
+    mobileSublinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (menuOpen) mobileMenuBtn.click();
       });
     });
   });

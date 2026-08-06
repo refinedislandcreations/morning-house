@@ -2,34 +2,59 @@
 layout: default
 title: Coming Soon
 ---
-<div class="relative min-h-screen bg-gray-900 bg-cover bg-[80%_center] bg-no-repeat" style='background-image: url("{{ "/assets/images/morning-house-ai-automation-small-business.webp" | relative_url }}");'>
+
+<div
+  class="relative min-h-screen bg-gray-900 bg-cover bg-[80%_center] bg-no-repeat"
+  style='background-image: url("{{ "/assets/images/morning-house-ai-automation-small-business.webp" | relative_url }}");'
+>
   <!-- Gradient Overlay for readability on smaller screens and better contrast -->
-  <div class="absolute inset-0 bg-black/40 md:bg-black/30 xl:bg-transparent xl:bg-gradient-to-r xl:from-black/60 xl:via-black/20 xl:to-transparent"></div>
-  
+  <div
+    class="absolute inset-0 bg-black/40 md:bg-black/30 xl:bg-transparent xl:bg-gradient-to-r xl:from-black/60 xl:via-black/20 xl:to-transparent"
+  ></div>
+
   <div class="relative z-10 flex flex-col min-h-screen">
     <!-- Header / Logo -->
     <header class="p-6 md:p-10 xl:p-12">
-      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Morning House" width="877" height="400" class="h-10 w-auto md:h-12 xl:h-14" />
+      <img
+        src="{{ '/assets/images/logo.svg' | relative_url }}"
+        alt="Morning House"
+        width="877"
+        height="400"
+        class="h-10 w-auto md:h-12 xl:h-14"
+      />
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow flex flex-col justify-center px-6 md:px-10 xl:px-24 max-w-4xl pb-16">
-      <span class="text-white font-body text-[11px] md:text-xs xl:text-sm mb-3">Coming Soon.</span>
-      
-      <h1 class="text-white font-title text-2xl md:text-4xl xl:text-5xl leading-tight mb-6">
-        Give us the work you dread.<br> It'll be done by morning.
+    <main
+      class="flex-grow flex flex-col justify-center px-6 md:px-10 xl:px-24 max-w-4xl pb-16"
+    >
+      <span class="text-white font-body text-[11px] md:text-xs xl:text-sm mb-3"
+        >Coming Soon.</span
+      >
+
+      <h1
+        class="text-white font-title text-2xl md:text-4xl xl:text-5xl leading-tight mb-6"
+      >
+        Give us the work you dread.<br />
+        It'll be done by morning.
       </h1>
-      
-      <p class="text-white/90 font-body text-xs md:text-sm xl:text-base max-w-md md:max-w-lg mb-10 leading-relaxed font-light">
-        We're building AI automations for small businesses: inboxes sorted, leads followed up within minutes, reviews requested and answered while you sleep. We're putting the finishing touches on it now.
+
+      <p
+        class="text-white/90 font-body text-xs md:text-sm xl:text-base max-w-md md:max-w-lg mb-10 leading-relaxed font-light"
+      >
+        We're building AI automations for small businesses: inboxes sorted,
+        leads followed up within minutes, reviews requested and answered while
+        you sleep. We're putting the finishing touches on it now.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 w-full sm:max-w-xl mb-4">
-        <a 
+        <a
           href="https://www.instagram.com/morninghouse.ai"
-          target="_blank" 
+          target="_blank"
           class="relative inline-flex items-center justify-center w-full sm:w-auto rounded-xl px-6 sm:px-10 py-4 font-body font-semibold text-white bg-brand-orange shadow-lg shadow-brand-orange/20 overflow-hidden group hover:shadow-brand-orange/40 hover:-translate-y-0.5 transition-all text-[11px] sm:text-sm tracking-widest uppercase whitespace-nowrap"
         >
-          <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></span>
+          <span
+            class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"
+          ></span>
           <span class="relative">FOLLOW OUR PROGRESS</span>
         </a>
       </div>
@@ -37,23 +62,36 @@ title: Coming Soon
 
     <style>
       @keyframes shimmer {
-        100% { transform: translateX(100%); }
+        100% {
+          transform: translateX(100%);
+        }
       }
     </style>
 
     <!-- Footer -->
-    <footer class="px-6 pb-6 md:px-10 xl:px-24 grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+    <footer
+      class="px-6 pb-6 md:px-10 xl:px-24 grid grid-cols-1 md:grid-cols-3 gap-4 items-center"
+    >
       <div class="flex justify-center md:justify-start order-1 md:order-none">
-        <a href="{{ '/privacy.html' | relative_url }}" class="text-gray-300 hover:text-white font-body text-[11px] md:text-xs transition hover:underline underline-offset-2">Privacy Policy</a>
+        <a
+          href="{{ '/privacy.html' | relative_url }}"
+          class="text-gray-300 hover:text-white font-body text-[11px] md:text-xs transition hover:underline underline-offset-2"
+          >Privacy Policy</a
+        >
       </div>
       <div class="text-center order-2 md:order-none">
         <p class="text-gray-300 font-body text-[11px] md:text-xs">
-          Designed and built by <a href="https://refinedislandcreations.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition hover:underline underline-offset-2">Refined Island Creations</a>.
+          Designed and built by
+          <a
+            href="https://refinedislandcreations.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-white transition hover:underline underline-offset-2"
+            >Refined Island Creations</a
+          >.
         </p>
       </div>
       <div class="hidden md:block"></div>
     </footer>
   </div>
-
-
 </div>
