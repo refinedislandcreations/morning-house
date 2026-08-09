@@ -78,26 +78,5 @@
       {% endfor %} {% endif %}
     </div>
 
-    <!-- Bottom CTA -->
-    <div class="mt-16 md:mt-24 text-center">
-      {% if data.bottom_cta_headline %}
-      <h2
-        class="font-title text-[#4a3628] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4"
-      >
-        {{ data.bottom_cta_headline }}
-      </h2>
-      {% endif %} {% if data.bottom_cta_link_text %}
-      <a
-        href="{{ data.bottom_cta_link }}"
-        class="inline-block font-title text-brand-orange hover:text-[#8f4222] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold transition-colors group"
-      >
-        {{ data.bottom_cta_link_text }}
-        <span
-          class="inline-block transition-transform group-hover:translate-x-2"
-          >&rarr;</span
-        >
-      </a>
-      {% endif %}
-    </div>
   </div>
 </section>

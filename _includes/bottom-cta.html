@@ -1,0 +1,25 @@
+{% assign data = include.data | default: page.bottom_cta %}
+<section class="w-full bg-[#f6f4f0] pb-16 md:pb-24">
+  <div class="content-wrapper">
+    <div class="text-center">
+      {% if data.headline %}
+      <h2
+        class="font-title text-[#4a3628] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4"
+      >
+        {{ data.headline }}
+      </h2>
+      {% endif %} {% if data.link_text %}
+      <a
+        href="{{ data.link }}"
+        class="inline-block font-title text-brand-orange hover:text-[#8f4222] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold transition-colors group"
+      >
+        {{ data.link_text }}
+        <span
+          class="inline-block transition-transform group-hover:translate-x-2"
+          >&rarr;</span
+        >
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
