@@ -1007,6 +1007,9 @@
   .opacity-0 {
     opacity: 0%;
   }
+  .opacity-20 {
+    opacity: 20%;
+  }
   .opacity-70 {
     opacity: 70%;
   }
@@ -1015,6 +1018,9 @@
   }
   .opacity-90 {
     opacity: 90%;
+  }
+  .mix-blend-overlay {
+    mix-blend-mode: overlay;
   }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
@@ -1536,6 +1542,9 @@
     }
     .lg\:min-h-\[600px\] {
       min-height: 600px;
+    }
+    .lg\:w-1\/2 {
+      width: calc(1 / 2 * 100%);
     }
     .lg\:w-3\/5 {
       width: calc(3 / 5 * 100%);

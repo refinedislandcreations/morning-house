@@ -1,0 +1,31 @@
+{% assign data = include.data | default: page.price_factors %}
+<section class="section w-full bg-[#f6f4f0]">
+  <div class="content-wrapper">
+    <div
+      class="w-full bg-[#7B6558] rounded-3xl p-10 md:p-16 lg:p-20 shadow-xl flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 relative overflow-hidden"
+    >
+
+      <!-- Left Content -->
+      <div class="w-full lg:w-1/2 text-center lg:text-left relative z-10">
+        {% if data.headline %}
+        <h2
+          class="font-title text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight"
+        >
+          {{ data.headline }}
+        </h2>
+        {% endif %}
+      </div>
+
+      <!-- Right Content -->
+      <div class="w-full lg:w-1/2 text-center lg:text-left relative z-10">
+        {% if data.body %}
+        <p
+          class="font-body text-white/90 text-xs md:text-sm leading-relaxed font-light"
+        >
+          {{ data.body }}
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
