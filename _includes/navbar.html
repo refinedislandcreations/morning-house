@@ -54,10 +54,12 @@
     <div class="hidden lg:flex items-center gap-8 xl:gap-12 relative z-[60]">
       <div class="relative group">
         <button
+          id="desktop-dropdown-btn"
           class="nav-item group relative flex items-center gap-1 text-white/80 hover:text-white font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors py-2 cursor-pointer focus:outline-none"
         >
           Solutions
           <svg
+            id="desktop-dropdown-icon"
             class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180"
             fill="none"
             stroke="currentColor"
@@ -75,6 +77,7 @@
           ></span>
         </button>
         <div
+          id="desktop-dropdown-menu"
           class="absolute top-full left-0 mt-2 w-56 bg-[#7B6558]/95 backdrop-blur-xl rounded-xl shadow-xl shadow-black/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 overflow-hidden z-50"
         >
           <a
@@ -112,15 +115,7 @@
           class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"
         ></span>
       </a>
-      <a
-        href="{{ '/faq.html' | relative_url }}"
-        class="nav-item group relative text-white/80 hover:text-white font-body text-[10px] lg:text-[12px] uppercase tracking-[0.15em] transition-colors py-2"
-      >
-        FAQ
-        <span
-          class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"
-        ></span>
-      </a>
+
 
       <a
         href="{{ '/contact.html' | relative_url }}"
@@ -202,15 +197,7 @@
         class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"
       ></span>
     </a>
-    <a
-      href="{{ '/faq.html' | relative_url }}"
-      class="mobile-link group relative inline-block pb-1 text-white/90 hover:text-white font-body text-base uppercase tracking-[0.2em] transition-colors"
-    >
-      FAQ
-      <span
-        class="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full opacity-70"
-      ></span>
-    </a>
+
     <a
       href="{{ '/contact.html' | relative_url }}"
       class="mobile-link relative overflow-hidden group bg-brand-orange text-white font-body font-bold px-10 py-5 rounded-xl shadow-xl shadow-brand-orange/20 mt-6 active:scale-95 text-[11px] uppercase tracking-[0.2em] w-4/5 text-center"
@@ -431,6 +418,35 @@
               mobileDropdownMenu.classList.remove("flex");
             },
           });
+        }
+      });
+    }
+
+    // --- Desktop Dropdown Click Toggle ---
+    const desktopDropdownBtn = document.getElementById("desktop-dropdown-btn");
+    const desktopDropdownMenu = document.getElementById("desktop-dropdown-menu");
+    const desktopDropdownIcon = document.getElementById("desktop-dropdown-icon");
+    let desktopDropdownOpen = false;
+
+    if (desktopDropdownBtn && desktopDropdownMenu) {
+      desktopDropdownBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        desktopDropdownOpen = !desktopDropdownOpen;
+        if (desktopDropdownOpen) {
+          desktopDropdownMenu.classList.add("!opacity-100", "!visible", "!translate-y-0");
+          if (desktopDropdownIcon) desktopDropdownIcon.classList.add("!rotate-180");
+        } else {
+          desktopDropdownMenu.classList.remove("!opacity-100", "!visible", "!translate-y-0");
+          if (desktopDropdownIcon) desktopDropdownIcon.classList.remove("!rotate-180");
+        }
+      });
+
+      // Close when clicking outside
+      document.addEventListener("click", (e) => {
+        if (desktopDropdownOpen && !desktopDropdownBtn.contains(e.target) && !desktopDropdownMenu.contains(e.target)) {
+          desktopDropdownOpen = false;
+          desktopDropdownMenu.classList.remove("!opacity-100", "!visible", "!translate-y-0");
+          if (desktopDropdownIcon) desktopDropdownIcon.classList.remove("!rotate-180");
         }
       });
     }
