@@ -34,7 +34,7 @@
       {% if data.items %} {% for item in data.items %}
       <!-- Card -->
       <div
-        class="relative w-full min-h-[500px] md:min-h-[560px] overflow-hidden rounded-sm bg-cover bg-[center] flex flex-col p-6 md:p-8"
+        class="relative w-full min-h-[500px] md:min-h-[560px] overflow-hidden bg-cover bg-[center] flex flex-col p-6 md:p-8"
         style="background-image: url('{{ item.image | relative_url }}');"
       >
         <!-- Overlay -->
@@ -47,7 +47,7 @@
             </h3>
           </div>
           
-          <div class="w-full bg-white/10 backdrop-blur-md p-6 md:p-8 rounded-sm shadow-sm border border-white/20">
+          <div class="w-full bg-white/10 backdrop-blur-md p-6 md:p-8 shadow-sm border border-white/20">
             <div class="mb-5 md:mb-6 min-h-[32px] sm:min-h-[40px] flex flex-col justify-start">
               <div class="font-title text-white text-lg sm:text-xl md:text-2xl font-bold leading-none tracking-wide">{{ item.price }}</div>
             </div>

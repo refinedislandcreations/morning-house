@@ -48,10 +48,9 @@
     <!-- Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
       {% if data.cards %} {% for card in data.cards %}
-      <!-- Card -->
       <a
         href="{{ card.link }}"
-        class="group relative w-full min-h-[380px] sm:min-h-[420px] lg:min-h-[480px] h-full overflow-hidden rounded-sm bg-cover bg-[center] flex flex-col justify-end p-6 md:p-8"
+        class="group relative w-full min-h-[380px] sm:min-h-[420px] lg:min-h-[480px] h-full overflow-hidden bg-cover bg-[center] flex flex-col justify-end p-6 md:p-8"
         style="background-image: url('{{ card.image | relative_url }}');"
       >
         <div
