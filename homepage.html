@@ -118,8 +118,39 @@ final_cta:
   button_link: "#contact"
 ---
 
-{% include hero-section.html %} {% include pain-points.html %} {% include
-ai-automation-benefits.html %} {% include bottom-cta.html %} {% include free-consultation-cta.html %} {%
-include our-automation-process.html %} {% include founder-story.html %} {%
-include proven-results.html %} {% include pricing-overview.html %} {% include
-faq.html %} {% include cross_referral.html %} {% include final-cta.html %}
+
+{% include hero-section.html %}
+<div class="no-pb">
+{% include pain-points.html %}
+</div>
+
+{% include ai-automation-benefits.html %}
+
+<div class="no-pt">
+{% include bottom-cta.html %}
+</div>
+<div class="no-pt">
+  {% include free-consultation-cta.html %}
+</div>
+
+{% include our-automation-process.html %}
+
+<div class="no-pb">
+{% include founder-story.html %}
+</div>
+<div class="no-pb">
+{% include proven-results.html %}
+</div>
+<div class="no-pb">
+{% include pricing-overview.html %}
+</div>
+
+{% include faq.html %}
+
+<div class="no-pt">
+{% include cross_referral.html %}
+</div>
+<div class="no-pt">
+  {% include final-cta.html %}
+</div>
+

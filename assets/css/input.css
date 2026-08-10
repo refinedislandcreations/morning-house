@@ -22,8 +22,22 @@
 
 /* Fix subpixel background gaps between adjacent sections on resize */
 section ~ section,
-section ~ footer {
+section ~ footer,
+.no-pb ~ .no-pb,
+.no-pb ~ footer {
   margin-top: -1px;
+}
+
+/* Modifier to remove bottom padding from sections */
+.section.no-pb,
+.no-pb .section {
+  padding-bottom: 1px !important;
+}
+
+/* Modifier to remove top padding from sections */
+.section.no-pt,
+.no-pt .section {
+  padding-top: 1px !important;
 }
 
 @media (max-width: 1024px) {
