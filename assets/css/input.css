@@ -20,6 +20,12 @@
   padding-block: var(--spacing-section-desktop);
 }
 
+/* Fix subpixel background gaps between adjacent sections on resize */
+section ~ section,
+section ~ footer {
+  margin-top: -1px;
+}
+
 @media (max-width: 1024px) {
   .section {
     padding-block: var(--spacing-section-tablet);
