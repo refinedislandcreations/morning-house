@@ -299,9 +299,6 @@
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
-  .mt-16 {
-    margin-top: calc(var(--spacing) * 16);
-  }
   .mb-1 {
     margin-bottom: var(--spacing);
   }
@@ -807,9 +804,6 @@
   }
   .p-10 {
     padding: calc(var(--spacing) * 10);
-  }
-  .p-12 {
-    padding: calc(var(--spacing) * 12);
   }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
@@ -1392,9 +1386,6 @@
     .md\:mt-16 {
       margin-top: calc(var(--spacing) * 16);
     }
-    .md\:mt-24 {
-      margin-top: calc(var(--spacing) * 24);
-    }
     .md\:mb-2 {
       margin-bottom: calc(var(--spacing) * 2);
     }
@@ -1553,9 +1544,6 @@
     }
     .md\:pb-16 {
       padding-bottom: calc(var(--spacing) * 16);
-    }
-    .md\:pb-24 {
-      padding-bottom: calc(var(--spacing) * 24);
     }
     .md\:pb-32 {
       padding-bottom: calc(var(--spacing) * 32);
@@ -1798,8 +1786,8 @@
 .section {
   padding-block: var(--spacing-section-desktop);
 }
-section ~ section, section ~ footer, .no-pb ~ .no-pb, .no-pb ~ footer {
-  margin-top: -1px;
+main > * + *, main + footer {
+  margin-top: -2px;
 }
 .section.no-pb, .no-pb .section {
   padding-bottom: 1px !important;

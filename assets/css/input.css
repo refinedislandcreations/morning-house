@@ -21,11 +21,9 @@
 }
 
 /* Fix subpixel background gaps between adjacent sections on resize */
-section ~ section,
-section ~ footer,
-.no-pb ~ .no-pb,
-.no-pb ~ footer {
-  margin-top: -1px;
+main > * + *,
+main + footer {
+  margin-top: -2px;
 }
 
 /* Modifier to remove bottom padding from sections */
