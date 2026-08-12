@@ -1,5 +1,5 @@
 {% assign data = include.data | default: page.bundles %}
-<section class="section w-full bg-[#f6f4f0]">
+<section class="section w-full bg-[#F0EDE7]">
   <div class="content-wrapper">
     <!-- Header Area -->
     <div
@@ -8,7 +8,7 @@
       <div class="max-w-2xl">
         {% if data.headline %}
         <h2
-          class="font-title text-[#4a3628] text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight font-bold"
+          class="font-title text-[#402518] text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight font-bold"
         >
           {{ data.headline }}
         </h2>
@@ -18,7 +18,7 @@
         {% if data.button_text %}
         <a
           href="{{ data.button_link }}"
-          class="relative inline-flex items-center justify-center bg-brand-orange text-white font-body font-bold px-8 py-4 md:px-10 md:py-5 rounded-xl shadow-xl shadow-brand-orange/20 overflow-hidden group hover:shadow-brand-orange/40 transition-all transform hover:-translate-y-1 tracking-widest text-[10px] sm:text-[11px] uppercase w-full md:w-auto text-center"
+          class="relative inline-flex items-center justify-center bg-brand-orange text-[#FFFFFF] font-body font-bold px-8 py-4 md:px-10 md:py-5 rounded-xl shadow-xl shadow-brand-orange/20 overflow-hidden group hover:shadow-brand-orange/40 transition-all transform hover:-translate-y-1 tracking-widest text-[10px] sm:text-[11px] uppercase w-full md:w-auto text-center"
         >
           <span
             class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"
@@ -42,19 +42,19 @@
         
         <div class="relative z-10 h-full flex flex-col justify-end">
           <div class="min-h-[48px] sm:min-h-[56px] flex flex-col justify-end mb-3">
-            <h3 class="font-title text-white text-base sm:text-lg md:text-xl font-bold leading-tight">
+            <h3 class="font-title text-[#FFFFFF] text-base sm:text-lg md:text-xl font-bold leading-tight">
               {{ item.title }}
             </h3>
           </div>
           
-          <div class="w-full bg-white/10 backdrop-blur-md p-6 md:p-8 shadow-sm border border-white/20">
+          <div class="w-full bg-[#FFFFFF]/10 backdrop-blur-md p-6 md:p-8 shadow-sm border border-[#FFFFFF]/20">
             <div class="mb-5 md:mb-6 min-h-[32px] sm:min-h-[40px] flex flex-col justify-start">
-              <div class="font-title text-white text-lg sm:text-xl md:text-2xl font-bold leading-none tracking-wide">{{ item.price }}</div>
+              <div class="font-title text-[#FFFFFF] text-lg sm:text-xl md:text-2xl font-bold leading-none tracking-wide">{{ item.price }}</div>
             </div>
             
             <div class="flex flex-col">
-              <div class="border-t border-white/30 pt-4 min-h-[120px] md:min-h-[140px] flex items-start">
-                <div class="font-body text-white text-[11px] sm:text-xs md:text-sm font-light leading-relaxed">
+              <div class="border-t border-[#FFFFFF]/30 pt-4 min-h-[120px] md:min-h-[140px] flex items-start">
+                <div class="font-body text-[#FFFFFF] text-[11px] sm:text-xs md:text-sm font-light leading-relaxed">
                   {{ item.description }}
                 </div>
               </div>

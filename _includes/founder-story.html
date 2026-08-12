@@ -1,5 +1,5 @@
 {% assign data = include.data | default: page.founder_story %}
-<section class="section w-full bg-[#f6f4f0]" id="about">
+<section class="section w-full bg-[#F0EDE7]" id="about">
   <div class="content-wrapper">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       <!-- Left Image -->
@@ -13,27 +13,27 @@
       <div class="flex flex-col justify-center max-w-2xl mx-auto lg:mx-0">
         {% if data.kicker %}
         <p
-          class="font-body text-[#5a4a42] text-[11px] sm:text-xs md:text-sm mb-6 tracking-wide font-light"
+          class="font-body text-[#402518] text-[11px] sm:text-xs md:text-sm mb-6 tracking-wide font-light"
         >
           {{ data.kicker }}
         </p>
         {% endif %} {% if data.quote %}
         <h2
-          class="font-title text-[#4a3628] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 leading-[1.2]"
+          class="font-title text-[#402518] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 leading-[1.2]"
         >
           {{ data.quote }}
         </h2>
         {% endif %} {% if data.body %}
         <p
-          class="font-body text-[#5a4a42] text-[11px] sm:text-xs md:text-sm leading-relaxed mb-10 font-light"
+          class="font-body text-[#402518] text-[11px] sm:text-xs md:text-sm leading-relaxed mb-10 font-light"
         >
           {{ data.body }}
         </p>
         {% endif %}
         <div>
-          <p class="font-body text-[#4a3628] font-bold text-xs md:text-sm">
+          <p class="font-body text-[#402518] font-bold text-xs md:text-sm">
             {{ data.name }} {% if data.title %}
-            <span class="font-light text-[#5a4a42]">{{ data.title }}</span>
+            <span class="font-light text-[#402518]">{{ data.title }}</span>
             {% endif %}
           </p>
         </div>
