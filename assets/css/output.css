@@ -614,9 +614,6 @@
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
-  .rounded-sm {
-    border-radius: var(--radius-sm);
-  }
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
@@ -630,9 +627,6 @@
   }
   .border-\[\#4a3628\] {
     border-color: #4a3628;
-  }
-  .border-\[\#FFFFFF\] {
-    border-color: #FFFFFF;
   }
   .border-\[\#FFFFFF\]\/5 {
     border-color: color-mix(in oklab, #FFFFFF 5%, transparent);
@@ -687,12 +681,6 @@
   }
   .bg-\[\#eff0f3\] {
     background-color: #eff0f3;
-  }
-  .bg-\[\#f6f4f0\] {
-    background-color: #f6f4f0;
-  }
-  .bg-\[\#f6f4f0\]\/90 {
-    background-color: color-mix(in oklab, #f6f4f0 90%, transparent);
   }
   .bg-black {
     background-color: var(--color-black);
@@ -830,9 +818,6 @@
   }
   .bg-\[80\%_center\] {
     background-position: 80% center;
-  }
-  .bg-\[center\] {
-    background-position: center;
   }
   .bg-center {
     background-position: center;
@@ -1050,12 +1035,6 @@
   }
   .whitespace-nowrap {
     white-space: nowrap;
-  }
-  .text-\[\#4a3628\] {
-    color: #4a3628;
-  }
-  .text-\[\#5a4a42\] {
-    color: #5a4a42;
   }
   .text-\[\#402518\] {
     color: #402518;
@@ -1328,17 +1307,11 @@
     .hover\:bg-\[\#8f4222\]:hover {
       background-color: #8f4222;
     }
-    .hover\:bg-\[\#FFFFFF\]:hover {
-      background-color: #FFFFFF;
-    }
     .hover\:bg-\[\#FFFFFF\]\/10:hover {
       background-color: color-mix(in oklab, #FFFFFF 10%, transparent);
     }
     .hover\:bg-\[\#FFFFFF\]\/20:hover {
       background-color: color-mix(in oklab, #FFFFFF 20%, transparent);
-    }
-    .hover\:bg-white:hover {
-      background-color: var(--color-white);
     }
     .hover\:bg-white\/10:hover {
       background-color: color-mix(in srgb, #FFFFFF 10%, transparent);
@@ -1356,12 +1329,6 @@
     }
     .hover\:text-\[\#FFFFFF\]:hover {
       color: #FFFFFF;
-    }
-    .hover\:text-\[\#f6f4f0\]:hover {
-      color: #f6f4f0;
-    }
-    .hover\:text-white:hover {
-      color: var(--color-white);
     }
     .hover\:underline:hover {
       text-decoration-line: underline;
