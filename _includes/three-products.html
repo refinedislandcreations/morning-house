@@ -31,14 +31,16 @@
 
     <!-- Cards Grid -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
-      {% if data.products %} {% for product in data.products %}
+      {% if data.products %}
+      {% assign shared_image = data.image | default: data.products[0].image %}
+      {% for product in data.products %}
       <!-- Card -->
       <div
-        class="relative w-full min-h-[500px] md:min-h-[560px] overflow-hidden bg-cover bg-[center] flex flex-col p-6 md:p-8"
-        style="background-image: url('{{ product.image | relative_url }}');"
+        class="relative w-full min-h-[500px] md:min-h-[560px] overflow-hidden flex flex-col p-6 md:p-8"
       >
+        <img src="{{ shared_image | relative_url }}" alt="" class="absolute top-0 h-full object-cover z-0 pointer-events-none" style="width: 300%; max-width: 300%; left: calc(-100% * {{ forloop.index0 }});" />
         <!-- Overlay -->
-        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="absolute inset-0 bg-black/10 z-0"></div>
         
         <div class="relative z-10 h-full flex flex-col justify-end">
           <div class="min-h-[48px] sm:min-h-[56px] flex flex-col justify-end mb-3">

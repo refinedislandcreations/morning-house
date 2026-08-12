@@ -47,14 +47,16 @@
 
     <!-- Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-      {% if data.cards %} {% for card in data.cards %}
+      {% if data.cards %}
+      {% assign shared_image = data.image | default: data.cards[0].image %}
+      {% for card in data.cards %}
       <a
         href="{{ card.link }}"
-        class="group relative w-full min-h-[380px] sm:min-h-[420px] lg:min-h-[480px] h-full overflow-hidden bg-cover bg-[center] flex flex-col justify-end p-6 md:p-8"
-        style="background-image: url('{{ card.image | relative_url }}');"
+        class="group relative w-full min-h-[380px] sm:min-h-[420px] lg:min-h-[480px] h-full overflow-hidden flex flex-col justify-end p-6 md:p-8"
       >
+        <img src="{{ shared_image | relative_url }}" alt="" class="absolute top-0 h-full object-cover z-0 pointer-events-none" style="width: 300%; max-width: 300%; left: calc(-100% * {{ forloop.index0 }});" />
         <div
-          class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity group-hover:opacity-90"
+          class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity group-hover:opacity-90 z-0"
         ></div>
         
         <div class="relative z-10 text-[#FFFFFF] transform transition-transform duration-500 group-hover:-translate-y-2 w-full flex flex-col">

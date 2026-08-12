@@ -68,7 +68,7 @@
   <!-- Image Break Section -->
   <div
     class="relative w-full h-[60vh] min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex flex-col justify-end bg-cover bg-[70%_center] md:bg-[80%_center] bg-no-repeat"
-    style="background-image: url('{{ data.background_image | relative_url }}');"
+    style="background-image: url('{{ data.background_image_2 | default: data.background_image | relative_url }}');"
   >
     <!-- Subtle Gradient Overlay to ensure text readability -->
     <div
