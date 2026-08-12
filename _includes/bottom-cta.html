@@ -10,7 +10,7 @@
       </h2>
       {% endif %} {% if data.link_text %}
       <a
-        href="{{ data.link }}"
+        href="{{ data.link | default: '/booking.html' }}"
         class="inline-block font-title text-brand-orange hover:text-[#8f4222] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold transition-colors group"
       >
         {{ data.link_text }}
