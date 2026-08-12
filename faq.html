@@ -1,0 +1,64 @@
+---
+layout: product
+title: Frequently Asked Questions
+hero:
+  background_image: /assets/images/faq-hero.webp
+  kicker: Questions, answered plainly
+  headline: Frequently asked questions
+  body: "Everything you need to know about how Morning House works, what it costs, and how we handle your data. Can't find your answer? Book a free 20-minute call."
+  button_text: BOOK A FREE 20 MINUTE CALL
+  button_link: "/#contact"
+faq_cost_and_scope:
+  headline: Cost and scope
+  background_image: /assets/images/5.webp
+  items:
+    - question: What does AI automation cost for a small business?
+      answer: "Our three products run $600&ndash;$1,200 one-time to set up, with monthly retainers from $150 to $450 depending on the system. Bundle two products and save 15% on setup, all three and save 25%. You always get a fixed written quote before anything starts."
+    - question: Is my business too small for this?
+      answer: "Probably not. If you get more than a handful of emails or inquiries a day, there's usually one automation that pays for itself within months. If yours genuinely wouldn't, we'll tell you on the call."
+    - question: What can actually be automated?
+      answer: "The repetitive, rule-following work: sorting and drafting email, following up with leads, requesting reviews, moving data between tools, daily summaries, appointment reminders. The creative and personal work stays yours."
+    - question: Which product is right for me?
+      answer: "If email volume is your problem, Smart Inbox. If leads go cold before you reply, Lead Follow-Up. If your Google rating doesn't reflect the work you do, Google Reviews. Not sure, or think it might be all three? Book the free 20-minute AI Audit Call and we'll tell you honestly."
+faq_working_together:
+  headline: Working together
+  background_image: /assets/images/9.webp
+  items:
+    - question: How long does setup take?
+      answer: "Most systems go from first call to running in 2 to 3 weeks. Simple workflows can be live within days."
+    - question: Do I need to be technical?
+      answer: "No. We build everything and nothing changes in how you work day to day. You keep your normal inbox and tools; they just start working for you."
+    - question: What happens on the free call?
+      answer: "Twenty minutes: you describe how work flows through your business, we identify the one or two automations with the biggest payoff, and you get honest numbers. No pressure, no jargon, and no obligation."
+    - question: Do you work with businesses outside Indonesia?
+      answer: "Yes. Morning House is fully remote and works with clients worldwide, in English and German."
+faq_technology_and_data:
+  headline: Technology and data
+  background_image: /assets/images/7.webp
+  items:
+    - question: What tools do you build on?
+      answer: "Proven, widely used platforms (n8n for workflows, leading AI models for language) connected to the tools you already use: Gmail, Outlook, WhatsApp, your CRM. No experimental software in your business."
+    - question: What happens to my data? Is this GDPR-compliant?
+      answer: "Your data stays in your own accounts, and we document exactly what flows where before anything goes live. You get that documentation in writing, built with GDPR-conscious choices throughout, including a signed data processing agreement with our AI provider."
+    - question: Will my customers know they're talking to AI?
+      answer: "Where a message goes out automatically without a human reviewing it first, like an instant lead reply or a review request, we add a simple line disclosing it's automated, in line with EU AI Act transparency rules. Messages a human reviews and sends themselves don't need this."
+    - question: What if the AI makes a mistake?
+      answer: "The systems are designed so a human stays in control: drafts instead of auto-sends, labels instead of deletions, and monitoring on every workflow. Mistakes are rare, small, and fixed fast, usually before you notice."
+    - question: When will it be finished?
+      answer: "Already done. That's the point: by the time you're asking, the work happened overnight. (For new setups: 2 to 3 weeks from the first call.)"
+final_cta:
+  headline: Something we didn't answer?
+  subhead: Ask us directly.
+  button_text: BOOK A FREE 20 MINUTE CALL
+  button_link: "/#contact"
+---
+
+{% include hero-section.html %}
+
+
+{% include faq.html data=page.faq_cost_and_scope %}
+{% include faq.html data=page.faq_working_together %}
+{% include faq.html data=page.faq_technology_and_data %}
+<div class="no-pt">
+  {% include final-cta.html %}
+</div>

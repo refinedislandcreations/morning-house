@@ -63,6 +63,8 @@
       </div>
     </div>
   </div>
+{% unless faq_script_included %}
+{% assign faq_script_included = true %}
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     if (typeof gsap === "undefined") return;
@@ -70,6 +72,9 @@
     const faqItems = document.querySelectorAll(".faq-item");
     
     faqItems.forEach(item => {
+      if (item.dataset.bound) return;
+      item.dataset.bound = "true";
+
       const summary = item.querySelector(".faq-summary");
       const content = item.querySelector(".faq-content-wrapper");
       const icon = item.querySelector(".faq-icon");
@@ -125,4 +130,5 @@
     });
   });
 </script>
+{% endunless %}
 </section>
