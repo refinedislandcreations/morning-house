@@ -20,9 +20,16 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
       {% for post in insights %}
 
-      {% comment %} Select a pseudo-random image based on loop index to guarantee uniqueness {% endcomment %}
-      {% assign random_images = "/assets/images/hero.webp,/assets/images/about-hero.webp,/assets/images/pricing-hero.webp,/assets/images/faq-hero.webp,/assets/images/morning-house-ai-automation-method.webp,/assets/images/smart-inbox-hero.webp,/assets/images/lead-follow-up-hero.webp" | split: "," %}
-      {% assign rand_index = forloop.index0 | modulo: random_images.size %}
+      {% comment %} Deterministically select a pseudo-random image based on alphabetical URL sort {% endcomment %}
+      {% assign random_images = "/assets/images/ai-automation-benefits-for-small-business.webp,/assets/images/ai-automation-pricing-and-scope.webp,/assets/images/ai-automation-product-bundles.webp,/assets/images/booking-hero.webp,/assets/images/faq-hero.webp,/assets/images/morning-house-ai-automation-method.webp,/assets/images/morning-house-frequently-asked-questions.webp,/assets/images/overwhelmed-inbox-lead-follow-up.webp,/assets/images/proven-ai-automation-results-for-business.webp,/assets/images/small-business-admin-pain-points.webp,/assets/images/smart-inbox-ai-pricing.webp,/assets/images/smart-inbox-email-sorting-automation.webp" | split: "," %}
+      {% assign sorted_urls = site.insights | map: "url" | sort %}
+      {% assign post_index = 0 %}
+      {% for u in sorted_urls %}
+        {% if u == post.url %}
+          {% assign post_index = forloop.index0 %}
+        {% endif %}
+      {% endfor %}
+      {% assign rand_index = post_index | modulo: random_images.size %}
       {% assign post_image = random_images[rand_index] %}
 
       <a
