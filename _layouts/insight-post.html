@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+
+    <!-- Open Graph & Twitter Cards -->
+    <meta property="og:title" content="{{ page.title }} - {{ site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="{{ site.url }}{{ page.image | default: '/assets/images/hero.webp' }}">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/output.css' | relative_url }}">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- Article Structured Data -->
+    {% if page.schema %}
+    {{ page.schema }}
+    {% endif %}
+
+    <!-- GEO: Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Morning House",
+      "url": "https://morninghouse.ai",
+      "description": "Morning House builds AI automations for small businesses.",
+      "sameAs": ["https://instagram.com/morninghouse.ai"]
+    }
+    </script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.webp' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon/favicon-32x32.webp' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon/favicon-16x16.webp' | relative_url }}">
+    <link rel="manifest" href="{{ '/assets/favicon/site.webmanifest' | relative_url }}">
+    <link rel="shortcut icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
+
+    <style>
+      /* Insight post specific styles */
+      .insight-bg {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .insight-bg::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.35);
+      }
+      .insight-scroll-area {
+        position: relative;
+        z-index: 10;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        padding-top: 140px;
+        padding-bottom: 80px;
+      }
+      .insight-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        margin: 0 auto;
+        width: 100%;
+        color: #ffffff;
+      }
+      .insight-prose h1 {
+        font-family: 'DM Serif Display', serif;
+        font-size: clamp(1.75rem, 4vw, 2.75rem);
+        line-height: 1.1;
+        color: #ffffff;
+        margin-bottom: 1.25rem;
+      }
+      .insight-prose h2 {
+        font-family: 'DM Serif Display', serif;
+        font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+        color: #ffffff;
+        margin-top: 2.5rem;
+        margin-bottom: 0.875rem;
+        line-height: 1.2;
+      }
+      .insight-prose p {
+        font-family: 'Raleway', sans-serif;
+        font-size: 11px;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 1.25rem;
+        font-weight: 300;
+      }
+      .insight-prose strong {
+        font-weight: 600;
+        color: #ffffff;
+      }
+      .insight-prose ul, .insight-prose ol {
+        font-family: 'Raleway', sans-serif;
+        font-size: 11px;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 300;
+        margin-bottom: 1.25rem;
+        padding-left: 1.5rem;
+      }
+      .insight-prose li {
+        margin-bottom: 0.4rem;
+      }
+      .insight-prose .in-this-guide {
+        border-left: 2px solid rgba(255, 255, 255, 0.4);
+        padding: 0.875rem 1.25rem;
+        margin: 1.5rem 0 2rem;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .insight-prose .in-this-guide p {
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+      }
+      .insight-prose .in-this-guide ul {
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .insight-prose .in-this-guide li {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 400;
+        margin-bottom: 0.25rem;
+      }
+      .insight-prose .callout {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        padding: 1.25rem 1.5rem;
+        margin: 2rem 0;
+      }
+      .insight-prose .callout p {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 0;
+        font-style: italic;
+      }
+      .insight-prose .closing-cta {
+        margin-top: 2.5rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .insight-prose .closing-cta a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
+        background: #ffffff;
+        color: #1a1a1a;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 0.6875rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: opacity 0.2s, transform 0.2s;
+        margin-top: 0.75rem;
+      }
+      .insight-prose .closing-cta a:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+      }
+      .insight-meta {
+        font-family: 'Raleway', sans-serif;
+        font-size: 0.6875rem;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      .insight-meta .dot {
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        display: inline-block;
+      }
+      .insight-kicker {
+        font-family: 'Raleway', sans-serif;
+        font-size: 0.6875rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 0.875rem;
+      }
+      .back-link {
+        font-family: 'Raleway', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.85);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-bottom: 1.5rem;
+        transition: color 0.2s;
+      }
+      .back-link:hover { color: #fff; }
+
+      /* Responsive text sizing mirroring text-[11px] sm:text-xs md:text-sm */
+      @media (min-width: 640px) {
+        .insight-prose p, .insight-prose ul, .insight-prose ol, .insight-prose .in-this-guide li, .insight-prose .callout p {
+          font-size: 0.75rem; /* 12px */
+        }
+      }
+      @media (min-width: 768px) {
+        .insight-prose p, .insight-prose ul, .insight-prose ol, .insight-prose .in-this-guide li, .insight-prose .callout p {
+          font-size: 0.875rem; /* 14px */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Fixed background -->
+    {% assign random_images = "/assets/images/hero.webp,/assets/images/about-hero.webp,/assets/images/pricing-hero.webp,/assets/images/faq-hero.webp,/assets/images/morning-house-ai-automation-method.webp,/assets/images/smart-inbox-hero.webp,/assets/images/lead-follow-up-hero.webp" | split: "," %}
+    {% assign sorted_insights = site.insights | sort: "date_published" | reverse %}
+    {% assign page_index = 0 %}
+    {% for p in sorted_insights %}
+      {% if p.url == page.url %}
+        {% assign page_index = forloop.index0 %}
+      {% endif %}
+    {% endfor %}
+    {% assign rand_index = page_index | modulo: random_images.size %}
+    {% assign page_bg = random_images[rand_index] %}
+    <div
+      class="insight-bg"
+      style="background-image: url('{{ page_bg | relative_url }}');"
+    ></div>
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50">
+      {% include navbar.html %}
+    </header>
+
+    <!-- Scrollable content -->
+    <div class="insight-scroll-area content-wrapper">
+
+      <!-- Back link -->
+      <div class="w-full mb-4">
+        <a href="/insight.html" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          All Insights
+        </a>
+      </div>
+
+      <!-- Glass card -->
+      <article class="insight-card px-6 sm:px-10 md:px-14 py-10 md:py-14 insight-prose">
+        {% if page.kicker %}
+        <p class="insight-kicker">{{ page.kicker }}</p>
+        {% endif %}
+
+        {{ content }}
+
+        <div class="closing-cta">
+          <p style="margin-bottom:0.25rem;">Morning House builds AI automations and AI agents for small businesses.</p>
+          <a href="/booking.html">Book a free 20-minute call &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Related Insights -->
+      {% assign related = site.insights | where_exp: "item", "item.url != page.url" | sort: "date_published" | reverse | slice: 0, 3 %}
+      {% if related.size > 0 %}
+      <div class="w-full mt-16 md:mt-24">
+        <h3 class="font-title text-xl sm:text-2xl text-white font-bold mb-6 md:mb-8">Read next</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          {% for post in related %}
+          <a href="{{ post.url }}" class="group block bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-lg hover:bg-white/15 transition-all transform hover:-translate-y-1">
+            <span class="block font-body text-[10px] text-white/60 uppercase tracking-widest mb-2">{{ post.read_time }}</span>
+            <h4 class="font-title text-base sm:text-lg text-white font-bold leading-tight">{{ post.title }}</h4>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+    </div>
+
+    {% include footer.html %}
+  </body>
+</html>

@@ -1,0 +1,89 @@
+# CloudCannon CMS Configuration
+# Docs: https://cloudcannon.com/documentation/
+
+source: .
+
+collections_config:
+  insights:
+    # Label shown in the CloudCannon sidebar
+    name: Insights
+    singular_name: Insight
+    # Icon for the sidebar (any Phosphor icon name)
+    icon: article
+    # Show the collection in the sidebar
+    _enabled_editors:
+      - content
+      - data
+    # Where new posts are created
+    create:
+      path: "_insights/{title|slugify}.html"
+    # Fields shown in the data panel (right sidebar in editor)
+    _inputs:
+      title:
+        type: text
+        label: Title
+        comment: The headline shown on the card and at the top of the post.
+      description:
+        type: textarea
+        label: Short description
+        comment: One or two sentences. Shown on the insight card on the listing page.
+      kicker:
+        type: text
+        label: Kicker
+        comment: "Small label above the title. E.g. \"Insights · Costs\""
+      read_time:
+        type: text
+        label: Read time
+        comment: "E.g. \"7 min\""
+      updated:
+        type: text
+        label: Updated date
+        comment: "E.g. \"August 2026\""
+      date_published:
+        type: date
+        label: Date published
+      date_modified:
+        type: date
+        label: Date last modified
+      image:
+        type: image
+        label: Card image
+        comment: Shown as the thumbnail on the insight listing page.
+        uploads_dir: assets/images
+      background_image:
+        type: image
+        label: Background image
+        comment: Full-bleed image behind the article content.
+        uploads_dir: assets/images
+
+# Paths CloudCannon uses for asset uploads
+file_config:
+  - glob: "assets/images/**"
+    _inputs:
+      image:
+        accepts_mime_types:
+          - image/webp
+          - image/jpeg
+          - image/png
+
+# Editor defaults
+_editables:
+  content:
+    # Rich-text toolbar for the article body
+    format: p h2 h3
+    bold: true
+    italic: true
+    link: true
+    bulletedlist: true
+    numberedlist: true
+    blockquote: false
+    code: false
+    table: false
+    undo: true
+    redo: true
+
+# Sidebar navigation
+navigation:
+  - name: Insights
+    collection: insights
+    icon: article
