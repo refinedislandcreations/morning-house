@@ -693,6 +693,9 @@
   .border-\[\#FFFFFF\]\/30 {
     border-color: color-mix(in oklab, #FFFFFF 30%, transparent);
   }
+  .border-gray-200 {
+    border-color: var(--color-gray-200);
+  }
   .border-white\/20 {
     border-color: color-mix(in srgb, #FFFFFF 20%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
