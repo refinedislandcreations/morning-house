@@ -1,0 +1,133 @@
+<style>
+  #page-loader {
+    position: fixed;
+    inset: 0;
+    background-color: #F0EDE7; 
+    z-index: 999999;
+    transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Skeleton Animations */
+  .sk-anim {
+    background: linear-gradient(90deg, rgba(0,0,0,0.04) 25%, rgba(0,0,0,0.08) 50%, rgba(0,0,0,0.04) 75%);
+    background-size: 200% 100%;
+    animation: sk-shimmer 1.5s infinite linear;
+    border-radius: 4px;
+  }
+  @keyframes sk-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  /* Navbar Skeleton */
+  .sk-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    width: 100%;
+    max-width: 1280px; /* content-wrapper */
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  @media (min-width: 768px) { .sk-nav { padding: 32px 40px; } }
+  @media (min-width: 1280px) { .sk-nav { padding: 32px 96px; } }
+
+  .sk-logo { width: 140px; height: 32px; border-radius: 8px; }
+  .sk-nav-right { display: flex; gap: 24px; align-items: center; }
+  .sk-nav-link { width: 60px; height: 16px; display: none; }
+  .sk-nav-btn { width: 140px; height: 40px; border-radius: 12px; display: none; }
+  .sk-nav-hamburger { width: 32px; height: 32px; border-radius: 6px; }
+
+  @media (min-width: 1024px) {
+    .sk-nav-link { display: block; }
+    .sk-nav-btn { display: block; }
+    .sk-nav-hamburger { display: none; }
+  }
+
+  /* Hero Skeleton */
+  .sk-hero {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 24px 64px 24px;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  @media (min-width: 768px) { .sk-hero { padding: 0 40px 64px 40px; } }
+  @media (min-width: 1280px) { .sk-hero { padding: 0 96px 64px 96px; } }
+
+  .sk-headline { width: 80%; max-width: 500px; height: 48px; margin-bottom: 16px; border-radius: 8px; }
+  .sk-headline-2 { width: 60%; max-width: 400px; height: 48px; margin-bottom: 32px; border-radius: 8px; }
+  
+  .sk-body-1 { width: 90%; max-width: 600px; height: 16px; margin-bottom: 12px; }
+  .sk-body-2 { width: 85%; max-width: 550px; height: 16px; margin-bottom: 12px; }
+  .sk-body-3 { width: 70%; max-width: 450px; height: 16px; margin-bottom: 40px; }
+
+  .sk-hero-btn { width: 220px; height: 56px; border-radius: 12px; }
+  
+  @media (max-width: 640px) {
+    .sk-headline, .sk-headline-2 { height: 32px; }
+    .sk-hero-btn { width: 100%; max-width: 320px; }
+  }
+
+  /* Fallback: if JS fails, hide loader after 2.5 seconds */
+  @keyframes force-hide {
+    100% { opacity: 0; visibility: hidden; display: none; }
+  }
+  .no-js #page-loader {
+    animation: force-hide 0.1s 2.5s forwards;
+  }
+</style>
+
+<div id="page-loader">
+  <!-- Navbar Skeleton -->
+  <div class="sk-nav">
+    <div class="sk-logo sk-anim"></div>
+    <div class="sk-nav-right">
+      <div class="sk-nav-link sk-anim"></div>
+      <div class="sk-nav-link sk-anim"></div>
+      <div class="sk-nav-link sk-anim"></div>
+      <div class="sk-nav-btn sk-anim"></div>
+      <div class="sk-nav-hamburger sk-anim"></div>
+    </div>
+  </div>
+
+  <!-- Hero Skeleton -->
+  <div class="sk-hero">
+    <div class="sk-headline sk-anim"></div>
+    <div class="sk-headline-2 sk-anim"></div>
+    
+    <div class="sk-body-1 sk-anim"></div>
+    <div class="sk-body-2 sk-anim"></div>
+    <div class="sk-body-3 sk-anim"></div>
+    
+    <div class="sk-hero-btn sk-anim"></div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const loader = document.getElementById('page-loader');
+    if(!loader) return;
+    
+    function hideLoader() {
+      loader.style.opacity = '0';
+      loader.style.visibility = 'hidden';
+      setTimeout(() => {
+        if(loader.parentNode) loader.parentNode.removeChild(loader);
+      }, 400);
+    }
+
+    // Hide when page fully loads
+    window.addEventListener('load', hideLoader);
+    
+    // Fallback: hide after 1.5 seconds regardless, in case load event takes too long
+    setTimeout(hideLoader, 1500);
+  })();
+</script>
