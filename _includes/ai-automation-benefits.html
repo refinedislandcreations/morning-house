@@ -51,7 +51,7 @@
       {% assign shared_image = data.image | default: data.cards[0].image %}
       {% for card in data.cards %}
       <a
-        href="{{ card.link }}"
+        href="{{ card.link | relative_url }}"
         class="group relative w-full min-h-[380px] sm:min-h-[420px] lg:min-h-[480px] h-full overflow-hidden flex flex-col justify-end p-6 md:p-8"
       >
         <img src="{{ shared_image | relative_url }}" alt="" class="absolute top-0 h-full object-cover z-0 pointer-events-none" style="width: 300%; max-width: 300%; left: calc(-100% * {{ forloop.index0 }});" />
