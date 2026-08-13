@@ -52,6 +52,3 @@ Keep customer data inside your own accounts rather than exporting it to unrelate
 
 It doesn't mean you need a data protection officer or a legal team if you're a small operation handling ordinary business contact data. It doesn't mean you can't use AI. And it doesn't mean every message needs a disclosure — only the ones sent automatically without a human reviewing them first. Most of this is achievable with clear documentation and a studio or vendor willing to put it in writing.
 
-<div class="callout">
-  <p><strong>Optional:</strong> Add a line here about your own DPA with your AI provider once finalised. For example: 'Morning House operates under a signed data processing agreement with OpenAI for all AI-assisted workflows.'</p>
-</div>

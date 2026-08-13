@@ -51,7 +51,3 @@ A good system sends a genuine, specific-feeling acknowledgment within minutes of
 ## What stays human
 
 Automation handles the acknowledgment and the timing. It doesn't handle the actual sales conversation, the quote, or the relationship — that's still you. The goal is making sure a real conversation gets the chance to happen at all, before the lead moves on.
-
-<div class="callout">
-  <p><strong>Your numbers here:</strong> Replace with your own client results once you have a few live systems running. For example: 'A client using Lead Follow-Up went from an average response time of X hours to under X minutes, and saw X more inquiries convert to booked calls in the first month.'</p>
-</div>

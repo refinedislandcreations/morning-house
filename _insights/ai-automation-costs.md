@@ -52,6 +52,3 @@ Tools like Zapier or Make cost $20 to $50 a month and can absolutely build a sim
 
 If you're only getting a handful of emails or inquiries a week, the payoff period on a paid setup stretches out long enough that it may not be worth it yet. If your process changes unpredictably week to week, automation needs something stable enough to encode, and a moving target is hard to build against. And if $600 or more genuinely isn't in the budget right now, it's fine to wait until volume or revenue grows into it. A studio worth working with will tell you this on the first call rather than sell you something you don't need yet.
 
-<div class="callout">
-  <p><strong>Your numbers here:</strong> Replace with your own client results once you have a few live systems running. For example: 'The Smart Inbox we run on our own business eliminated about X minutes of daily email sorting. At $X/hour, that's roughly $X of founder time per month. Setup paid for itself in X weeks.'</p>
-</div>

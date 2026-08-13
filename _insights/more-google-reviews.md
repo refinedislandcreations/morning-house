@@ -51,7 +51,3 @@ The best moment is shortly after a clearly positive interaction, while it's stil
 ## Keeping it consistent without becoming a chore
 
 This is where most businesses fall off, not from lack of care, but because remembering to ask every single time is genuinely hard alongside everything else you're doing. Automating the request so it goes out right after a job or booking closes, and flagging new reviews with a drafted response ready for your approval, keeps the habit going without it living on your to-do list.
-
-<div class="callout">
-  <p><strong>Your numbers here:</strong> Replace with your own client results once you have a few live systems running. For example: 'A client using Google Reviews went from X reviews a month to X, with an average rating that moved from X to X stars.'</p>
-</div>
