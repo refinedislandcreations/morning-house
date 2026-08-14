@@ -19,7 +19,7 @@ schema: '<script type="application/ld+json">{"@context":"https://schema.org","@t
   <span>Updated August 2026</span>
 </div>
 
-The businesses with the most Google reviews aren't the best at asking, they're the best at timing the ask and making it effortless. 97% of people read reviews before choosing a local business, and the trust sweet spot sits around 4.2 to 4.5 stars, not a perfect five. Getting there consistently is less about being pushy and more about asking the right customer at the right moment, every time, without relying on memory.
+The businesses with the most Google reviews aren't necessarily better at asking, they just ask at the right moment and make it effortless when they do. 97% of people read reviews before choosing a local business, and the trust sweet spot sits around 4.2 to 4.5 stars, not a perfect five. Getting there consistently is less about being pushy and more about asking the right customer at the right moment, every time, without relying on memory.
 
 <div class="in-this-guide">
   <p>In this guide</p>

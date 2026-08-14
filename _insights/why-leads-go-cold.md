@@ -26,7 +26,7 @@ Leads go cold because most businesses take hours or days to respond, and the dat
   <ul>
     <li><a href="#why-speed-matters-more-than-most-businesses-think">Why speed matters more than most businesses think</a></li>
     <li><a href="#what-cold-actually-looks-like">What "cold" actually looks like</a></li>
-    <li><a href="#the-five-minute-window-explained">The five-minute window, explained</a></li>
+    <li><a href="#what-the-five-minute-window-means-for-you">What the five-minute window means for you</a></li>
     <li><a href="#what-automated-follow-up-actually-does">What automated follow-up actually does</a></li>
     <li><a href="#what-stays-human">What stays human</a></li>
   </ul>
@@ -40,7 +40,7 @@ Responding within five minutes produces roughly a 32% close rate, compared to 24
 
 An inquiry lands in the evening, on a weekend, or during a busy stretch of the day. It sits in the inbox until someone gets to it, sometimes the next business day. In the meantime, the prospect has often already booked with whoever replied first, or simply lost the urgency that made them reach out. It isn't usually a failure of care, it's a byproduct of volume and timing that nobody's watching every hour.
 
-## The five-minute window, explained
+## What the five-minute window means for you
 
 Interest peaks at the exact moment someone reaches out. A fast reply confirms they were heard and that the business is actually paying attention. A slow one quietly raises doubt about whether anyone's home, and that doubt is enough to send them looking elsewhere, even if your business would've been the better fit.
 
