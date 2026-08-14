@@ -24,11 +24,11 @@ Leads go cold because most businesses take hours or days to respond, and the dat
 <div class="in-this-guide">
   <p>In this guide</p>
   <ul>
-    <li>Why speed matters more than most businesses think</li>
-    <li>What "cold" actually looks like</li>
-    <li>The five-minute window, explained</li>
-    <li>What automated follow-up actually does</li>
-    <li>What stays human</li>
+    <li><a href="#why-speed-matters-more-than-most-businesses-think">Why speed matters more than most businesses think</a></li>
+    <li><a href="#what-cold-actually-looks-like">What "cold" actually looks like</a></li>
+    <li><a href="#the-five-minute-window-explained">The five-minute window, explained</a></li>
+    <li><a href="#what-automated-follow-up-actually-does">What automated follow-up actually does</a></li>
+    <li><a href="#what-stays-human">What stays human</a></li>
   </ul>
 </div>
 

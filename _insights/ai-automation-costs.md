@@ -24,11 +24,11 @@ AI automation for a small business typically costs $600 to $1,200 as a one-time 
 <div class="in-this-guide">
   <p>In this guide</p>
   <ul>
-    <li>What you're actually paying for</li>
-    <li>Setup costs by automation type</li>
-    <li>Monthly costs: what care plans cover</li>
-    <li>DIY vs. hiring a studio: the honest math</li>
-    <li>When automation isn't worth it yet</li>
+    <li><a href="#what-youre-actually-paying-for">What you're actually paying for</a></li>
+    <li><a href="#setup-costs-by-automation-type">Setup costs by automation type</a></li>
+    <li><a href="#monthly-costs-what-care-plans-cover">Monthly costs: what care plans cover</a></li>
+    <li><a href="#diy-vs-hiring-a-studio-the-honest-math">DIY vs. hiring a studio: the honest math</a></li>
+    <li><a href="#when-automation-isnt-worth-it-yet">When automation isn't worth it yet</a></li>
   </ul>
 </div>
 

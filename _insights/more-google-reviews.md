@@ -24,11 +24,11 @@ The businesses with the most Google reviews aren't the best at asking, they're t
 <div class="in-this-guide">
   <p>In this guide</p>
   <ul>
-    <li>Why reviews matter more than most businesses realize</li>
-    <li>The two things that kill review requests</li>
-    <li>When to ask (and when not to)</li>
-    <li>How to respond to the ones that come in</li>
-    <li>Keeping it consistent without becoming a chore</li>
+    <li><a href="#why-reviews-matter-more-than-most-businesses-realize">Why reviews matter more than most businesses realize</a></li>
+    <li><a href="#the-two-things-that-kill-review-requests">The two things that kill review requests</a></li>
+    <li><a href="#when-to-ask-and-when-not-to">When to ask (and when not to)</a></li>
+    <li><a href="#how-to-respond-to-the-ones-that-come-in">How to respond to the ones that come in</a></li>
+    <li><a href="#keeping-it-consistent-without-becoming-a-chore">Keeping it consistent without becoming a chore</a></li>
   </ul>
 </div>
 

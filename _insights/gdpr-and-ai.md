@@ -24,11 +24,11 @@ If you're a small business using AI tools that touch customer data — like emai
 <div class="in-this-guide">
   <p>In this guide</p>
   <ul>
-    <li>The two things that actually apply to you</li>
-    <li>Controller vs. processor, in plain language</li>
-    <li>What the EU AI Act adds in 2026</li>
-    <li>What good practice actually looks like</li>
-    <li>What this doesn't mean</li>
+    <li><a href="#the-two-things-that-actually-apply-to-you">The two things that actually apply to you</a></li>
+    <li><a href="#controller-vs-processor-in-plain-language">Controller vs. processor, in plain language</a></li>
+    <li><a href="#what-the-eu-ai-act-adds-in-2026">What the EU AI Act adds in 2026</a></li>
+    <li><a href="#what-good-practice-actually-looks-like">What good practice actually looks like</a></li>
+    <li><a href="#what-this-doesnt-mean">What this doesn't mean</a></li>
   </ul>
 </div>
 

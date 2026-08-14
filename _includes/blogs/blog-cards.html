@@ -17,7 +17,7 @@
     {% endif %}
 
     <!-- Cards Grid — driven by _insights collection -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
       {% for post in insights %}
 
       {% comment %} Deterministically select a pseudo-random image based on alphabetical URL sort {% endcomment %}
@@ -44,7 +44,7 @@
         />
 
         <!-- Gradient overlay -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent transition-opacity group-hover:opacity-90 z-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30 transition-opacity group-hover:opacity-90 z-0"></div>
 
         <!-- Content -->
         <div class="relative z-10 text-[#FFFFFF] transform transition-transform duration-500 group-hover:-translate-y-2 w-full flex flex-col">
@@ -67,24 +67,24 @@
 
           <!-- Meta line: read time · updated date -->
           {% if post.read_time or post.updated %}
-          <div class="flex items-center gap-2 flex-wrap">
+          <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
             {% if post.read_time %}
-            <span class="font-body text-[10px] font-semibold uppercase tracking-widest text-white/70">{{ post.read_time }}</span>
+            <span class="font-body text-[9px] sm:text-[10px] font-semibold uppercase tracking-widest text-white/70">{{ post.read_time }}</span>
             {% endif %}
             {% if post.read_time and post.updated %}
-            <span class="w-[3px] h-[3px] rounded-full bg-white/40 inline-block flex-shrink-0"></span>
+            <span class="w-1 h-1 sm:w-[3px] sm:h-[3px] rounded-full bg-white/40 inline-block flex-shrink-0"></span>
             {% endif %}
             {% if post.updated %}
-            <span class="font-body text-[10px] font-medium uppercase tracking-widest text-white/50">Updated {{ post.updated }}</span>
+            <span class="font-body text-[9px] sm:text-[10px] font-medium uppercase tracking-widest text-white/50">Updated {{ post.updated }}</span>
             {% endif %}
           </div>
           {% endif %}
 
-          <!-- Hover "Read" pill — hidden at rest, revealed on hover -->
-          <div class="mt-4 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out">
-            <span class="inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-sm border border-white/25 text-white font-body font-bold text-[10px] uppercase tracking-widest px-4 py-2 rounded-full">
+          <!-- Hover "Read" pill — hidden at rest on desktop, always visible on mobile -->
+          <div class="mt-4 opacity-100 translate-y-0 md:opacity-0 md:translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out">
+            <span class="inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-sm border border-white/25 text-white font-body font-bold text-[9px] sm:text-[10px] uppercase tracking-widest px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl">
               Read
-              <svg class="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
             </span>
           </div>
 
@@ -94,7 +94,7 @@
       {% endfor %}
 
       {% if insights.size == 0 %}
-      <p class="font-body text-xs text-gray-400 col-span-3">No insights published yet.</p>
+      <p class="font-body text-xs text-gray-400 col-span-full">No insights published yet.</p>
       {% endif %}
     </div>
 
