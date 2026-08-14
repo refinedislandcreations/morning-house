@@ -46,7 +46,7 @@
     </div>
 
     <!-- Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
       {% if data.cards %}
       {% assign shared_image = data.image | default: data.cards[0].image %}
       {% for card in data.cards %}
