@@ -13,7 +13,7 @@ Morning House currently builds three AI automation tools:
 
 - **Smart Inbox**: Sorts your email and drafts replies for you to review, turning hours of inbox management into minutes of quick approvals
 - **Lead Follow-Up**: Acknowledges every new lead within minutes and follows up automatically if they go quiet, ensuring no opportunity slips through
-- **Google Reviews**: Requests reviews from happy customers and drafts responses to the ones that come in, maintaining your online reputation while you sleep
+- **Review Requests**: Requests reviews from happy customers and drafts responses to the ones that come in, maintaining your online reputation while you sleep
 
 Services are continuously expanded based on client feedback.
 

@@ -18,8 +18,8 @@ Speed of response is the single strongest predictor of lead conversion, yet smal
 
 Beyond initial response, the system tracks lead engagement and automatically follows up when prospects go quiet, using contextually appropriate messaging based on the original inquiry and any subsequent interaction. The goal is persistence without being pushy — maintaining presence in a prospect's inbox without requiring the business owner to remember to follow up manually.
 
-### Google Reviews
-Online reputation management creates two time-consuming obligations: asking satisfied customers for reviews and responding to the reviews that appear. Google Reviews automates both. After completed transactions or positive interactions, the system sends personalized review requests to customers, timed for when satisfaction is highest.
+### Review Requests
+Online reputation management creates two time-consuming obligations: asking satisfied customers for reviews and responding to the reviews that appear. Review Requests automates both. After completed transactions or positive interactions, the system sends personalized review requests to customers, timed for when satisfaction is highest.
 
 When reviews arrive — positive or negative — the system drafts appropriate responses. Positive reviews receive grateful, personalized acknowledgments. Negative reviews receive professional, solution-oriented responses that demonstrate the business's commitment to customer satisfaction. As with all Morning House tools, business owners review and approve before anything is published.
 

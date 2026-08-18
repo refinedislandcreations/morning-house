@@ -92,7 +92,7 @@ Verify:
 Every indexable page contains:
 
 * title: "Morning House | AI Automation for Small Businesses"
-* meta description: "Morning House builds AI automations for small businesses. Smart Inbox sorts email, Lead Follow-Up acknowledges new leads within minutes, Google Reviews requests and responds to reviews automatically."
+* meta description: "Morning House builds AI automations for small businesses. Smart Inbox sorts email, Lead Follow-Up acknowledges new leads within minutes, Review Requests asks happy customers for a Google review and drafts responses to the ones that come in."
 * canonical URL: https://morninghouse.ai/
 
 ### Social Metadata
@@ -127,7 +127,7 @@ Verify:
 * JSON-LD valid for Organization schema
 * Morning House business details accurate
 * Address: Denpasar, Bali, Indonesia
-* Services listed: Smart Inbox, Lead Follow-Up, Google Reviews
+* Services listed: Smart Inbox, Lead Follow-Up, Review Requests
 * Social link: https://instagram.com/morninghouse.ai
 
 ---
@@ -416,7 +416,7 @@ Business type: AI Automation Studio for small businesses
 Business name: Morning House
 Domain: https://morninghouse.ai
 Location: Bali, Indonesia (serving worldwide)
-Services: Smart Inbox, Lead Follow-Up, Google Reviews
+Services: Smart Inbox, Lead Follow-Up, Review Requests
 Existing robots.txt: [yes/no]
 Existing llms.txt: [yes/no]
 Collections beyond posts: None (single page currently)
@@ -432,7 +432,7 @@ Email form: Present for notification signup
 Morning House is an AI automation studio for small businesses based in Bali, Indonesia, working with clients worldwide. They currently build three tools:
 - **Smart Inbox**: Sorts email and drafts replies for review
 - **Lead Follow-Up**: Acknowledges every new lead within minutes
-- **Google Reviews**: Requests and responds to customer reviews automatically
+- **Review Requests**: Requests and responds to customer reviews automatically
 
 The current website is a "Coming Soon" page with email capture for launch notifications. Future pages will detail each service.
 
@@ -530,7 +530,7 @@ Morning House currently builds three AI automation tools:
 
 - **Smart Inbox**: Sorts your email and drafts replies for you to review, turning hours of inbox management into minutes of quick approvals
 - **Lead Follow-Up**: Acknowledges every new lead within minutes and follows up automatically if they go quiet, ensuring no opportunity slips through
-- **Google Reviews**: Requests reviews from happy customers and drafts responses to the ones that come in, maintaining your online reputation while you sleep
+- **Review Requests**: Requests reviews from happy customers and drafts responses to the ones that come in, maintaining your online reputation while you sleep
 
 Services are continuously expanded based on client feedback.
 
@@ -583,8 +583,8 @@ Speed of response is the single strongest predictor of lead conversion, yet smal
 
 Beyond initial response, the system tracks lead engagement and automatically follows up when prospects go quiet, using contextually appropriate messaging based on the original inquiry and any subsequent interaction. The goal is persistence without being pushy — maintaining presence in a prospect's inbox without requiring the business owner to remember to follow up manually.
 
-### Google Reviews
-Online reputation management creates two time-consuming obligations: asking satisfied customers for reviews and responding to the reviews that appear. Google Reviews automates both. After completed transactions or positive interactions, the system sends personalized review requests to customers, timed for when satisfaction is highest.
+### Review Requests
+Online reputation management creates two time-consuming obligations: asking satisfied customers for reviews and responding to the reviews that appear. Review Requests automates both. After completed transactions or positive interactions, the system sends personalized review requests to customers, timed for when satisfaction is highest.
 
 When reviews arrive — positive or negative — the system drafts appropriate responses. Positive reviews receive grateful, personalized acknowledgments. Negative reviews receive professional, solution-oriented responses that demonstrate the business's commitment to customer satisfaction. As with all Morning House tools, business owners review and approve before anything is published.
 
@@ -645,7 +645,7 @@ The Organization schema is already present in the project. Verify it's correctly
   "@type": "Organization",
   "name": "Morning House",
   "url": "https://morninghouse.ai",
-  "description": "Morning House builds AI automations for small businesses. Smart Inbox sorts email and drafts replies for review. Lead Follow-Up acknowledges every new lead within minutes and follows up automatically if they go quiet. Google Reviews requests reviews from happy customers and drafts responses to the ones that come in.",
+  "description": "Morning House builds AI automations for small businesses. Smart Inbox sorts email and drafts replies for review. Lead Follow-Up acknowledges every new lead within minutes and follows up automatically if they go quiet. Review Requests asks happy customers for a Google review and drafts responses to the ones that come in.",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Denpasar",
@@ -686,7 +686,7 @@ Add ProfessionalService schema as a separate block in `_layouts/default.html` `<
   "@type": "ProfessionalService",
   "name": "Morning House",
   "url": "https://morninghouse.ai",
-  "description": "AI automation studio for small businesses. Smart Inbox, Lead Follow-Up, and Google Reviews automation.",
+  "description": "AI automation studio for small businesses. Smart Inbox, Lead Follow-Up, and Review Requests automation.",
   "image": "https://morninghouse.ai/assets/images/og-image.jpg",
   "address": {
     "@type": "PostalAddress",
@@ -727,7 +727,7 @@ Add ProfessionalService schema as a separate block in `_layouts/default.html` `<
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Google Reviews",
+          "name": "Review Requests",
           "description": "Automated review requests for happy customers and AI-drafted review responses"
         }
       }
@@ -755,7 +755,7 @@ Create `_data/faq.yml`:
 
 ```yaml
 - question: "What does Morning House do?"
-  answer: "Morning House builds AI automation tools for small businesses. We currently offer three tools: Smart Inbox for email management, Lead Follow-Up for instant lead response and nurturing, and Google Reviews for automated review requests and responses."
+  answer: "Morning House builds AI automation tools for small businesses. We currently offer three tools: Smart Inbox for email management, Lead Follow-Up for instant lead response and nurturing, and Review Requests for automated review requests and responses."
 
 - question: "When will Morning House launch?"
   answer: "We're currently in development with early clients and putting the finishing touches on our tools. Sign up for our email list on the homepage to be notified as soon as we open to new clients."
@@ -988,7 +988,7 @@ deployment_report:
     low: []
 
   recommendations:
-    - Create dedicated service pages for Smart Inbox, Lead Follow-Up, Google Reviews
+    - Create dedicated service pages for Smart Inbox, Lead Follow-Up, Review Requests
     - Add case studies/testimonials section as clients come on board
     - Implement blog for AI automation thought leadership content
     - Add contact page with full form once launched

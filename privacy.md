@@ -10,7 +10,7 @@ Morning House builds AI automations for small businesses: sorted inboxes, faster
 ## What we collect
 - **If you sign up to be notified about our launch:** your email address.
 - **If you book a call or fill out a contact form:** your name, email address, business name, and anything you choose to tell us about your business.
-- **If you become a client:** the business data needed to deliver the service you've signed up for (for example, your business inbox content for Smart Inbox, or your customer contact details for Lead Follow-Up and Google Reviews), exactly as described in your service agreement with us.
+- **If you become a client:** the business data needed to deliver the service you've signed up for (for example, your business inbox content for Smart Inbox, or your customer contact details for Lead Follow-Up and Review Requests), exactly as described in your service agreement with us.
 
 ## Why we collect it
 - To let you know when we launch, if you signed up for updates.
