@@ -83,7 +83,7 @@ Do not continue.
 
 ### Current Site Structure
 
-Morning House is currently a single-page "Coming Soon" site with only `index.html`. The SEO validation must account for this limited scope while ensuring everything is production-ready for future expansion.
+Morning House is a multi-page site including `index.html`, `homepage.html`, `pricing.html`, `faq.html`, `about.html`, `booking.html`, and individual product pages. The SEO validation must ensure metadata is correctly populated across all indexable pages.
 
 Verify:
 
@@ -233,7 +233,7 @@ Verify:
 
 ## Phase 5: CMS Validation
 
-For the current coming soon page, verify CloudCannon editability for:
+Verify CloudCannon editability for site pages:
 
 ### Content
 
@@ -419,10 +419,10 @@ Location: Bali, Indonesia (serving worldwide)
 Services: Smart Inbox, Lead Follow-Up, Review Requests
 Existing robots.txt: [yes/no]
 Existing llms.txt: [yes/no]
-Collections beyond posts: None (single page currently)
-_data/ files: [list]
-FAQ content exists: No — needs creation
-Current pages: index.html only (Coming Soon)
+Collections beyond posts: insights
+_data/ files: None
+FAQ content exists: Yes, stored in page frontmatter
+Current pages: index.html, homepage.html, pricing.html, faq.html, about.html, booking.html, product pages (smart-inbox, lead-follow-up, review-requests).
 Social media: Instagram (instagram.com/morninghouse.ai)
 Email form: Present for notification signup
 ```
@@ -434,7 +434,7 @@ Morning House is an AI automation studio for small businesses based in Bali, Ind
 - **Lead Follow-Up**: Acknowledges every new lead within minutes
 - **Review Requests**: Requests and responds to customer reviews automatically
 
-The current website is a "Coming Soon" page with email capture for launch notifications. Future pages will detail each service.
+The current website is a multi-page site detailing services, pricing, and FAQ. A "Coming Soon" page (index.html) is also available.
 
 ---
 
@@ -751,86 +751,33 @@ Add ProfessionalService schema as a separate block in `_layouts/default.html` `<
 
 ### Implementation
 
-Create `_data/faq.yml`:
+
+FAQ data is stored in the frontmatter of relevant pages (e.g., `homepage.html`, `faq.html`, `pricing.html`).
 
 ```yaml
-- question: "What does Morning House do?"
-  answer: "Morning House builds AI automation tools for small businesses. We currently offer three tools: Smart Inbox for email management, Lead Follow-Up for instant lead response and nurturing, and Review Requests for automated review requests and responses."
-
-- question: "When will Morning House launch?"
-  answer: "We're currently in development with early clients and putting the finishing touches on our tools. Sign up for our email list on the homepage to be notified as soon as we open to new clients."
-
-- question: "Where is Morning House based?"
-  answer: "Morning House is based in Bali, Indonesia, but we work with small business clients worldwide. Our remote structure means time zone differences work to our advantage — tasks submitted at the end of your business day are processed during our working hours."
-
-- question: "How does the Smart Inbox work?"
-  answer: "Smart Inbox connects to your existing email account and uses AI to categorize incoming messages, prioritize urgent items, and draft replies for your review. You maintain full control — AI suggests, but you approve every response before it's sent. Over time, the system learns your communication style and preferences."
-
-- question: "Do I maintain control over automated responses?"
-  answer: "Absolutely. Every Morning House tool operates with a 'human in the loop' approach. AI drafts and suggests, but nothing is sent or published without your explicit approval. You're always in control of what goes out under your name."
-
-- question: "What types of businesses do you work with?"
-  answer: "We serve small businesses typically with 1-20 employees — professional services, home services, health and wellness practitioners, and other businesses where the owner still personally handles email, leads, and customer communication."
-
-- question: "How is Lead Follow-Up different from an email autoresponder?"
-  answer: "Unlike a generic autoresponder that sends the same message to everyone, Lead Follow-Up uses AI to craft personalized responses based on the specific inquiry. It also tracks engagement and follows up intelligently when leads go quiet, adapting its messaging based on the conversation context."
-
-- question: "Can I try Morning House tools individually?"
-  answer: "Yes. While the tools work well together, each is available independently. You can start with the automation that addresses your most pressing need — whether that's email overload, lead response time, or review management — and add others as needed."
+faq:
+  kicker: Questions, answered plainly
+  headline: Frequently asked
+  items:
+    - question: "What does Morning House do?"
+      answer: "Morning House builds AI automation tools for small businesses."
+    # ... additional items
 ```
 
-### Homepage Integration
+### Page Integration
 
-Add to `index.html` before the closing `</main>` tag:
+Render the FAQ content using the `faq.html` include:
 
 ```html
-{% if site.data.faq %}
-<section class="relative z-10 px-6 md:px-10 xl:px-24 max-w-4xl pb-16" aria-label="Frequently Asked Questions">
-  <h2 class="text-white font-title text-xl md:text-2xl mb-8">Frequently Asked Questions</h2>
-  
-  <div class="space-y-4">
-    {% for item in site.data.faq %}
-    <details class="group bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-      <summary class="cursor-pointer px-6 py-4 font-body text-white font-medium hover:bg-white/10 transition rounded-xl">
-        {{ item.question }}
-      </summary>
-      <div class="px-6 pb-4 text-white/90 font-body text-sm leading-relaxed">
-        <p>{{ item.answer }}</p>
-      </div>
-    </details>
-    {% endfor %}
-  </div>
-</section>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {% for item in site.data.faq %}
-    {
-      "@type": "Question",
-      "name": {{ item.question | jsonify }},
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": {{ item.answer | jsonify }}
-      }
-    }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ]
-}
-</script>
-{% endif %}
+{% include faq.html %}
 ```
 
 ### Verification
 
-- [ ] _data/faq.yml created with 8 questions
 - [ ] Questions derived from actual Morning House services
-- [ ] FAQ section added to index.html
-- [ ] FAQPage JSON-LD uses Liquid loop from same data source
-- [ ] Tailwind classes match existing design system (glass morphism style)
-- [ ] Accordion works without JavaScript (native `<details>`/`<summary>`)
+- [ ] FAQ section included in relevant pages via frontmatter
+- [ ] FAQPage JSON-LD generated correctly if applicable
+- [ ] Tailwind classes match existing design system
 - [ ] Questions substantive and specific (not vague marketing)
 
 ---
@@ -839,7 +786,7 @@ Add to `index.html` before the closing `</main>` tag:
 
 ### Implementation
 
-Since Morning House currently has only one page, create a manual `sitemap.xml` at Jekyll root:
+Morning House uses a dynamic `sitemap.xml` that iterates over `site.pages`. Ensure it is present at Jekyll root:
 
 ```xml
 ---
@@ -847,18 +794,15 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for page in site.pages %}
+  {% if page.url contains '.xml' or page.url contains '.txt' or page.url contains '.json' %}{% continue %}{% endif %}
   <url>
-    <loc>https://morninghouse.ai/</loc>
+    <loc>{{ site.url }}{{ page.url | replace:'index.html','' }}</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <changefreq>{% if page.url == '/' %}weekly{% else %}monthly{% endif %}</changefreq>
+    <priority>{% if page.url == '/' %}1.0{% else %}0.8{% endif %}</priority>
   </url>
-  <url>
-    <loc>https://morninghouse.ai/privacy</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
+  {% endfor %}
 </urlset>
 ```
 
