@@ -35,22 +35,22 @@ booking:
       <h1 class="font-title text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[1.1] mb-6 md:mb-8 text-[#FFFFFF]">
         {{ page.booking.headline }}
       </h1>
-      <p class="font-body text-[11px] sm:text-xs md:text-sm font-light leading-relaxed text-[#FFFFFF]/90 mb-8 md:mb-12">
+      <p class="font-body text-xs md:text-sm font-light leading-relaxed text-[#FFFFFF]/90 mb-8 md:mb-12">
         {{ page.booking.body }}
       </p>
 
       <ul class="space-y-6 mb-10">
         {% for step in page.booking.steps %}
         <li class="flex gap-4">
-          <span class="font-bold text-[11px] sm:text-xs md:text-sm text-[#FFFFFF]">{{ forloop.index }}.</span>
-          <div class="font-body text-[11px] sm:text-xs md:text-sm font-light leading-relaxed text-[#FFFFFF]/90">
+          <span class="font-bold text-xs md:text-sm text-[#FFFFFF]">{{ forloop.index }}.</span>
+          <div class="font-body text-xs md:text-sm font-light leading-relaxed text-[#FFFFFF]/90">
             <strong class="font-bold text-[#FFFFFF]">{{ step.title }}</strong> <span>{{ step.body }}</span>
           </div>
         </li>
         {% endfor %}
       </ul>
 
-      <div class="font-body text-[11px] sm:text-xs md:text-sm font-light text-[#FFFFFF]/90 border-t border-white/20 pt-6 mt-6">
+      <div class="font-body text-xs md:text-sm font-light text-[#FFFFFF]/90 border-t border-white/20 pt-6 mt-6">
         {{ page.booking.email_text }} <a href="mailto:{{ page.booking.email_address }}" class="underline hover:text-white">{{ page.booking.email_address }}</a>
       </div>
     </div>
