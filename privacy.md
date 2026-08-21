@@ -24,7 +24,7 @@ Our products use OpenAI's API to read, classify, and draft content as part of de
 Coming-soon signups are kept until launch, then deleted or used only to send the launch notification. Client data is kept for as long as the service agreement is active, and is deleted or returned within a reasonable period after the agreement ends, as agreed with each client individually.
 
 ## Your rights
-You can ask us what data we hold about you, ask us to correct it, or ask us to delete it, by emailing [info@refinedislandcreations.com](mailto:info@refinedislandcreations.com). We'll respond within a reasonable time.
+You can ask us what data we hold about you, ask us to correct it, or ask us to delete it, by emailing [hello@morninghouse.ai](mailto:hello@morninghouse.ai). We'll respond within a reasonable time.
 
 ## Third parties
 We use OpenAI (AI processing) and n8n (workflow automation) to deliver our services. We don't sell or share your data for advertising or any purpose outside delivering the service you've asked for.
@@ -33,4 +33,4 @@ We use OpenAI (AI processing) and n8n (workflow automation) to deliver our servi
 We'll update this page if what we collect or how we use it changes.
 
 ## Contact
-Questions about this policy: [info@refinedislandcreations.com](mailto:info@refinedislandcreations.com)
+Questions about this policy: [hello@morninghouse.ai](mailto:hello@morninghouse.ai)
