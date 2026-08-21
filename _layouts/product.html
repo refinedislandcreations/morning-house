@@ -4,13 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
-    <link rel="preload" as="image" href="{{ '/assets/images/ai-automation-benefits-for-small-business.webp' | relative_url }}">
+    {% assign preload_image = page.booking.background_image | default: page.hero_image | default: '/assets/images/ai-automation-benefits-for-small-business.webp' %}
+    <link rel="preload" as="image" href="{{ preload_image | relative_url }}">
     
     <!-- Open Graph & Twitter Cards -->
     <meta property="og:title" content="{{ page.title }} - {{ site.title }}">
-    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html','' }}">
     <meta property="og:type" content="website">
     <meta property="og:image" content="{{ site.url }}/assets/images/og-image.jpg">
