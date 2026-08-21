@@ -5,7 +5,7 @@ last_updated: July 2026
 ---
 
 ## Who we are
-Morning House builds AI automations for small businesses: sorted inboxes, faster lead follow-up, and managed Google reviews. Morning House is a service of PT Agen Pulau Kreatif, Jl. Bypass Ngurah Rai No 88 B, Sanur Kaja, Denpasar, Indonesia.
+Morning House builds AI automations for small businesses: sorted inboxes, faster lead follow-up, and managed review requests. Morning House is a service of PT Agen Pulau Kreatif, Jl. Bypass Ngurah Rai No 88 B, Sanur Kaja, Denpasar, Indonesia.
 
 ## What we collect
 - **If you sign up to be notified about our launch:** your email address.

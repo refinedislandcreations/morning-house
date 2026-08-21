@@ -34,7 +34,7 @@ AI automation for a small business typically costs $600 to $1,200 as a one-time 
 
 ## What you're actually paying for
 
-A quote for AI automation covers three things, whether the studio breaks them out or not. Building is mapping your actual process, connecting the tools involved, and writing the logic that handles it. Testing is running the system against real scenarios from your business before it touches a real customer, so it doesn't embarrass you on day one. Care is what keeps it working after launch: monitoring, adjusting prompts as your business changes, and fixing things when a connected tool updates its API. Most quotes fold building and testing into the one-time setup fee, and care into the monthly retainer.
+A quote for AI automation covers three things, whether the studio breaks them out or not. Building is mapping your actual process, connecting the tools involved, and writing the logic that handles it. Tuning is sharpening that logic against real examples from your business, categories, reply tone, edge cases, before it's handling everything on its own. Most of these systems have to connect to your real inbox or process to work at all, so there's rarely a separate safe environment to rehearse in first: the first few days live are a closely monitored tuning window, not a dry run. Care is what keeps it working after launch: monitoring, adjusting prompts as your business changes, and fixing things when a connected tool updates its API. Most quotes fold building and testing into the one-time setup fee, and care into the monthly retainer.
 
 ## Setup costs by automation type
 
@@ -46,7 +46,7 @@ Retainers usually run $150 to $450 a month depending on the system's complexity.
 
 ## DIY vs. hiring a studio: the honest math
 
-Tools like Zapier or Make cost $20 to $50 a month and can absolutely build a simple automation yourself. The real cost isn't the tool, it's your time. Getting a workflow built correctly the first time, including the edge cases that don't show up until real data hits it, commonly takes a business owner 10 to 20 hours of learning and troubleshooting. Valued at even a modest hourly rate, that time alone often exceeds what a studio charges to build it properly and test it before go-live. DIY makes sense if you enjoy the tinkering, have more time than budget, or the workflow is genuinely simple, like a one-step notification. Hiring a studio makes sense if your time is the scarcer resource, you want it working correctly from day one, and you want someone accountable when something breaks.
+Tools like Zapier or Make cost $20 to $50 a month and can absolutely build a simple automation yourself. The real cost isn't the tool, it's your time. Getting a workflow built correctly the first time, including the edge cases that don't show up until real data hits it, commonly takes a business owner 10 to 20 hours of learning and troubleshooting. Valued at even a modest hourly rate, that time alone often exceeds what a studio charges to build and tune it properly. DIY makes sense if you enjoy the tinkering, have more time than budget, or the workflow is genuinely simple, like a one-step notification. Hiring a studio makes sense if your time is the scarcer resource, you want it working correctly from day one, and you want someone accountable when something breaks.
 
 ## When automation isn't worth it yet
 
