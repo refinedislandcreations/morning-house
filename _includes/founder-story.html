@@ -6,14 +6,14 @@
       <img
         src="{{ data.image | relative_url }}"
         alt="{{ data.alt_text }}"
-        class="w-full max-w-md lg:max-w-none mx-auto aspect-square object-cover"
+        class="w-full max-w-md lg:max-w-none mx-auto aspect-square object-cover order-2 lg:order-1"
       />
 
       <!-- Right Content -->
-      <div class="flex flex-col justify-center max-w-2xl mx-auto lg:mx-0">
+      <div class="flex flex-col justify-center max-w-2xl mx-auto lg:mx-0 order-1 lg:order-2">
         {% if data.kicker %}
         <p
-          class="font-body text-[#402518] text-sm md:text-base mb-6 tracking-wide font-light"
+          class="font-body text-[#402518] text-sm md:text-base mb-4 tracking-wide font-light"
         >
           {{ data.kicker }}
         </p>
@@ -25,7 +25,7 @@
         </h2>
         {% endif %} {% if data.body %}
         <p
-          class="font-body text-[#402518] text-sm md:text-base leading-relaxed mb-10 font-light"
+          class="font-body text-[#402518] text-sm md:text-base leading-relaxed mb-4 font-light"
         >
           {{ data.body }}
         </p>
