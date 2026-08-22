@@ -6,7 +6,7 @@
       <img
         src="{{ data.image | relative_url }}"
         alt="Refined Island Creations"
-        class="w-full max-w-md lg:max-w-none mx-auto aspect-square object-cover"
+        class="w-full max-w-md lg:max-w-none mx-auto aspect-square object-cover {{ data.image_position | default: 'object-center' }}"
       />
 
       <!-- Right Content -->

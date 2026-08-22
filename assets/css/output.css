@@ -909,6 +909,15 @@
   .object-cover {
     object-fit: cover;
   }
+  .object-center {
+    object-position: center;
+  }
+  .object-left {
+    object-position: left;
+  }
+  .object-right {
+    object-position: right;
+  }
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
