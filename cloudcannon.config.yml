@@ -56,6 +56,32 @@ collections_config:
         comment: Full-bleed image behind the article content.
         uploads_dir: assets/images
 
+# Global Input Configuration
+_inputs:
+  body:
+    type: textarea
+  answer:
+    type: textarea
+  description:
+    type: textarea
+  quote:
+    type: textarea
+  features:
+    type: textarea
+  image:
+    type: image
+    uploads_dir: assets/images
+  background_image:
+    type: image
+    uploads_dir: assets/images
+  background_image_2:
+    type: image
+    uploads_dir: assets/images
+  icon:
+    type: code
+  seo:
+    type: array
+
 # Paths CloudCannon uses for asset uploads
 file_config:
   - glob: "assets/images/**"
