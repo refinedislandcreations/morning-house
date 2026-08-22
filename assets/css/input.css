@@ -39,6 +39,12 @@ main + footer {
   padding-top: 1px !important;
 }
 
+/* Modifier to remove all padding from sections */
+.section.no-section,
+.no-section .section {
+  padding-block: 1px !important;
+}
+
 @media (max-width: 1024px) {
   .section {
     padding-block: var(--spacing-section-tablet);
