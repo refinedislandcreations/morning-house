@@ -14,13 +14,13 @@ This document defines the mandatory final validation process before a project ca
 
 The objective is to ensure:
 
-* Production stability
-* Deployment readiness
-* SEO readiness
-* Accessibility compliance
-* Performance optimization
-* CMS maintainability
-* Netlify compatibility
+- [ ] Production stability
+- [ ] Deployment readiness
+- [ ] SEO readiness
+- [ ] Accessibility compliance
+- [ ] Performance optimization
+- [ ] CMS maintainability
+- [ ] Netlify compatibility
 
 No deployment should be considered complete until this checklist has been executed.
 
@@ -48,13 +48,13 @@ Do not skip any phase.
 
 Verify:
 
-* Project builds successfully
-* No fatal build errors
-* No unresolved imports
-* No missing assets
-* No missing includes/layouts
-* No broken Liquid templates
-* No Jekyll warnings that could impact production
+- [ ] Project builds successfully
+- [ ] No fatal build errors
+- [ ] No unresolved imports
+- [ ] No missing assets
+- [ ] No missing includes/layouts
+- [ ] No broken Liquid templates
+- [ ] No Jekyll warnings that could impact production
 
 Required:
 
@@ -91,44 +91,44 @@ Verify:
 
 Every indexable page contains:
 
-* title: "Morning House | AI Automation for Small Businesses"
-* meta description: "Morning House builds AI automations for small businesses. Smart Inbox sorts email, Lead Follow-Up acknowledges new leads within minutes, Review Requests asks happy customers for a Google review and drafts responses to the ones that come in."
-* canonical URL: https://morninghouse.ai/
+- [ ] title: "Morning House | AI Automation for Small Businesses"
+- [ ] meta description: "Morning House builds AI automations for small businesses. Smart Inbox sorts email, Lead Follow-Up acknowledges new leads within minutes, Review Requests asks happy customers for a Google review and drafts responses to the ones that come in."
+- [ ] canonical URL: https://morninghouse.ai/
 
 ### Social Metadata
 
 Every indexable page contains:
 
-* Open Graph title
-* Open Graph description
-* Open Graph image
-* Twitter card metadata
+- [ ] Open Graph title
+- [ ] Open Graph description
+- [ ] Open Graph image
+- [ ] Twitter card metadata
 
 ### Sitemap
 
 Verify:
 
-* sitemap.xml generated (even if only one page currently)
-* URLs valid
-* Canonicals match sitemap URLs
+- [ ] sitemap.xml generated (even if only one page currently)
+- [ ] URLs valid
+- [ ] Canonicals match sitemap URLs
 
 ### Robots
 
 Verify:
 
-* robots.txt exists with GEO bot rules
-* Production configuration enabled
-* Sitemap location referenced
+- [ ] robots.txt exists with GEO bot rules
+- [ ] Production configuration enabled
+- [ ] Sitemap location referenced
 
 ### Structured Data
 
 Verify:
 
-* JSON-LD valid for Organization schema
-* Morning House business details accurate
-* Address: Denpasar, Bali, Indonesia
-* Services listed: Smart Inbox, Lead Follow-Up, Review Requests
-* Social link: https://instagram.com/morninghouse.ai
+- [ ] JSON-LD valid for Organization schema
+- [ ] Morning House business details accurate
+- [ ] Address: Denpasar, Bali, Indonesia
+- [ ] Services listed: Smart Inbox, Lead Follow-Up, Review Requests
+- [ ] Social link: https://instagram.com/morninghouse.ai
 
 ---
 
@@ -138,41 +138,41 @@ Verify:
 
 ### Images
 
-* Logo has alt text: "Morning House"
-* Background image is decorative (no alt needed)
-* All content images have alt text
+- [ ] Logo has alt text: "Morning House"
+- [ ] Background image is decorative (no alt needed)
+- [ ] All content images have alt text
 
 ### Headings
 
 Verify:
 
-* Single H1 per page
-* Current H1: "Give us the work you dread. It'll be done by morning."
-* Logical hierarchy maintained
+- [ ] Single H1 per page
+- [ ] Current H1: "Give us the work you dread. It'll be done by morning."
+- [ ] Logical hierarchy maintained
 
 ### Forms
 
 Verify:
 
-* Email input has associated label (even if visually hidden)
-* Form validation accessible
-* Error states announced to screen readers
+- [ ] Email input has associated label (even if visually hidden)
+- [ ] Form validation accessible
+- [ ] Error states announced to screen readers
 
 ### Keyboard Navigation
 
 Verify:
 
-* All interactive elements reachable via keyboard
-* Visible focus indicators on email input and submit button
-* No keyboard traps
+- [ ] All interactive elements reachable via keyboard
+- [ ] Visible focus indicators on email input and submit button
+- [ ] No keyboard traps
 
 ### ARIA
 
 Verify:
 
-* No redundant ARIA
-* No invalid ARIA usage
-* Form elements properly labeled
+- [ ] No redundant ARIA
+- [ ] No invalid ARIA usage
+- [ ] Form elements properly labeled
 
 Target:
 
@@ -186,48 +186,48 @@ Verify:
 
 ### Images
 
-* Logo SVG optimized
-* Background image properly compressed (WebP format used)
-* Responsive sizing implemented
+- [ ] Logo SVG optimized
+- [ ] Background image properly compressed (WebP format used)
+- [ ] Responsive sizing implemented
 
 ### Loading
 
 Verify:
 
-* Background image prioritized (hero image)
-* Logo not lazy loaded
-* Fonts optimized for loading
+- [ ] Background image prioritized (hero image)
+- [ ] Logo not lazy loaded
+- [ ] Fonts optimized for loading
 
 ### Scripts
 
 Verify:
 
-* defer used where appropriate
-* async used where appropriate
-* Minimal JavaScript for coming soon page
+- [ ] defer used where appropriate
+- [ ] async used where appropriate
+- [ ] Minimal JavaScript for coming soon page
 
 ### CSS
 
 Verify:
 
-* Tailwind purge effective
-* No large unused bundles
-* Custom brand colors preserved: brand-orange (#b85a32)
+- [ ] Tailwind purge effective
+- [ ] No large unused bundles
+- [ ] Custom brand colors preserved: brand-orange (#b85a32)
 
 ### Fonts
 
 Verify:
 
-* Optimized loading
-* Critical fonts preloaded (font-title, font-body)
+- [ ] Optimized loading
+- [ ] Critical fonts preloaded (font-title, font-body)
 
 ### Layout Stability
 
 Verify:
 
-* Width/height attributes on logo
-* No avoidable CLS issues
-* Form maintains layout during loading
+- [ ] Width/height attributes on logo
+- [ ] No avoidable CLS issues
+- [ ] Form maintains layout during loading
 
 ---
 
@@ -237,27 +237,27 @@ Verify CloudCannon editability for site pages:
 
 ### Content
 
-* Headline text editable
-* Description paragraph editable
-* "Coming Soon" badge text editable
+- [ ] Headline text editable
+- [ ] Description paragraph editable
+- [ ] "Coming Soon" badge text editable
 
 ### Form
 
-* Email placeholder text editable
-* Button text editable
-* Privacy note text editable
+- [ ] Email placeholder text editable
+- [ ] Button text editable
+- [ ] Privacy note text editable
 
 ### Media
 
-* Logo source editable
-* Background image source editable
-* Alt text editable
+- [ ] Logo source editable
+- [ ] Background image source editable
+- [ ] Alt text editable
 
 ### Footer
 
-* Privacy policy link editable
-* Credit text editable
-* Credit link editable
+- [ ] Privacy policy link editable
+- [ ] Credit text editable
+- [ ] Credit link editable
 
 ---
 
@@ -267,32 +267,32 @@ Verify:
 
 ### Build Configuration
 
-* netlify.toml valid
-* build command: `bundle exec jekyll build`
-* publish directory: `_site`
+- [ ] netlify.toml valid
+- [ ] build command: `bundle exec jekyll build`
+- [ ] publish directory: `_site`
 
 ### Redirects
 
 Verify:
 
-* Custom 404 page works
-* Future page redirects planned
+- [ ] Custom 404 page works
+- [ ] Future page redirects planned
 
 ### Environment Variables
 
 Verify:
 
-* JEKYLL_ENV set to production
-* No exposed secrets
-* Build variables correctly referenced
+- [ ] JEKYLL_ENV set to production
+- [ ] No exposed secrets
+- [ ] Build variables correctly referenced
 
 ### HTTPS Readiness
 
 Verify:
 
-* All assets loaded via HTTPS
-* No mixed content
-* Domain: https://morninghouse.ai
+- [ ] All assets loaded via HTTPS
+- [ ] No mixed content
+- [ ] Domain: https://morninghouse.ai
 
 ---
 
@@ -306,10 +306,10 @@ Must block deployment.
 
 Examples:
 
-* Build failures
-* Broken email form submission
-* Missing index.html
-* Fatal accessibility failures
+- [ ] Build failures
+- [ ] Broken email form submission
+- [ ] Missing index.html
+- [ ] Fatal accessibility failures
 
 ### High
 
@@ -317,10 +317,10 @@ Strongly recommended before launch.
 
 Examples:
 
-* Missing social metadata
-* Broken structured data
-* Significant performance regressions
-* Email capture not functional
+- [ ] Missing social metadata
+- [ ] Broken structured data
+- [ ] Significant performance regressions
+- [ ] Email capture not functional
 
 ### Medium
 
@@ -328,9 +328,9 @@ Post-launch acceptable.
 
 Examples:
 
-* Minor Lighthouse deductions
-* Small accessibility improvements
-* Additional browser testing needed
+- [ ] Minor Lighthouse deductions
+- [ ] Small accessibility improvements
+- [ ] Additional browser testing needed
 
 ### Low
 
@@ -338,9 +338,9 @@ Nice-to-have improvements.
 
 Examples:
 
-* Animation refinements
-* Micro-interactions
-* A/B testing variations
+- [ ] Animation refinements
+- [ ] Micro-interactions
+- [ ] A/B testing variations
 
 ---
 
@@ -348,14 +348,14 @@ Examples:
 
 Deployment MUST be blocked if any of the following exist:
 
-* Build failure
-* Fatal runtime error
-* Broken email form
-* Missing logo or background image
-* Severe accessibility issue
-* Invalid structured data
-* Invalid Netlify configuration
-* HTTPS mixed content
+- [ ] Build failure
+- [ ] Fatal runtime error
+- [ ] Broken email form
+- [ ] Missing logo or background image
+- [ ] Severe accessibility issue
+- [ ] Invalid structured data
+- [ ] Invalid Netlify configuration
+- [ ] HTTPS mixed content
 
 If any blocker exists:
 
@@ -377,11 +377,11 @@ STATUS: READY FOR PRODUCTION
 
 when:
 
-* Build passes
-* No blockers exist
-* Critical issues = 0
-* GEO implementation verified
-* Email form functional
+- [ ] Build passes
+- [ ] No blockers exist
+- [ ] Critical issues = 0
+- [ ] GEO implementation verified
+- [ ] Email form functional
 
 ---
 
@@ -393,9 +393,9 @@ when:
 
 **GEO (Generative Engine Optimisation)** structures a website so AI tools — ChatGPT, Perplexity, Google AI Overviews, Bing Copilot, Claude — can accurately read and cite it. It is separate from traditional SEO:
 
-- 83% of AI Overview citations come from pages *outside* the Google top 10
-- AI referral traffic converts ~5× higher than traditional search
-- AI search grew 527% YoY in H1 2025
+- [ ] 83% of AI Overview citations come from pages *outside* the Google top 10
+- [ ] AI referral traffic converts ~5× higher than traditional search
+- [ ] AI search grew 527% YoY in H1 2025
 
 ---
 
@@ -430,9 +430,9 @@ Email form: Present for notification signup
 ### Business Context
 
 Morning House is an AI automation studio for small businesses based in Bali, Indonesia, working with clients worldwide. They currently build three tools:
-- **Smart Inbox**: Sorts email and drafts replies for review
-- **Lead Follow-Up**: Acknowledges every new lead within minutes
-- **Review Requests**: Requests and responds to customer reviews automatically
+- [ ] **Smart Inbox**: Sorts email and drafts replies for review
+- [ ] **Lead Follow-Up**: Acknowledges every new lead within minutes
+- [ ] **Review Requests**: Requests and responds to customer reviews automatically
 
 The current website is a multi-page site detailing services, pricing, and FAQ. A "Coming Soon" page (index.html) is also available.
 
@@ -961,15 +961,15 @@ deployment_report:
 
 Before declaring completion:
 
-* Revalidate all modified files.
-* Revalidate all affected layouts.
-* Revalidate all affected includes.
-* Revalidate Netlify configuration.
-* Revalidate SEO metadata generation.
-* Revalidate all GEO files (robots.txt, llms.txt, llms-full.txt).
-* Revalidate all JSON-LD schema blocks.
-* Revalidate FAQ data and template integration.
-* Revalidate Tailwind CSS purge safety.
+- [ ] Revalidate all modified files.
+- [ ] Revalidate all affected layouts.
+- [ ] Revalidate all affected includes.
+- [ ] Revalidate Netlify configuration.
+- [ ] Revalidate SEO metadata generation.
+- [ ] Revalidate all GEO files (robots.txt, llms.txt, llms-full.txt).
+- [ ] Revalidate all JSON-LD schema blocks.
+- [ ] Revalidate FAQ data and template integration.
+- [ ] Revalidate Tailwind CSS purge safety.
 
 Never assume a fix worked.
 
@@ -981,16 +981,16 @@ Always verify.
 
 A project is considered complete only when:
 
-* Production build succeeds
-* No critical blockers remain
-* Core Web Vitals are acceptable
-* SEO requirements are satisfied
-* Accessibility requirements are satisfied
-* GEO implementation is complete and verified
-* All GEO files are accessible at their expected URLs
-* Structured data validates without errors
-* Email capture form is functional
-* Netlify deployment requirements are satisfied
+- [ ] Production build succeeds
+- [ ] No critical blockers remain
+- [ ] Core Web Vitals are acceptable
+- [ ] SEO requirements are satisfied
+- [ ] Accessibility requirements are satisfied
+- [ ] GEO implementation is complete and verified
+- [ ] All GEO files are accessible at their expected URLs
+- [ ] Structured data validates without errors
+- [ ] Email capture form is functional
+- [ ] Netlify deployment requirements are satisfied
 
 Until then, continue auditing, fixing, validating, and reporting.
 
@@ -998,10 +998,10 @@ Until then, continue auditing, fixing, validating, and reporting.
 
 # References
 
-- [GEO: Generative Engine Optimization — Princeton & IIT Delhi, KDD 2024](https://arxiv.org/abs/2311.09735)
-- [llms.txt standard specification](https://llmstxt.org)
-- [Jekyll documentation](https://jekyllrb.com/docs/)
-- [Tailwind CSS Content Configuration](https://tailwindcss.com/docs/content-configuration)
-- [IndexNow Protocol](https://www.indexnow.org/documentation)
-- [Google Rich Results Test](https://search.google.com/test/rich-results)
-- [Morning House Website](https://morninghouse.ai)
+- [ ] [GEO: Generative Engine Optimization — Princeton & IIT Delhi, KDD 2024](https://arxiv.org/abs/2311.09735)
+- [ ] [llms.txt standard specification](https://llmstxt.org)
+- [ ] [Jekyll documentation](https://jekyllrb.com/docs/)
+- [ ] [Tailwind CSS Content Configuration](https://tailwindcss.com/docs/content-configuration)
+- [ ] [IndexNow Protocol](https://www.indexnow.org/documentation)
+- [ ] [Google Rich Results Test](https://search.google.com/test/rich-results)
+- [ ] [Morning House Website](https://morninghouse.ai)
