@@ -12,4 +12,12 @@ layout: null
     <priority>{% if page.url == '/' %}1.0{% else %}0.8{% endif %}</priority>
   </url>
   {% endfor %}
+  {% for doc in site.insights %}
+  <url>
+    <loc>{{ site.url }}{{ doc.url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  {% endfor %}
 </urlset>
