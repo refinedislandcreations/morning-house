@@ -102,10 +102,24 @@
               aria-label="Copy email address hello@morninghouse.ai to clipboard"
               class="footer-email-btn group relative text-[#FFFFFF]/70 hover:text-[#FFFFFF] focus-visible:text-[#FFFFFF] font-body text-sm transition-colors w-fit flex items-center gap-2 pb-1 text-left cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[#D46D3C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#402518] rounded-xs select-none active:scale-[0.98]"
             >
-              <svg class="w-4 h-4 z-10 transition-transform duration-200 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 z-10 transition-transform duration-200 group-hover:scale-110 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
               </svg>
               <span class="z-10">Email Us</span>
+
+              <!-- Visual Hint Badge (Mobile & Tablet: "tap to copy") -->
+              <span class="email-hint-badge z-10 inline-flex lg:hidden items-center gap-1 text-[10px] font-medium tracking-wide text-[#FFFFFF]/60 bg-[#FFFFFF]/[0.08] border border-[#FFFFFF]/10 px-2 py-0.5 rounded-full transition-all duration-200 group-hover:text-[#FFFFFF] group-hover:bg-[#FFFFFF]/15 group-hover:border-[#FFFFFF]/25">
+                <svg class="hint-icon-copy w-2.5 h-2.5 text-[#D46D3C] transition-transform duration-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+                </svg>
+                <svg class="hint-icon-check w-2.5 h-2.5 text-[#4ADE80] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="hint-text-idle">tap to copy</span>
+                <span class="hint-text-copied text-[#4ADE80]">copied!</span>
+              </span>
+
               <span class="absolute bottom-0 left-0 w-0 h-px bg-[#FFFFFF] transition-all duration-300 ease-out group-hover:w-full group-focus-visible:w-full opacity-70"></span>
             </button>
 
@@ -181,6 +195,31 @@
   .footer-email-wrapper.is-copied .tooltip-caret {
     border-right-color: rgba(212, 109, 60, 0.45);
     border-bottom-color: rgba(212, 109, 60, 0.45);
+  }
+
+  .footer-email-wrapper.is-copied .email-hint-badge {
+    background-color: rgba(74, 222, 128, 0.12);
+    border-color: rgba(74, 222, 128, 0.35);
+    color: #4ADE80;
+  }
+
+  /* Hint Badge Icon & Text state transitions */
+  .email-hint-badge .hint-icon-check,
+  .email-hint-badge .hint-text-copied {
+    display: none !important;
+  }
+
+  .footer-email-wrapper.is-copied .email-hint-badge .hint-icon-copy,
+  .footer-email-wrapper.is-copied .email-hint-badge .hint-text-idle {
+    display: none !important;
+  }
+
+  .footer-email-wrapper.is-copied .email-hint-badge .hint-icon-check {
+    display: inline-block !important;
+  }
+
+  .footer-email-wrapper.is-copied .email-hint-badge .hint-text-copied {
+    display: inline !important;
   }
 </style>
 
