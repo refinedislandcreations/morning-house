@@ -67,11 +67,51 @@
         <!-- Connect -->
         <div class="flex flex-col gap-4 col-span-2 sm:col-span-1">
           <p class="text-[#FFFFFF] font-body font-semibold tracking-widest uppercase text-[10px] mb-2">Connect</p>
-          <a href="mailto:hello@morninghouse.ai" class="group relative text-[#FFFFFF]/70 hover:text-[#FFFFFF] font-body text-sm transition-colors w-fit flex items-center gap-2 pb-1">
-            <svg class="w-4 h-4 z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-            <span class="z-10">Email Us</span>
-            <span class="absolute bottom-0 left-0 w-0 h-px bg-[#FFFFFF] transition-all duration-300 ease-out group-hover:w-full opacity-70"></span>
-          </a>
+          
+          <!-- Email Us Copy Interaction -->
+          <div class="footer-email-wrapper relative w-fit inline-flex flex-col items-start">
+            <!-- Tooltip / Confirmation Badge -->
+            <div
+              id="footer-email-tooltip"
+              role="status"
+              class="footer-email-tooltip pointer-events-none absolute bottom-full left-0 mb-2 z-30"
+            >
+              <div class="tooltip-box flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#25130A] border border-white/15 shadow-[0_4px_16px_rgba(0,0,0,0.45)] text-white text-[11px] font-medium tracking-wide whitespace-nowrap transition-colors duration-200">
+                <span class="tooltip-icon flex items-center text-[#D46D3C]">
+                  <!-- Default Copy Icon -->
+                  <svg class="copy-svg w-3 h-3 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+                  </svg>
+                  <!-- Success Check Icon -->
+                  <svg class="check-svg w-3 h-3 hidden text-[#4ADE80] transition-transform duration-200 scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </span>
+                <span class="tooltip-text text-white/90">Copy Address</span>
+              </div>
+              <!-- Tooltip Caret Pointer -->
+              <div class="tooltip-caret w-2 h-2 bg-[#25130A] border-r border-b border-white/15 rotate-45 ml-4 -mt-1"></div>
+            </div>
+
+            <!-- Interactive Copy Button -->
+            <button
+              id="footer-copy-email-btn"
+              type="button"
+              data-email="hello@morninghouse.ai"
+              aria-label="Copy email address hello@morninghouse.ai to clipboard"
+              class="footer-email-btn group relative text-[#FFFFFF]/70 hover:text-[#FFFFFF] focus-visible:text-[#FFFFFF] font-body text-sm transition-colors w-fit flex items-center gap-2 pb-1 text-left cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[#D46D3C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#402518] rounded-xs select-none active:scale-[0.98]"
+            >
+              <svg class="w-4 h-4 z-10 transition-transform duration-200 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              <span class="z-10">Email Us</span>
+              <span class="absolute bottom-0 left-0 w-0 h-px bg-[#FFFFFF] transition-all duration-300 ease-out group-hover:w-full group-focus-visible:w-full opacity-70"></span>
+            </button>
+
+            <!-- Screen reader live announcement -->
+            <span id="footer-copy-email-announcement" class="sr-only" aria-live="polite"></span>
+          </div>
           <a href="https://www.instagram.com/morninghouse.ai" class="group relative text-[#FFFFFF]/70 hover:text-[#FFFFFF] font-body text-sm transition-colors w-fit flex items-center gap-2 pb-1">
             <svg class="w-4 h-4 z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             <span class="z-10">Instagram</span>
@@ -106,3 +146,150 @@
     </div>
   </div>
 </footer>
+
+<style>
+  .footer-email-tooltip {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(4px);
+    pointer-events: none;
+    transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.2s;
+  }
+  
+  /* Desktop hover & focus states */
+  @media (hover: hover) and (pointer: fine) {
+    .footer-email-wrapper:hover .footer-email-tooltip,
+    .footer-email-wrapper:focus-within .footer-email-tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  /* Active / Copied confirmation state (desktop click & mobile tap) */
+  .footer-email-wrapper.is-copied .footer-email-tooltip {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+  }
+
+  .footer-email-wrapper.is-copied .tooltip-box {
+    border-color: rgba(212, 109, 60, 0.45);
+    box-shadow: 0 0 0 1px rgba(212, 109, 60, 0.2), 0 4px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  .footer-email-wrapper.is-copied .tooltip-caret {
+    border-right-color: rgba(212, 109, 60, 0.45);
+    border-bottom-color: rgba(212, 109, 60, 0.45);
+  }
+</style>
+
+<script>
+  (function() {
+    function initFooterEmailCopy() {
+      const btn = document.getElementById('footer-copy-email-btn');
+      if (!btn || btn.__emailCopyInitialized) return;
+      btn.__emailCopyInitialized = true;
+
+      const wrapper = btn.closest('.footer-email-wrapper');
+      const tooltipText = wrapper ? wrapper.querySelector('.tooltip-text') : null;
+      const copySvg = wrapper ? wrapper.querySelector('.copy-svg') : null;
+      const checkSvg = wrapper ? wrapper.querySelector('.check-svg') : null;
+      const announcement = document.getElementById('footer-copy-email-announcement');
+      const email = btn.getAttribute('data-email') || 'hello@morninghouse.ai';
+
+      let copyTimeout = null;
+
+      function fallbackCopyText(text) {
+        return new Promise(function(resolve, reject) {
+          try {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            textArea.setAttribute('readonly', '');
+            textArea.style.opacity = '0';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            const successful = document.execCommand('copy');
+            document.body.removeChild(textArea);
+            if (successful) {
+              resolve();
+            } else {
+              reject(new Error('execCommand copy failed'));
+            }
+          } catch (err) {
+            reject(err);
+          }
+        });
+      }
+
+      function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(text).catch(function() {
+            return fallbackCopyText(text);
+          });
+        } else {
+          return fallbackCopyText(text);
+        }
+      }
+
+      function showCopiedSuccess() {
+        if (wrapper) {
+          wrapper.classList.add('is-copied');
+        }
+        if (tooltipText) {
+          tooltipText.textContent = 'Address Copied!';
+        }
+        if (copySvg && checkSvg) {
+          copySvg.classList.add('hidden');
+          checkSvg.classList.remove('hidden');
+        }
+        if (announcement) {
+          announcement.textContent = 'Email address ' + email + ' copied to clipboard';
+        }
+
+        if (copyTimeout) clearTimeout(copyTimeout);
+        copyTimeout = setTimeout(function() {
+          if (wrapper) {
+            wrapper.classList.remove('is-copied');
+          }
+          if (tooltipText) {
+            tooltipText.textContent = 'Copy Address';
+          }
+          if (copySvg && checkSvg) {
+            copySvg.classList.remove('hidden');
+            checkSvg.classList.add('hidden');
+          }
+          if (announcement) {
+            announcement.textContent = '';
+          }
+        }, 2200);
+      }
+
+      function handleCopy(e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+
+        copyText(email)
+          .then(showCopiedSuccess)
+          .catch(function(err) {
+            console.warn('Clipboard copy fallback:', err);
+            showCopiedSuccess();
+          });
+      }
+
+      btn.addEventListener('click', handleCopy);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initFooterEmailCopy);
+    } else {
+      initFooterEmailCopy();
+    }
+  })();
+</script>
