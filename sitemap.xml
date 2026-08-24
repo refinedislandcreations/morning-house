@@ -6,7 +6,7 @@ layout: null
   {% for page in site.pages %}
   {% if page.url contains '.xml' or page.url contains '.txt' or page.url contains '.json' or page.url contains '404.html' %}{% continue %}{% endif %}
   <url>
-    <loc>{{ site.url }}{{ page.url | replace:'index.html','' }}</loc>
+    <loc>{{ site.url }}{{ page.url | replace:'index.html','' | replace:'.html','' }}</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>{% if page.url == '/' %}weekly{% else %}monthly{% endif %}</changefreq>
     <priority>{% if page.url == '/' %}1.0{% else %}0.8{% endif %}</priority>
