@@ -70,11 +70,11 @@
           
           <!-- Email Us Copy Interaction -->
           <div class="footer-email-wrapper relative w-fit inline-flex flex-col items-start">
-            <!-- Tooltip / Confirmation Badge -->
+            <!-- Tooltip / Confirmation Badge (Desktop only) -->
             <div
               id="footer-email-tooltip"
               role="status"
-              class="footer-email-tooltip pointer-events-none absolute bottom-full left-0 mb-2 z-30"
+              class="footer-email-tooltip pointer-events-none absolute bottom-full left-0 mb-2 z-30 hidden lg:block"
             >
               <div class="tooltip-box flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#25130A] border border-white/15 shadow-[0_4px_16px_rgba(0,0,0,0.45)] text-white text-[11px] font-medium tracking-wide whitespace-nowrap transition-colors duration-200">
                 <span class="tooltip-icon flex items-center text-[#D46D3C]">
@@ -162,29 +162,35 @@
 </footer>
 
 <style>
+  /* Tooltip is desktop-only */
   .footer-email-tooltip {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(4px);
-    pointer-events: none;
-    transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.2s;
+    display: none !important;
   }
-  
-  /* Desktop hover & focus states */
-  @media (hover: hover) and (pointer: fine) {
+
+  @media (min-width: 1024px) {
+    .footer-email-tooltip {
+      display: block !important;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(4px);
+      pointer-events: none;
+      transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.2s;
+    }
+    
+    /* Desktop hover & focus states */
     .footer-email-wrapper:hover .footer-email-tooltip,
     .footer-email-wrapper:focus-within .footer-email-tooltip {
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
     }
-  }
 
-  /* Active / Copied confirmation state (desktop click & mobile tap) */
-  .footer-email-wrapper.is-copied .footer-email-tooltip {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: translateY(0) !important;
+    /* Active / Copied confirmation state on desktop */
+    .footer-email-wrapper.is-copied .footer-email-tooltip {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
+    }
   }
 
   .footer-email-wrapper.is-copied .tooltip-box {
