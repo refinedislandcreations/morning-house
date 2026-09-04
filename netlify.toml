@@ -3,3 +3,15 @@
   publish = "_site"
   environment = { JEKYLL_ENV = "production" }
 
+[[redirects]]
+  from = "/insights"
+  to = "/insight.html"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/insights/"
+  to = "/insight.html"
+  status = 301
+  force = false
+
